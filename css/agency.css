@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: avenir next,"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .text-muted {
@@ -17,9 +17,32 @@ body {
     color: #fed136;
 }
 
+h1.first{
+    color: #3e3e3e;
+    text-decoration: none;
+    color: inherit;
+    font-size:70px;
+
+}
+
+h1.second{
+    color: #3e3e3e;
+    text-decoration: none;
+    color: inherit;
+    font-size:50px;
+
+}
+
+p.introduction{
+            font-weight: 500;
+            color: #c3c7c9;
+            /*color: #3e3e3e;*/
+}
+
 p {
-    font-size: 14px;
-    line-height: 1.75;
+    font-size: 19px;
+    line-height: 2;
+    font-family:avenir next;
 }
 
 p.large {
@@ -53,7 +76,8 @@ h5,
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 700
+    color: #39454b;
 }
 
 .img-centered {
@@ -175,7 +199,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family:  "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+
     color: #fed136;
 }
 
@@ -265,7 +290,8 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-color: #191919;
+    /*background-image: url("https://unsplash.imgix.net/18/misty-plank.JPG?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050" );*/
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -281,7 +307,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "avenir next","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
@@ -290,7 +316,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "avenir next",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
@@ -333,7 +359,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:  avenir next,"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -790,7 +816,7 @@ ul.social-buttons li a:active {
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:  avenir next,"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
 }
