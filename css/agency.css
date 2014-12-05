@@ -291,6 +291,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-color: #2d2522;
+    opacity:0.8;
     /*background-image: url("https://unsplash.imgix.net/18/misty-plank.JPG?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050" );*/
     background-position: center center;
     background-repeat: none;
