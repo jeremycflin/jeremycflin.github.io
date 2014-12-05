@@ -11,6 +11,7 @@ body {
 
 .text-muted {
     color: #777;
+    margin:15px;
 }
 
 .text-primary {
@@ -30,12 +31,14 @@ h1.second{
     text-decoration: none;
     color: inherit;
     font-size:50px;
+    font-weight:300;
 
 }
 
 p.introduction{
             font-weight: 500;
             color: #c3c7c9;
+            font-size:25px;
             /*color: #3e3e3e;*/
 }
 
@@ -74,7 +77,6 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700
     color: #39454b;
@@ -291,7 +293,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-color: #2d2522;
-    opacity:0.8;
+    opacity:0.85;
     /*background-image: url("https://unsplash.imgix.net/18/misty-plank.JPG?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050" );*/
     background-position: center center;
     background-repeat: none;
@@ -302,8 +304,9 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 header .intro-text .intro-lead-in {
@@ -316,7 +319,6 @@ header .intro-text .intro-lead-in {
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-    text-transform: uppercase;
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 50px;
     font-weight: 700;
@@ -352,9 +354,12 @@ section {
 }
 
 section h2.section-heading {
+
+    font-family: Helvetica Neue;
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight:800;
 }
 
 section h3.section-subheading {
