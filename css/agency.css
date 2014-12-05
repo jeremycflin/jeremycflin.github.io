@@ -12,6 +12,7 @@ body {
 .text-muted {
     color: #777;
     margin:15px;
+    margin-top: 40px;
 }
 
 .text-primary {
@@ -36,7 +37,7 @@ h1.second{
 }
 
 p.introduction{
-            font-weight: 500;
+            font-weight: 400;
             color: #c3c7c9;
             font-size:25px;
             /*color: #3e3e3e;*/
@@ -96,7 +97,7 @@ h6 {
 
 .btn-primary {
     border-color: #fed136;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
@@ -147,7 +148,7 @@ fieldset[disabled] .btn-primary.active {
     padding: 20px 40px;
     border-color: #fed136;
     border-radius: 3px;
-    text-transform: uppercase;
+   /* text-transform: uppercase;*/
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -232,9 +233,10 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
+    /*text-transform: uppercase;*/
+    font-size: 18px;
+    font-family: sans-serif,"avenir next",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 1000;
     letter-spacing: 1px;
     color: #fff;
 }
@@ -358,7 +360,7 @@ section h2.section-heading {
     font-family: Helvetica Neue;
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 35px;
     font-weight:800;
 }
 
