@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>J200 Showcase: Enviro Group</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+       <script type="text/javascript">
+
+      var unused = []
+
+      function getQuote() {
+
+         var quotes = new Array("Rockin' in the free world.", "Rave on.", "Maximize significance. Maximize pleasure.", "Rain on.", "The beat goes on.", "We're all in this together.","Rail on.", "A classic news story lede (1) conveys the essence (the news) of the story and (2) does so in terms that readers can grasp easily.", "Long sentences with many subordinate clauses feel more like thought. Short sentences create action.", "Read your stories aloud.", "Report with the story you are writing in mind. Ask good questions to get background and explanation.", "Avoid \"there is\" and \"there are\" to make your writing stronger.", "Try to find more precise and colorful verbs than \"has\" and \"have.\"", "The tease should normally be no more than 1/5 of the story.", "If you use the word \"however\" at the beginning of a sentence, it stops the reader. Think about whether that's the effect you intend. And don't use it to start a new paragraph.", "Don't begin a new paragraph with an attribution.", "An em dash is a lazy clause connector. Try to find another construction.","Rage on.","The key word here is \"self-organization\" (which, by the way, is the central tenet of anarchism, contrary to popular opinion).", "The other key word is \"fun.\"","Cool beans.","Onward.","A narrative is a journey.","Have a good reason if you choose to break the chronology in a narrative piece.", "Keep track of all the timelines that have to do with your story.","The four types of ledes: action present, action past, assertion\/declaration, descriptive.","Don't put anything into the story that doesn't have some purpose.","Ask yourself: Why is this sentence here? Why am I picking out this particular detail?","Be careful with adverbs. Usually you can cut them.","Be careful with similes. One great way to get a metaphoric effect into writing is to use a verb.","Focus on accuracy in your descriptions.","Take pictures while reporting and use them to help with your descriptions.","Elements of a scene: character, action, dialogue, description.","Holy jump cut batwoman!","Rock on.","Double-check anything you aren't completely certain about.","Just get in the habit--a lifelong habit--of reviewing media for potential overlap.","Environmental advocacy groups can be useful sources, but remember that they too have an agenda.","Rage on, Intrepid Journos!","There's never been an excuse for misspelling anything, including formal titles, but Google makes it ridiculously easy to get it right.");
+
+         //var randomChoice = Math.floor(Math.random()* quotes.length)
+
+         if (unused.length == 0) {
+            for (var i = 0; i < quotes.length; i++) {
+               unused.push(i);
+            }
+         }
+
+         var randomChoice = Math.floor(Math.random()* unused.length);
+         var quote = quotes[unused[randomChoice]];
+         $("#myBox").html(quote);
+         unused.splice(randomChoice, 1);
+
+      }
+
+
+      //document.getElementById("body").onload = function() {getQuote(); };
+
+    </script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="javascript:getQuote()">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">J200 Showcase:</span> Enviro Group
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#jeremy">Jeremy</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#daphne">Daphne</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#joshua">Joshua</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#nadine">Nadine</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#qian">Jieqian</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#melissa">Melissa</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#mallory">Mallory</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ted">Ted</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#jimmy">Jimmy</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#laki">Laki</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ethan">Ethan</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ed">Ed</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">J200 Showcase</h1>
+                        <p class="intro-text">Environmental Reporting with Edwin Dobb</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+                            <!-- Ed generator-->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div style = "height:300px"> 
+                    <h2>About</h2>
+                    <p><strong>"</strong> Change comes slowly. It often takes looking back over a long period of time to realize how much you have grown. <strong>"</strong> </p>
+                    <p> - Ed Dobb </p>
+                </div>    
+
+
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+
+        <!-- Jeremy -->
+    <section id="jeremy" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Jeremy Lin</h2>
+                <p><strong>"</strong> I really enjoyed doing this series of infographics for the elections. I learned how to quickly construct an engaging and transparent narrative through infographics. <strong>"</strong></p>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- Jeremy Lin -->
+    <section id="jeremy" class="content-section text-center">
+        <div class="jeremy_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Daphne Matziaraki -->
+    <section id="daphne" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Daphne Matziaraki</h2>
+                <p><strong>"</strong> I learned that the politics behind environmental stories are so complicated. Even for an issue that sounds so simple. <strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Daphne Matziaraki -->
+    <section id="daphne" class="content-section text-center">
+        <div class="daphne_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+<!--                     <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Joshua Chin -->
+    <section id="joshua" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Joshua Chin</h2>
+                <p><strong>"</strong> I learned that the actions people take in the Bay Area do affect endangered animals all over the world. <strong>"</strong></p>
+            </div>
+        </div>
+    </section>
+
+            <!-- Joshua Chin -->
+    <section id="joshua" class="content-section text-center">
+        <div class="joshua_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Nadine Sebai -->
+    <section id="nadine" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Nadine Sebai</h2>
+                <p><strong>"</strong> As a novice reporter, I learned a lot about how important (and hard) it is to outline your story before sitting down to write it. <strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+                <!-- Nadine Sebai -->
+    <section id="nadine" class="content-section text-center">
+        <div class="nadine_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+ <!--                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- Jieqian Zhang -->
+    <section id="qian" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Jieqian Zhang</h2>
+                <p><strong>"</strong> I learned that it’s hard to not get nerdy when writing environment stories. My first draft always reads like Martian language to others, in a bad way. <strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+                <!-- Jieqian Zhang -->
+    <section id="qian" class="content-section text-center">
+        <div class="qian_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Melissa Bosworth -->
+    <section id="melissa" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Melissa Bosworth</h2>
+                <p><strong>"</strong> I learned that an enormous amount of food goes to waste in California without ever leaving the farm. I also learned that it's really challenging to get good interview audio in a loud environment. <strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+
+
+            <section id="melissa" class="container content-section text-center">
+        <div class="row">
+                <iframe src="//player.vimeo.com/video/109773431?
+                " width="1200" height="800" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+        </div>
+        </section>
+
+
+
+        <!-- Mallory Pickett -->
+    <section id="mallory" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Mallory Pickett</h2>
+                <p><strong>"</strong> I learned that revision is key. I also re-learned how to punctuate quotes, and it was harder than I thought. <strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+                <!-- Mallory Pickett -->
+    <section id="mallory" class="content-section text-center">
+        <div class="mallory_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+<!--                     <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Ted Anderson -->
+    <section id="ted" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Ted Andersen</h2>
+                <p><strong>"</strong> I was scouring water insider reports and found something that eventually led me to the story, and then, after publication online, the article was cited by the same insider and used on her blog. It was kind of funny to see the process in full circle. <strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+                <!-- Ted Anderson-->
+    <section id="ted" class="content-section text-center">
+        <div class="ted_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+<!--                     <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Jimmy Tobias -->
+    <section id="jimmy" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Jimmy Tobias</h2>
+                <p><strong>"</strong> I learned that cigarette litter is EVERYWHERE. And that turning a short article into a long feature takes a lot of re-reporting.<strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+
+                <!-- Jimmy Tobias-->
+    <section id="jimmy" class="content-section text-center">
+        <div class="jimmy_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                   <!--  <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- Laki Sarah -->
+    <section id="laki" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Lakshmi Sarah</h2>
+                <p><strong>"</strong> I learned that sometimes school lunches can be really yummy. I also learned that kids are incredibly hard to interview.<strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+                <!-- Laki Sarah-->
+    <section id="laki" class="content-section text-center">
+        <div class="laki_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                   <!--  <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <section id="about" class="container content-section text-center">
+        <div class="row">
+                <iframe src="//player.vimeo.com/video/110217543" width="1200" height="800" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+        </div>
+    </section>
+
+            <!-- Ethan Bien< -->
+    <section id="ethan" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Ethan Bien</h2>
+                <p><strong>"</strong>This was my first work on assignment. Ed helped me translate a fairly weird piece of science news into what I feel was an engaging, relevant piece about the future of the oceans in a climate-changed world.<strong>"</strong> </p>
+            </div>
+        </div>
+    </section>
+
+                <!--Ethan Bien-->
+    <section id="ethan" class="content-section text-center">
+        <div class="ethan_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <!--   <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Ed -->
+    <section id="ed" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Eddie's tips on writing, life and everything in between</h2>    
+
+                <div>
+                    <br> <br>
+                    <p id="myBox">
+                     
+                    </p> 
+                    <p> - Ed Dobb </p>
+                </div>
+
+                
+                
+                <a href="javascript:getQuote()">
+                    <button type="button" class="btn btn-primary">click here</button>
+                </a>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!--Ed  -->
+    <section id="ed" class="content-section text-center">
+        <div class="ed_pic">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                   <!--  <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Download Section -->
+
+<!--     <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+
+<!--     <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Map Section -->
+
+<!--     <div id="map"></div> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; J200 Showcase: Enviro Group</p>
+            <p>Produced by J200 Enviro Group</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
