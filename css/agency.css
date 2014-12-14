@@ -4,6 +4,50 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* h4.cv{
+    margin:5px;
+ }*/
+
+ .cv-title{
+
+    font-family: "Helvetica Neue";
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 28px;
+    font-weight:800;
+    color: #515151;
+
+ }
+
+ h4{
+    font-family:avenir next;
+    font-size:20px;
+    font-weight:600;
+    color: #515151;
+ }
+
+ h5{
+   color:  #727272;
+   font-size:16px;
+   font-weight:400;
+ }
+
+
+h6{
+    font-family:avenir next;
+    color: #777;
+
+}
+
+li{
+    color: #777;
+    font-family:avenir next;
+    margin:5px;
+    margin-top: 5px;
+    font-size:16px;
+
+}
+
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -33,6 +77,8 @@ h1.second{
     color: inherit;
     font-size:50px;
     font-weight:300;
+    font-family: Helvetica Neue;
+    margin-bottom: 25px;
 
 }
 
@@ -234,7 +280,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     /*text-transform: uppercase;*/
-    font-size: 18px;
+    font-size: 16px;
     font-family: sans-serif,"avenir next",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 1000;
     letter-spacing: 1px;
@@ -294,10 +340,10 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-color: #2d2522;
+    background-color: #010101;
     opacity:0.85;
-    /*background-image: url("https://ununsplash.imgix.net/reserve/D9xlw7UxTBqQw5sLf8cJ_reef%20insp-72.jpg?q=75&fm=jpg&s=a46f72e373f7af2b3bba993f565e24be" );*/
-    background-position: center center;
+/*    background-image: url("https://ununsplash.imgix.net/reserve/D9xlw7UxTBqQw5sLf8cJ_reef%20insp-72.jpg?q=75&fm=jpg&s=a46f72e373f7af2b3bba993f565e24be" );
+*/    background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -357,9 +403,9 @@ section {
 
 section h2.section-heading {
 
-    font-family: Helvetica Neue;
+    font-family: "Helvetica Neue";
     margin-top: 0;
-    margin-bottom: 15px;
+
     font-size: 35px;
     font-weight:800;
 }
