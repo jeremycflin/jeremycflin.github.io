@@ -105,7 +105,7 @@ opacity: 0.9; }
 
 var margin = {top: 80, right: 140, bottom: 60, left: 80},
     width = 1400 - margin.left - margin.right,
-    height = 870 - margin.top - margin.bottom;
+    height = 850 - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%Y").parse,
     bisectDate = d3.bisector(function(d) { return d.date; }).left,
@@ -497,7 +497,7 @@ d3.csv("data_3.csv", function(error, data) {
             d3.select("svg")
             .append("text")
             .attr("x",10)
-            .attr("y",860)
+            .attr("y",840)
             .text("Produced by Jeremy C.F. Lin")
             .style({"font-size":"12px", 
                 "font-family":"avenir next",
@@ -508,7 +508,7 @@ d3.csv("data_3.csv", function(error, data) {
             d3.select("svg")                
             .append("text")
             .attr("x", 10)
-            .attr("y", 845)
+            .attr("y", 825)
             .text("Data source: http://energyalmanac.ca.gov/electricity/")        
             .style({"font-size":"12px", 
                 "font-family":"avenir next",
@@ -519,37 +519,37 @@ d3.csv("data_3.csv", function(error, data) {
             d3.select("svg")                
             .append("text")
             .attr("x", 1263)
-            .attr("y", 728)
+            .attr("y", 708)
             .text("Wind")  
             
             d3.select("svg")                
             .append("text")
             .attr("x", 1263)
-            .attr("y", 753)
+            .attr("y", 733)
             .text("Direct Coal Imports")  
 
             d3.select("svg")                
             .append("text")
             .attr("x", 1263)
-            .attr("y", 770)
+            .attr("y", 750)
             .text("Biomass")  
 
             d3.select("svg")                
             .append("text")
             .attr("x", 1263)
-            .attr("y", 785)
+            .attr("y", 765)
             .text("Solar") 
 
             d3.select("svg")                
             .append("text")
-            .attr("x", 1263)
-            .attr("y", 800)
+            .attr("x", 123)
+            .attr("y", 780)
             .text("Oil")  
 
             d3.select("svg")                
             .append("text")
             .attr("x", 1263)
-            .attr("y", 815)
+            .attr("y", 795)
             .text("Other") 
 
 
