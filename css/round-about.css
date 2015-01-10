@@ -41,7 +41,8 @@ footer {
 }
 
 .social{
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 90px;
 }
 
 .img-responsive:hover {
@@ -130,7 +131,7 @@ li{
 
 .cv-title{
     font-weight: 800;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Oswald', sans-serif;
     color:  #337ab7;
 }
