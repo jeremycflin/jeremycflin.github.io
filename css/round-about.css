@@ -1,0 +1,198 @@
+/*!
+ * Start Bootstrap - Round About HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px;
+     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+     background-color: #fbfbfb;
+}
+
+.img-center {
+	margin:  0 auto;
+}
+
+
+footer {
+    margin: 50px 0;
+}
+
+
+.page-header-portfolio {
+    text-align: center;
+    color: #fbfbfb;
+}
+
+
+.img-responsive {
+           height:100%;
+           width:100%;
+        }
+
+.portfolio{
+  /*  height:130px;*/
+    padding-top: 20px;
+    margin-top:20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+
+}
+
+.social{
+    margin-top: 30px;
+}
+
+.img-responsive:hover {
+    opacity: 0.5;
+    background-color: #fec503;
+    border-color: #f6bf01;
+    color: #fff;
+}
+
+#portfolio {
+    position: absolute;
+    bottom: 0px;
+    background: #fff;
+    width: 100%;
+}
+
+.portfolio p{
+    font-family:'Archivo Narrow' ,Open Sans Condensed, Avenir Next LT Pro,Jaapokki enchance, Anders;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color:#337ab7;
+}
+
+.portfolio p1{
+    font-family: 'Open Sans', sans-serif;, District Pro;
+    color: #9c9fa0;
+    font-weight: 600;
+    color: #9c9fa0;
+    font-size:18px;
+}
+
+.font1{
+    font-weight: 800;
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: #337ab7;
+}
+
+.font2{
+    font-weight: 800;
+    font-size: 60px;
+    font-family: 'Oswald';
+    text-align: center;
+    color: #556270;
+}
+
+/*p.portfolio{
+
+            font-weight: 600;
+            color: #9c9fa0;
+            font-size:15px;
+            font-family: 'Open Sans', sans-serif;, District Pro,Elegant Lux, Dense,Code Light, Avenir Next LT Pro;
+}*/
+
+li{
+    font-weight: 600;
+    color: #9c9fa0;
+    font-size:18px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: 'Open Sans', sans-serif;, District Pro,Elegant Lux, Dense,Code Light, Avenir Next LT Pro;
+
+}
+
+.cv1{
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'Archivo Narrow';
+    color: #556270;
+
+}
+
+
+.cv2{
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    color:  #7c7f80;
+    margin:1px;
+    margin-bottom: 1px;
+}
+
+.cv-title{
+    font-weight: 800;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    color:  #337ab7;
+}
+
+
+header {
+    text-align: center;
+    color: #337ab7;
+/*    background-attachment: scroll;
+    background-color: white;
+    opacity:0.85;
+	background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;*/
+/*    font-family:'News Cycle', sans-serif;*/
+    font-weight: 800;
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.page-header2 {
+  padding-bottom: 1px;
+  border-bottom: 2px solid #eee;
+}
+
+/*header .intro-text {
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}*/
+
+/*header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}*/
+
+/*header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}*/
+
+p.introduction{
+            font-weight: 600;
+            color: #9c9fa0;
+            font-size:23px;
+            font-family: 'Open Sans', sans-serif;,District Pro,Elegant Lux, Dense,Code Light, Avenir Next LT Pro;
+            /*color: #3e3e3e;*/
+}
+
+.container {
+                padding: 15px;
+                width:1100px;
+                margin-left:auto;
+                margin-right:auto;
+                border:10px ;
+}
