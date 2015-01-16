@@ -186,9 +186,6 @@ var valueline13 = d3.svg.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.other_imports ); });
 
-
-
-
 var svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -476,7 +473,7 @@ d3.csv("data_3.csv", function(error, data) {
             .append("text")
             .attr("x", 10)
             .attr("y", 40)
-            .text("California Electrical Energy Production Breakdown")        
+            .text("California Electrical Energy Production Breakdown, Visualized")        
             .style({"font-size":"28px", 
                 "font-family":"Helvetica",
                 "font-weight":"600",
@@ -487,10 +484,10 @@ d3.csv("data_3.csv", function(error, data) {
             .append("text")
             .attr("x", 13)
             .attr("y", 65)
-            .text("Hover your mouse on each energy source to see quantities of sources per year")        
-            .style({"font-size":"15px", 
+            .text("Hover your mouse on each energy source to see more details")        
+            .style({"font-size":"20px", 
                 "font-family":"Helvetica",
-                "font-weight":"500",
+                "font-weight":"400",
                 "opacity":"0.65",
                 });
 
@@ -525,7 +522,7 @@ d3.csv("data_3.csv", function(error, data) {
             d3.select("svg")                
             .append("text")
             .attr("x", 1263)
-            .attr("y", 713)
+            .attr("y", 718)
             .text("Direct Coal Imports")  
 
             d3.select("svg")                
@@ -552,6 +549,92 @@ d3.csv("data_3.csv", function(error, data) {
             .attr("y", 775)
             .text("Other") 
 
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",345)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text(" Other Imports include power plants locatd")
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",360)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("physically out-of-state as following:")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",375)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Intermountain Power Plant (coal) in Utah,")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",390)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Mohave Generation Station (coal) in Nevada,")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",405)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Terra-Gen Dixie Valley plant (geothermal)")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",420)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Desert Star Plant (natural gas) in Nevada,")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",435)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Termoelectrica de Mexicali Plant and")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",450)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("InterGen's La Rosita Plant (natural gas)")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",465)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("both of which are in Mexico.")
+
+            
+
+      
+
+
+       
 
 
 
