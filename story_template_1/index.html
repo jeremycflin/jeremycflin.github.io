@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+    
+    
+
+    
+    
+
+    <!--jQuery-->
+    <script src="jquery-1.11.2.min.js"></script>
+    
+    
+    
+    
+
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    
+  
+    
+    <script src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js'></script>
+    <script src='data/seismic_risk.js'></script>
+    <script src='src/leaflet.ajax.min.js'></script>
+    <script src='src/date.format.js'></script>
+    <script src='http://code.jquery.com/jquery.min.js'></script>
+    
+    
+    
+    
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+            
+/*navigation css*/
+        
+        
+           li {
+            font-family: 'Crimson Text', serif;
+            font-weight: 400;
+            font-size: 18px;
+             
+   }
+        
+        
+/*content css*/
+        
+        #header {
+            background-image: url(assets/images/opening.jpg);
+            color: white;
+            min-height: 800px;
+            background-size: cover;
+            background-position: bottom;
+            background-attachment: fixed;
+            padding-top: 250px;
+
+        }
+        
+        #header h1 {
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            font-size: 70px;
+        }
+        
+        #header h2 {
+            font-family: 'Crimson Text', serif;
+            font-weight: 200;
+        }
+        
+        body{
+            background-color: #fdfcfc;
+        }
+        
+        #quote {
+            font-family: 'Crimson Text', serif;
+            font-size: 36px;
+            padding: 100px 0px;
+            font-style: italic;
+        }
+        
+        #byline {
+            font-size: 25px;
+        }
+        
+        #story {
+            background-color: #fdfcfc;
+        }
+        
+        #story p{
+            line-height: 46px;
+            font-family: Georgia;
+            font-weight: 400px;
+            font-size:1.2em;
+            padding:10px, 0px, 30px, 0px;
+            
+        }
+        
+        #story h1{
+            font-family: 'Libre Baskerville ', serif;
+            font-style: italic;
+            font-size: 50px;
+            font-weight: 600px;
+            color: #39454b;
+            margin-bottom: 30px;
+            margin-top:30px;
+        }
+        
+        #collage-img-1 img {
+            width: 50%;
+            height: auto;
+            /* margin: 200px 10px 10px 0px; */
+            float:left;
+            padding: 10px;
+        }
+        
+        
+        #collage-img-2 img {
+            height: auto;
+            margin: 0;
+            width: 50%;
+            padding:10px
+
+        }
+        
+        #collage-img-3 img {
+            width: 50%;
+            height: auto;
+            /* margin: 200px 10px 10px 0px; */
+            float:left;
+            padding: 10px;
+            margin-top: 10px
+            
+            
+        }
+        
+        #collage-img-4 img {
+            height: auto;
+            margin: 0;
+            width: 50%;
+            margin-top: -230px;
+            padding:10px
+        }
+        
+        #video {
+            min-height: 800px;
+            background-size: cover;
+            background-position: bottom;
+            background-attachment: fixed;
+            padding-top: 250px;
+        }
+
+        #chapter2{
+
+            margin-right: 10px;
+
+        }
+        
+        
+
+        
+/*data viz css        */
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #262626;
+          shape-rendering: crispEdges;
+        }
+
+        .bar {
+          fill: #853b62;
+        }
+
+        .bar:hover {
+          fill: #e769ab ;
+        }
+
+        /*#e14497
+        */
+
+        .x.axis path {
+          display: none;
+        }
+
+        .y.axis line{
+          stroke: #fdfdfd;
+          stroke-width:2.5px;
+        }
+
+        .d3-tip {
+          line-height: 1;
+          font-weight: bold;
+          padding: 12px;
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+          box-sizing: border-box;
+          display: inline;
+          font-size: 15px;
+          width: 100%;
+          line-height: 1;
+          color: rgba(0, 0, 0, 0.8);
+          content: "\25BC";
+          position: absolute;
+          text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+          margin: -1px 0 0 0;
+          top: 100%;
+          left: 0;
+        }
+
+        .graph-svg-component {
+            background-color:#fdfdfd;
+
+        } 
+        
+        
+
+/*table*/
+        
+
+    #table{
+        font: 12px/1.4 Arial, Helvetica, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 10px;
+        padding-bottom: 0px;
+        background-color: #fbfaf7;
+    }    
+
+    table {
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0 0 11px 0;
+        width: 100%;
+    }
+
+    table th {
+        text-align: left;
+        border-bottom: 2px solid #eee;
+        vertical-align: bottom;
+        padding: 0 10px 10px 10px;
+        text-align: right;
+    }
+
+    table td {
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        padding: 10px;
+        text-align: right;
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        text-align: left;
+        padding-left: 0;
+        font-weight: bold;
+    }        
+        
+        
+/* responsive table */
+@media screen and (max-width: 480px) {
+    table,
+    tbody {
+        display: block;
+        width: 100%;
+    } 
+    
+ thead { display: none; }    
+    
+    
+    table tr,
+    table th,
+    table td {
+        display: block;
+        padding: 0;
+        text-align: left;
+        white-space: normal;
+    }
+    
+    
+table tr {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 11px;
+        margin-bottom: 11px;
+    }    
+
+    
+    table th[data-title]:before,
+    table td[data-title]:before {
+        content: attr(data-title) ":\00A0";
+        font-weight: bold;
+    }
+    
+    table td {
+        border: none;
+        margin-bottom: 6px;
+        color: #444;
+    }
+    
+    table td:empty { display: none; }    
+    
+      table td:first-child {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        color: #333;
+    }
+    table td:first-child:before { content: ''; }
+    
+    
+
+    
+    
+
+    
+
+
+
+    
+    
+    
+    
+
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">   
+                    <li>
+                        <a href="#chapter1">Chapter I </a>
+                    </li>
+                    <li>
+                        <a href="#chapter2">Chapter II </a>
+                    </li>
+                    <li>
+                        <a href="#chapter3">Chapter III </a>
+                    </li>
+                    <li>
+                        <a href="#chapter4">Chapter IV </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    
+<!--    chapter 1-->
+    <div id="header" class="container-fluid">
+
+        <h1 class="text-center">Hello, world!</h1>
+        <h2 class="text-center">Here's a description of our project</h2>
+
+    </div>
+
+
+
+    <div id="quote" class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <p class="text-center">
+                    "If you only read the books that everyone else is reading, you can only think what everyone else is thinking."
+                </p>
+                <p id="byline" class="text-right"> Haruki Murakami</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--      Story body-->
+    <div id="story" class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                
+                <div id="chapter1" class="container-fluid">    
+                   <div class="col-sm-9 col-sm-offset-1">
+                    <IMG SRC="assets/images/chapter1.gif" ALT="some text" align="left" > 
+                        <h1 >Headline of my story</h1>
+                    </div>
+                </div>
+                
+                    <!--<h1 class="text-center">Headline of my story</h1>-->
+                
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id pretium leo. Pellentesque luctus massa non elit viverra pellentesque. Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem. Vivamus vehicula dignissim augue et scelerisque. Etiam quam nisi, molestie ac dolor in, tincidunt tincidunt arcu. Praesent sed justo finibus, fringilla velit quis, porta erat. Donec blandit metus ut arcu iaculis iaculis. Cras nec dolor fringilla justo ullamcorper auctor. Aliquam eget pretium velit. Morbi urna justo, pulvinar id lobortis in, aliquet placerat orci.</p><br>
+
+                <p>Etiam nisi turpis, eleifend nec tellus id, efficitur pellentesque dolor. Proin vitae massa a augue sagittis vulputate. Duis vel fringilla magna, sit amet vestibulum enim. Fusce laoreet accumsan nisl eu sagittis. Morbi hendrerit sapien eget efficitur imperdiet. Aenean vitae nisl id est placerat congue a et nisi. Suspendisse vitae quam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse eu risus lacus. Ut tristique libero eget est dictum, commodo malesuada orci elementum. Proin molestie eu mi in tempus.</p><br>
+
+                <p>In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p><br>
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+                
+ 
+                    
+                    
+                    
+                    
+                    
+                    
+                <div id="collage-img-1">
+                    <img src="https://unsplash.imgix.net/photo-1416184008836-5486f3e2cf58?dpr=2&fit=crop&fm=jpg&h=1600&q=75&w=1050" width="797" height="1200" alt="place holder">
+                </div>
+                
+                <div id="collage-img-2">
+                    <img src="https://ununsplash.imgix.net/photo-1413913619092-816734eed3a7?dpr=2&fit=crop&fm=jpg&h=600&q=75&w=1050" width="1200" height="785" alt="place holder">
+                </div>
+                
+                <div id="collage-img-3">
+                    <img src="https://unsplash.imgix.net/reserve/yapfjxRqy2d2rGRNc2yQ_zavrsnica-9-indie.jpg?dpr=2&fit=crop&fm=jpg&h=1600&q=75&w=1050" width="797" height="1200" alt="place holder">
+                </div>
+                
+                 <div id="collage-img-4">
+                    <img src="https://ununsplash.imgix.net/photo-1417021423914-070979c8eb34?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050" width="1200" height="785" alt="place holder">
+                </div>
+
+                    <br><br>
+                <p>Cras aliquet sit amet ante non blandit. Nunc eu efficitur lacus, id blandit tortor. Aenean nulla odio, consectetur ac tellus vitae, lacinia hendrerit dolor. Ut ligula leo, lobortis sed nibh eget, accumsan bibendum tellus. In eros diam, venenatis tempus venenatis ac, elementum nec mi. Nulla tristique tellus et lacus pellentesque, a feugiat sapien scelerisque. Integer et sollicitudin mauris, non varius velit. Integer ut auctor nulla. Sed eget neque faucibus, egestas neque et, aliquam lectus. Aenean id rutrum tellus, sed elementum justo. Nunc ac erat ut eros congue rhoncus. Vestibulum lectus lacus, consectetur vitae nisi sed, rutrum rutrum tellus.</p><br>
+
+                <p>Nulla sollicitudin malesuada ipsum sit amet elementum. Aenean viverra erat a enim consequat dignissim. Aliquam aliquet fringilla nibh, sit amet consectetur turpis convallis vel. Etiam sit amet dignissim nibh, a consectetur tortor. Nunc faucibus aliquet nisi, eget elementum nisi imperdiet rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi elementum euismod massa, vitae scelerisque arcu malesuada eget. Vivamus varius finibus purus sed posuere.</p><br>
+                
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id pretium leo. Pellentesque luctus massa non elit viverra pellentesque. Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem. Vivamus vehicula dignissim augue et scelerisque. Etiam quam nisi, molestie ac dolor in, tincidunt tincidunt arcu. Praesent sed justo finibus, fringilla velit quis, porta erat. Donec blandit metus ut arcu iaculis iaculis. Cras nec dolor fringilla justo ullamcorper auctor. Aliquam eget pretium velit. Morbi urna justo, pulvinar id lobortis in, aliquet placerat orci.</p><br><br><br>
+
+
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="video_main" class="container-fluid">    
+        
+    <iframe src="//player.vimeo.com/video/110170664?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="646.019" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        
+    </div>
+        <br><br><br>
+    
+
+    
+<!--Chapter2-->
+    
+    
+     <div id="story" class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                
+                
+                <div id="chapter2" class="container-fluid">    
+                   <div class="col-sm-10 col-sm-offset-1">
+                    <IMG SRC="assets/images/chapter2.gif" ALT="some text" align="left">
+                        <h1>Headline of my story</h1>
+                    </div>
+                </div>
+                    
+                    <!--<h1 class="text-center">Headline of my story</h1>-->
+                
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id pretium leo. Pellentesque luctus massa non elit viverra pellentesque. Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem. Vivamus vehicula dignissim augue et scelerisque. Etiam quam nisi, molestie ac dolor in, tincidunt tincidunt arcu. Praesent sed justo finibus, fringilla velit quis, porta erat. Donec blandit metus ut arcu iaculis iaculis. Cras nec dolor fringilla justo ullamcorper auctor. Aliquam eget pretium velit. Morbi urna justo, pulvinar id lobortis in, aliquet placerat orci.</p><br>
+
+                <p>Etiam nisi turpis, eleifend nec tellus id, efficitur pellentesque dolor. Proin vitae massa a augue sagittis vulputate. Duis vel fringilla magna, sit amet vestibulum enim. Fusce laoreet accumsan nisl eu sagittis. Morbi hendrerit sapien eget efficitur imperdiet. Aenean vitae nisl id est placerat congue a et nisi. Suspendisse vitae quam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse eu risus lacus. Ut tristique libero eget est dictum, commodo malesuada orci elementum. Proin molestie eu mi in tempus.</p><br><br>
+                    
+                                        
+
+<!--table -->
+         
+         <div id="table">
+         <table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+        </tr>
+    </thead>
+    <tr>
+        <td data-title="Category">Total (16 years and over)</td>
+        <td data-title="January">6.6</td>
+        <td data-title="February">6.7</td>
+        <td data-title="March">6.7</td>
+    </tr>
+    <tr>
+        <td data-title="Category">Less than a high school diploma</td>
+        <td data-title="January">9.6</td>
+        <td data-title="February">9.8</td>
+        <td data-title="March">9.6</td>
+    </tr>
+    <tr>
+        <td data-title="Category">High school graduates, no college</td>
+        <td data-title="January">6.5</td>
+        <td data-title="February">6.4</td>
+        <td data-title="March">6.3</td>
+    </tr>
+    <tr>
+        <td data-title="Category">Some college or associate degree</td>
+        <td data-title="January">6.0</td>
+        <td data-title="February">6.2</td>
+        <td data-title="March">6.1</td>
+    </tr>
+    <tr>
+        <td data-title="Category">Bachelor&rsquo;s degree and higher</td>
+        <td data-title="January">3.2</td>
+        <td data-title="February">3.4</td>
+        <td data-title="March">3.4</td>
+    </tr>
+</table>
+</div>    
+                    
+    
+                    var margin = {top: 40, right: 20, bottom: 100, left: 40},
+                    width = 450 - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom;
+
+               <br><br><p>In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p><br>
+                     
+                    
+            <!--    data viz code            -->
+                    
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>  
+     
+<script>        
+var margin = {top: 40, right: 20, bottom: 100, left: 500},
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+        
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+        
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Number of Gas Plants:</strong> <span style='color:red'>" + d.value + "</span>";
+  })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("class", "graph-svg-component")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+
+svg.call(tip);
+        
+d3.tsv("data2.tsv", type, function(error, data) {
+  x.domain(data.map(function(d) { return d.name; }));
+  y.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .selectAll("text")
+      .attr("y", 0)
+      .attr("x", 9)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(90)")
+      .style("text-anchor", "start");;
+
+  svg.selectAll(".bar")
+      .data(data)
+      .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.name); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.value); })
+      .attr("height", function(d) { return height - y(d.value); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+      svg.append("g")
+      .attr("class", "y axis")
+      .call((yAxis).scale(y).innerTickSize (-height))
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 8)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Number of Gas Plants")
+      .style("font-weight",500);
+
+      });
+
+      function type(d) {
+      d.value = +d.value;
+      return d;
+      }
+
+</script>
+ 
+                    
+                    
+                    
+            </div>
+        </div>
+    </div>
+         
+         
+         <!--Chapter3-->
+                 
+                                              
+    <br><br>
+     <div id="story" class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                
+                
+                <div id="chapter3" class="container-fluid">    
+                   <div class="col-sm-10 col-sm-offset-1">
+                    <IMG SRC="assets/images/chapter3.gif" ALT="some text" align="left">
+                        <h1>Headline of my story</h1>
+                    </div>
+                </div>
+                    
+                    <!--<h1 class="text-center">Headline of my story</h1>-->
+                
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id pretium leo. Pellentesque luctus massa non elit viverra pellentesque. Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem. Vivamus vehicula dignissim augue et scelerisque. Etiam quam nisi, molestie ac dolor in, tincidunt tincidunt arcu. Praesent sed justo finibus, fringilla velit quis, porta erat. Donec blandit metus ut arcu iaculis iaculis. Cras nec dolor fringilla justo ullamcorper auctor. Aliquam eget pretium velit. Morbi urna justo, pulvinar id lobortis in, aliquet placerat orci.</p><br>
+                    
+                    
+                     <div id="collage-img-1">
+                    <img src="https://unsplash.imgix.net/photo-1416184008836-5486f3e2cf58?dpr=2&fit=crop&fm=jpg&h=1600&q=75&w=1050" width="797" height="1200" alt="place holder">
+                </div>
+                
+                <div id="collage-img-2">
+                    <img src="https://ununsplash.imgix.net/photo-1413913619092-816734eed3a7?dpr=2&fit=crop&fm=jpg&h=600&q=75&w=1050" width="1200" height="785" alt="place holder">
+                </div>
+                
+                <div id="collage-img-3">
+                    <img src="https://unsplash.imgix.net/reserve/yapfjxRqy2d2rGRNc2yQ_zavrsnica-9-indie.jpg?dpr=2&fit=crop&fm=jpg&h=1600&q=75&w=1050" width="797" height="1200" alt="place holder">
+                </div>
+                
+                 <div id="collage-img-4">
+                    <img src="https://ununsplash.imgix.net/photo-1417021423914-070979c8eb34?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050" width="1200" height="785" alt="place holder">
+                </div>
+                    
+                    
+                <br><br>    
+                <p>Etiam nisi turpis, eleifend nec tellus id, efficitur pellentesque dolor. Proin vitae massa a augue sagittis vulputate. Duis vel fringilla magna, sit amet vestibulum enim. Fusce laoreet accumsan nisl eu sagittis. Morbi hendrerit sapien eget efficitur imperdiet. Aenean vitae nisl id est placerat congue a et nisi. Suspendisse vitae quam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse eu risus lacus. Ut tristique libero eget est dictum, commodo malesuada orci elementum. Proin molestie eu mi in tempus.</p><br>
+
+                <p>In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p><br>
+                    
+                <p>In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p><br>
+                    
+                    
+                    
+            </div>
+        </div>
+    </div>
+         <div id="video_main" class="container-fluid">    
+             
+             <iframe src="//player.vimeo.com/video/118781407?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="646.019" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        
+    </div>
+         
+           
+         <!--Chapter4-->
+    
+    <br><br>
+     <div id="story" class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                
+                
+                <div id="chapter4" class="container-fluid">    
+                   <div class="col-sm-10 col-sm-offset-1">
+                    <IMG SRC="assets/images/chapter4.gif" ALT="some text" align="left">
+                        <h1>Headline of my story</h1>
+                    </div>
+                </div>
+                    
+                    <!--<h1 class="text-center">Headline of my story</h1>-->
+                
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet malesuada feugiat. Curabitur fermentum bibendum nulla, non dictum ipsum tincidunt non. Quisque convallis pharetra tempor. Donec id pretium leo. Pellentesque luctus massa non elit viverra pellentesque. Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui. Fusce in urna sem. Vivamus vehicula dignissim augue et scelerisque. Etiam quam nisi, molestie ac dolor in, tincidunt tincidunt arcu. Praesent sed justo finibus, fringilla velit quis, porta erat. Donec blandit metus ut arcu iaculis iaculis. Cras nec dolor fringilla justo ullamcorper auctor. Aliquam eget pretium velit. Morbi urna justo, pulvinar id lobortis in, aliquet placerat orci.</p><br>
+                    
+                    
+                     <div id="collage-img-1">
+                    <img src="https://unsplash.imgix.net/photo-1416184008836-5486f3e2cf58?dpr=2&fit=crop&fm=jpg&h=1600&q=75&w=1050" width="797" height="1200" alt="place holder">
+                </div>
+                
+                <div id="collage-img-2">
+                    <img src="https://ununsplash.imgix.net/photo-1413913619092-816734eed3a7?dpr=2&fit=crop&fm=jpg&h=600&q=75&w=1050" width="1200" height="785" alt="place holder">
+                </div>
+                
+                <div id="collage-img-3">
+                    <img src="https://unsplash.imgix.net/reserve/yapfjxRqy2d2rGRNc2yQ_zavrsnica-9-indie.jpg?dpr=2&fit=crop&fm=jpg&h=1600&q=75&w=1050" width="797" height="1200" alt="place holder">
+                </div>
+                
+                 <div id="collage-img-4">
+                    <img src="https://ununsplash.imgix.net/photo-1417021423914-070979c8eb34?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050" width="1200" height="785" alt="place holder">
+                </div>
+                    
+                    
+                <br><br>    
+                <p>Etiam nisi turpis, eleifend nec tellus id, efficitur pellentesque dolor. Proin vitae massa a augue sagittis vulputate. Duis vel fringilla magna, sit amet vestibulum enim. Fusce laoreet accumsan nisl eu sagittis. Morbi hendrerit sapien eget efficitur imperdiet. Aenean vitae nisl id est placerat congue a et nisi. Suspendisse vitae quam ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse eu risus lacus. Ut tristique libero eget est dictum, commodo malesuada orci elementum. Proin molestie eu mi in tempus.</p><br>
+                                          
+
+                <br><br><br><p>In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p><br>
+                    
+                <p>In hac habitasse platea dictumst. Cras augue nisl, cursus mattis mattis id, lacinia nec augue. Integer nec augue non metus interdum rhoncus. Proin non imperdiet ante. Sed mollis, justo ac dapibus auctor, tellus mi congue nisl, nec commodo ex justo ut eros. Etiam fringilla porta dolor vitae gravida. Nulla facilisi. Nam dui eros, mattis ut turpis at, eleifend accumsan odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id ultrices erat, vehicula viverra ante. Etiam sit amet dignissim tellus, ac laoreet ligula. Aenean fringilla sodales lorem, ac maximus est hendrerit in.</p>
+                    
+                    
+              
+     
+                    
+                    
+                    
+                    
+                    
+                  
+                    
+                    
+                <hr/>
+                <p class="text-center">Produced by Jeremy C.F. Lin, Jieqian Zhang, Chole Shi, Fan Fei, Jimmy Tobias</p>    
+                    <hr/>
+         
+                    
+            </div>
+        </div>
+    </div>
+         
+         
+
+         
+         
+      
+         
+         
+         
+         
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+         
+    <script type="text/javascript" src="skrollr.min.js"></script>
+    <script type="text/javascript">
+    var s = skrollr.init();
+    </script>
+</body>
+
+        
+        
+        
+       
+        
+        
+        
+</html>

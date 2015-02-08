@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>Violent Events in the Syrian Civil War</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css' />
+    <script src='http://libs.cartocdn.com/cartodb.js/v3/cartodb.js'></script>   
+
+    <style>
+        html, body { width:100%; 
+        			 height:100%; 
+        			 padding: 0; 
+        			 margin: 0;
+        			}
+        
+        #map { width: 100%;
+        	   height:100%; 
+        	   background: lightgrey;
+        	}
+        
+        #control { position: absolute; 
+        		   top: 10px; 
+        		   right:15px; 
+        		   color:black; 
+        		   font-family:Avenir Next; 
+        		   font-size:25px; 
+        		   font-weight: 600; 
+        		   background-color: white; 
+        		   opacity:0.6;
+        		   padding-top: 10px;
+        		   padding-bottom: 10px;
+        		   padding-left: 8px;
+        		   padding-right: 8px;
+
+        		}
+
+        select { font-size: 20px; 
+        		 font-family: Avenir Next;
+        		}
+        #legend{ font-size: 13px;
+                 font-weight:400;
+                 text-align: right;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id='map'></div>
+        <div id='control'>
+        <p>Violent Events in the Syrian Civil War:    
+            <select>
+                <option value='all'>2001-2013</option>
+                <option value='y2013'>First Quarter of 2013</option>
+            </select> 
+         </p>
+         <p id="legend">
+         The data documents violent events in the Syrian civil war from the start of 2011 <br>
+         to the end of the first quarter of 2013, derived from The GDELT project.<br>I followed Peter Aldhous' tutorial to build this.<br> Double click the map to zoom in.</p>
+     </div>
+
+    <script>
+
+        var map = new L.Map('map', { 
+              center: [33.5,36.3],
+              zoom: 6,
+              zoomControl: false,
+              scrollWheelZoom: false
+        });
+
+        L.tileLayer('http://a{s}.acetate.geoiq.com/tiles/acetate-hillshading/{z}/{x}/{y}.png',{
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+        }).addTo(map);
+
+
+
+        //create another layer 
+
+        var layerUrl = 'http://jeremycflin.cartodb.com/api/v2/viz/d9415bd0-9c59-11e4-bd35-0e9d821ea90d/viz.json';
+        var sublayers = [];
+
+        cartodb.createLayer(map, layerUrl)
+            .addTo(map)
+            .on('done', function(layer) {
+            // change the query for the first layer
+            var subLayerOptions = {
+              sql: 'SELECT * FROM syria_all',
+            }
+
+        var sublayer = layer.getSubLayer(0);
+
+        sublayer.set(subLayerOptions);
+
+        sublayers.push(sublayer);
+        }).on('error', function() {
+        //log the error
+        });
+
+
+        var LayerActions = {
+            all: function(){
+                sublayers[0].setSQL('SELECT * FROM syria_all');
+                return true;
+            },
+            y2013: function(){
+                sublayers[0].setSQL("SELECT * FROM syria_all WHERE datestamp BETWEEN '2012-12-31' AND '2013-3-31'");
+                return true;
+            }
+        }
+
+        $('select').change(function() {
+        $('select').removeClass('selected');
+        $(this).addClass('selected');
+        LayerActions[$(this).attr('value')]();
+        });
+
+        cartodb.createLayer(map, 'http://jeremycflin.cartodb.com/api/v2/viz/fb70ac60-9c59-11e4-8a61-0e4fddd5de28/viz.json')
+            .addTo(map);
+
+    </script>
+
+</body>
+</html>
+
+
+
+

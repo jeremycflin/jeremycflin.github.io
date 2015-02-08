@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 13px avenir next;
+  font-weight: 450;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #262626;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #853b62;
+}
+
+.bar:hover {
+  fill: #e769ab ;
+}
+
+/*#e14497
+*/
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis line{
+  stroke: #fdfdfd;
+  stroke-width:2.5px;
+}
+/*.x.axis line {
+  stroke: #fff;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}*/
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 15px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.graph-svg-component {
+    background-color:#fdfdfd;
+
+}
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var margin = {top: 40, right: 20, bottom: 100, left: 40},
+    width = 700 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
+
+// var formatPercent = d3.format(".0%");
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    // .tickFormat(formatPercent);
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Number of Gas Plants:</strong> <span style='color:red'>" + d.value + "</span>";
+  })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("class", "graph-svg-component")
+        // .style("fill","green")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+
+svg.call(tip);
+
+d3.tsv("data2.tsv", type, function(error, data) {
+  x.domain(data.map(function(d) { return d.name; }));
+  y.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .selectAll("text")
+      .attr("y", 0)
+      .attr("x", 9)
+      .attr("dy", ".35em")
+      .attr("transform", "rotate(90)")
+      .style("text-anchor", "start");;
+
+  svg.selectAll(".bar")
+      .data(data)
+      .enter().append("rect")
+        // .attr("y",450)
+        // .transition()
+        // .duration(2000)
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.name); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.value); })
+      .attr("height", function(d) { return height - y(d.value); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+      svg.append("g")
+      .attr("class", "y axis")
+      .call((yAxis).scale(y).innerTickSize (-height))
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 8)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Number of Gas Plants")
+      .style("font-weight",500);
+
+      });
+
+      // d3.select("svg")
+      //   .append("text")
+      //   .attr("x", 70)
+      //   .attr("y", 50)
+      //   .text("Gas Plants in The Bay Area")        
+      //   .style({"font-size":"40px", 
+      //           "font-family":"avenir next",
+      //           "font-weight":"700",
+      //           "opacity":"0.8",
+      //           });
+
+      function type(d) {
+      d.value = +d.value;
+      return d;
+      }
+
+</script>

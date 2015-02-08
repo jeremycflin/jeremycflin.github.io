@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <title>Gas Plants in the San Francisco Bay Area</title>
+  	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="d3-tip.js"></script>
+    <style type="text/css">
+    /* Tooltip CSS */
+    .d3-tip {
+    line-height: 1;
+    font-weight: 600;
+    font-family: avenir next;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {      
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      pointer-events: none;
+      
+    }
+
+    /* Northward tooltips */
+    .d3-tip.n:after {
+      content: "\25BC";
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Eastward tooltips */
+    .d3-tip.e:after {
+      content: "\25C0";
+      margin: -4px 0 0 0;
+      top: 50%;
+      left: -8px;
+    }
+
+    /* Southward tooltips */
+    .d3-tip.s:after {
+      content: "\25B2";
+      margin: 0 0 1px 0;
+      top: -8px;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Westward tooltips */
+    .d3-tip.w:after {
+      content: "\25B6";
+      margin: -4px 0 0 -1px;
+      top: 50%;
+      left: 100%;
+    }
+
+    text{
+      pointer-events:none;
+    }
+
+    </style>
+  </head>
+  <body>
+  <script type="text/javascript">
+
+
+    //here is this data
+    var data = [
+      {county: "Alameda",       gasplants: 11 },
+      {county: "Contra Costa",  gasplants: 4  },
+      {county: "Marin",         gasplants: 2  },
+      {county: "Napa",          gasplants: 5  },
+      {county: "San Francisco", gasplants: 28 },
+      {county: "San Mateo",     gasplants: 4  },
+      {county: "Santa Clara",   gasplants: 12 },
+       {county: "Solano",       gasplants: 8  },
+      {county: "Sonoma",        gasplants: 6  },         
+     ];
+
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d, i, a) {
+        console.log(d, i, a);
+        return "County: " + d.county + "<br><span style='color:red'>Gas Plants: " + d.gasplants + "</span>";
+      })
+
+    d3.selection.prototype.moveToFront = function() {
+      return this.each(function() {
+        this.parentNode.appendChild(this);
+      });
+    };
+
+
+
+
+		d3.xml("gas_plant_interactive_1.svg", "image/svg+xml", function(xml) {
+		  document.body.appendChild(xml.documentElement);
+
+      // d3.select("#Layer_1")
+      //   .append("text")
+      //   .attr("x", 5)
+      //   .attr("y", 40)
+      //   .text("Gas Plants in The")        
+      //   .style({"font-size":"30px", 
+      //           "font-family":"avenir next",
+      //           "font-weight":"700",
+      //           "opacity":"0.8",
+      //           });
+
+      //   d3.select("#Layer_1")
+      //   .append("text")
+      //   .attr("x", 5)
+      //   .attr("y", 80)
+      //   .text("San Francisco Bay Area")        
+      //   .style({"font-size":"30px", 
+      //           "font-family":"avenir next",
+      //           "font-weight":"700",
+      //           "opacity":"0.8",
+      //           });
+
+
+
+      d3.selectAll(".gasplants")
+        .data(data)
+        .each(function(d,i){
+
+           d3.select(this)
+              .call(tip)
+              .on("mouseover", function(d){
+
+                //console.log(d);
+
+                var gasplants = d3.select(this).moveToFront().attr("data-gasplants");
+
+                //console.log(gasplants);
+                tip.show(d);
+
+                d3.select(this)
+                  .style({"cursor":"pointer", "stroke":"red", "stroke-width":"3px"});
+              })
+              .on("mouseout", function(d){
+
+                var gasplants = d3.select(this).attr("data-gasplants");
+
+                //console.log(gasplants);
+
+                tip.hide();
+
+                d3.select(this)
+                  .style({"cursor":"pointer", "stroke":"white", "stroke-width":"1px"});
+            })
+        })       
+		});
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>Energy Production in California</title>
+    <script data-require="d3@3.4.6" data-semver="3.4.6" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+    <style>
+
+body { font: 12px avenir next;}
+
+path { 
+    stroke: #;
+    stroke-width: ;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #e7eff1;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+
+
+.graph-svg-component {
+    background-color:#e7eff1;
+    opacity:0.9;
+
+}
+
+/*div {
+        padding: 15px;
+        width:800px;
+        margin-left:auto;
+        margin-right:auto;
+          border:10px ;
+}*/
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #990000;
+  stroke: #990000;
+}
+
+.line {
+  fill: none;
+  stroke: #7ea7ba;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 1.5px;
+}
+
+.line-hover {
+  stroke: #cc6200;
+  stroke-width:4;
+}
+
+.voronoi path {
+  fill: none;
+  pointer-events: all;
+}
+
+.grid .tick{
+    stroke:white;
+    stroke-width:1.5px;
+    stroke-opacity:0.9;
+    shape-rendering: crispEdges;
+}
+
+.grid path{
+    stroke-width:0;
+}
+
+.lable{
+    font-size: 30;
+}
+
+.lable-hover{
+    font-size: 30;
+}
+
+text.shadow { stroke: white;
+stroke-width: 2.5px;
+opacity: 0.9; }
+
+
+
+
+    </style>
+  </head>
+
+<body>
+
+
+<script>
+
+var margin = {top: 80, right: 140, bottom: 60, left: 80},
+    width = 1400 - margin.left - margin.right,
+    height = 830 - margin.top - margin.bottom;
+
+var parseDate = d3.time.format("%Y").parse,
+    bisectDate = d3.bisector(function(d) { return d.date; }).left,
+    formatValue = d3.format(",.2f");
+
+var x = d3.time.scale().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(15);
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(10);
+
+
+var voronoi = d3.geom.voronoi()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.value); })
+    .clipExtent([[-margin.left, -margin.top], [width + margin.right, height + margin.bottom]]);
+
+var valueline2 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.total_hydroelectric); });
+
+var valueline3 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.nuclear); });
+
+var valueline4 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.in_state_coal); });
+
+var valueline5 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.oil); });
+
+var valueline6 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.natural_gas ); });
+
+var valueline7 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.geothermal ); });
+
+var valueline8 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.biomass ); });
+
+var valueline9 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.wind ); });
+
+var valueline10 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.solar ); });
+
+var valueline11 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.other ); });
+
+var valueline12 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.direct_coal_imports ); });
+
+var valueline13 = d3.svg.line()
+    // .interpolate("basis") 
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.other_imports ); });
+
+var svg = d3.select("body")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("class", "graph-svg-component")
+    .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+tmp = null;
+
+function make_x_axis() { return d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+        .ticks(10)
+}
+function make_y_axis() { return d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(5)
+}
+
+// Get the data
+d3.csv("data_3.csv", function(error, data) {
+    
+    var flatData = [];
+    data.forEach(function(d) {
+        d.date = parseDate(d.date);
+        // d.california_energy_production = +d.california_energy_production;
+        d.total_hydroelectric = +d.total_hydroelectric;
+        d.nuclear = +d.nuclear;
+        d.in_state_coal = +d.in_state_coal;
+        d.oil = +d.oil;
+        d.natural_gas = +d.natural_gas;
+        d.geothermal = +d.geothermal;
+        d.biomass = +d.biomass;
+        d.wind = +d.wind;
+        d.solar = +d.solar;
+        d.other = +d.other;
+        d.direct_coal_imports = +d.direct_coal_imports;
+        d.other_imports = +d.other_imports;
+        flatData.push({date: d.date, value: d.total_hydroelectric, key: "total_hydroelectric"});
+        flatData.push({date: d.date, value: d.nuclear, key: "nuclear"});
+        flatData.push({date: d.date, value: d.in_state_coal, key: "in_state_coal"});
+        flatData.push({date: d.date, value: d.oil, key: "oil"});
+        flatData.push({date: d.date, value: d.natural_gas, key: "natural_gas"});
+        flatData.push({date: d.date, value: d.geothermal, key: "geothermal"});
+        flatData.push({date: d.date, value: d.biomass, key: "biomass"});
+        flatData.push({date: d.date, value: d.wind, key: "wind"});
+        flatData.push({date: d.date, value: d.solar, key: "solar"});
+        flatData.push({date: d.date, value: d.other, key: "other"});
+        flatData.push({date: d.date, value: d.direct_coal_imports, key: "direct_coal_imports"});
+        flatData.push({date: d.date, value: d.other_imports, key: "other_imports"});
+    });
+    
+    // Scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+    y.domain([0, d3.max(data, function(d) { return Math.max( d.total_hydroelectric, d.nuclear,d.in_state_coal, d.oil, d.natural_gas); })]) 
+
+    // Add the valueline path.
+    // svg.append("path")       
+    //  .attr("class", "line")
+    //  .attr("d", valueline1(data));
+
+    svg.append("g")
+        .attr("class", "grid")
+        .attr("transform", "translate(0," + height + ")")
+        .call(make_x_axis()
+            .tickSize(-height, 0, 0)
+            .tickFormat("")
+        )
+    svg.append("g")
+        .attr("class", "grid")
+        .call(make_y_axis()
+            .tickSize(-width, 0, 0)
+            .tickFormat("")
+        )
+
+
+
+    svg.append("path")      
+        .attr("class", "line total_hydroelectric") 
+        .attr("d", valueline2(data));
+
+    svg.append("path")      
+        .attr("class", "line nuclear")  
+        .attr("d", valueline3(data));
+
+    svg.append("path")      
+        .attr("class", "line in_state_coal")
+        .attr("d", valueline4(data));
+
+    svg.append("path")      
+        .attr("class", "line oil")  
+        .attr("d", valueline5(data));
+
+    svg.append("path")      
+        .attr("class", "line natural_gas")  
+        .attr("d", valueline6(data));
+
+    svg.append("path")      
+        .attr("class", "line geothermal")      
+        .attr("d", valueline7(data));
+
+    svg.append("path")      
+        .attr("class", "line biomass")      
+        .attr("d", valueline8(data));
+
+    svg.append("path")      
+        .attr("class", "line wind")
+        .attr("d", valueline9(data));
+
+    svg.append("path")      
+        .attr("class", "line solar")      
+        .attr("d", valueline10(data));
+
+    svg.append("path")      
+        .attr("class", "line other")      
+        .attr("d", valueline11(data));
+
+    svg.append("path")      
+        .attr("class", "line direct_coal_imports")  
+        .attr("d", valueline12(data));
+
+    svg.append("path")      
+        .attr("class", "line other_imports")      
+        .attr("d", valueline13(data));
+
+    svg.append("g")         // Add the X Axis
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")         // Add the Y Axis
+        .attr("class", "y axis")
+        .call(yAxis);
+
+
+
+    var focus = svg.append("g")
+      .attr("class", "focus")
+      .attr("transform", "translate(-100,-100)");
+
+    focus.append("circle")
+      .attr("r", 6);
+
+    focus.append("text")
+      .attr("x", -9)
+      .attr("y",-15)
+      .attr("dy", ".35em");
+
+    svg.append("text")
+        .attr("class", "lable total_hydroelectric")
+        .attr("transform", "translate(" + (width+3) + "," + y(data[30].total_hydroelectric) + ")")
+        .attr("dy", ".35em")
+        .attr("text-anchor", "start")
+        // .style("fill", "#898989")
+        .text("Total Hydroelectric");
+
+    svg.append("text")
+        .attr("class", "lable nuclear")
+        .attr("transform", "translate(" + (width+3) + "," + y(data[30].nuclear) + ")")
+        .attr("dy", ".35em")
+        .attr("text-anchor", "start")
+        // .style("fill", "#898989")
+        .text("Nuclear");
+
+    // svg.append("text")
+    //     .attr("class", "lable in_state_coal")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].in_state_coal) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("In State Coal");
+
+    // svg.append("text")
+    //     .attr("class", "lable oil")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].oil) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("Oil");
+
+    svg.append("text")
+        .attr("class", "lable natural_gas")
+        .attr("transform", "translate(" + (width+3) + "," + y(data[30].natural_gas) + ")")
+        .attr("dy", ".35em")
+        .attr("text-anchor", "start")
+        // .style("fill", "#898989")
+        .text("Natural Gas");
+
+    svg.append("text")
+        .attr("class", "lable geothermal")
+        .attr("transform", "translate(" + (width+3) + "," + y(data[30].geothermal) + ")")
+        .attr("dy", ".35em")
+        .attr("text-anchor", "start")
+        // .style("fill", "#898989")
+        .text("Geotheral");
+
+    // svg.append("text")
+    //     .attr("class", "lable biomass")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].biomass) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("Biomass");
+
+    // svg.append("text")
+    //     .attr("class", "lable wind")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].wind) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("Wind");
+
+    // svg.append("text")
+    //     .attr("class", "lable solar")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].solar) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("Solar");
+
+    // svg.append("text")
+    //     .attr("class", "lable other")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].other) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("Other");
+
+    // svg.append("text")
+    //     .attr("class", "lable direct_coal_imports")
+    //     .attr("transform", "translate(" + (width+3) + "," + y(data[30].direct_coal_imports) + ")")
+    //     .attr("dy", ".35em")
+    //     .attr("text-anchor", "start")
+    //     // .style("fill", "#898989")
+    //     .text("Direct Coal Imports");
+
+
+
+    svg.append("text")
+        .attr("class", "lable other_imports")
+        .attr("transform", "translate(" + (width+3) + "," + y(data[30].other_imports) + ")")
+        .attr("dy", ".35em")
+        .attr("text-anchor", "start")
+        // .style("fill", "#898989")
+        .text("Other Imports");
+
+    var voronoiGroup = svg.append("g")
+      .attr("class", "voronoi");
+      
+    voronoiGroup.selectAll("path")
+      .data(voronoi(flatData))
+      .enter().append("path")
+      .attr("d", function(d) { return "M" + d.join("L") + "Z"; })
+      .datum(function(d) { return d.point; })
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout);
+
+    function mouseover(d) {
+      console.log(d);
+      d3.select("."+d.key).classed("line-hover", true);
+      focus.attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")");
+      focus.select("text")
+            .text( d.value + " Gigawatt/Hours")
+            .style("font-size", "14")
+            .style("opacity", "0.75")
+            .style("font-weight",500);
+
+    }
+  
+    function mouseout(d) {
+      d3.select("."+d.key).classed("line-hover", false);
+      focus.attr("transform", "translate(-100,-100)");
+    }
+
+
+
+});
+
+
+
+ 
+        d3.select("svg")
+            .append("text")
+            .attr("x", 10)
+            .attr("y", 40)
+            .text("California Electrical Energy Production Breakdown, Visualized")        
+            .style({"font-size":"28px", 
+                "font-family":"Helvetica",
+                "font-weight":"600",
+                "opacity":"0.8",
+                });
+
+            d3.select("svg")
+            .append("text")
+            .attr("x", 13)
+            .attr("y", 65)
+            .text("Hover your mouse on each energy source to see more details")        
+            .style({"font-size":"20px", 
+                "font-family":"Helvetica",
+                "font-weight":"400",
+                "opacity":"0.65",
+                });
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",10)
+            .attr("y",820)
+            .text("Produced by Jeremy C.F. Lin")
+            .style({"font-size":"12px", 
+                "font-family":"avenir next",
+                "font-weight":"500",
+                "opacity":"0.65",
+                })
+
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 10)
+            .attr("y", 805)
+            .text("Data source: http://energyalmanac.ca.gov/electricity/")        
+            .style({"font-size":"12px", 
+                "font-family":"avenir next",
+                "font-weight":"500",
+                "opacity":"0.65",
+                });
+
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 1263)
+            .attr("y", 688)
+            .text("Wind")  
+            
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 1263)
+            .attr("y", 718)
+            .text("Direct Coal Imports")  
+
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 1263)
+            .attr("y", 730)
+            .text("Biomass")  
+
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 1263)
+            .attr("y", 745)
+            .text("Solar") 
+
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 1263)
+            .attr("y", 760)
+            .text("Oil")  
+
+            d3.select("svg")                
+            .append("text")
+            .attr("x", 1263)
+            .attr("y", 775)
+            .text("Other") 
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",345)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text(" Other Imports include power plants locatd")
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",360)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("physically out-of-state as following:")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",375)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Intermountain Power Plant (coal) in Utah,")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",390)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Mohave Generation Station (coal) in Nevada,")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",405)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Terra-Gen Dixie Valley plant (geothermal)")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",420)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Desert Star Plant (natural gas) in Nevada,")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",435)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("Termoelectrica de Mexicali Plant and")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",450)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("InterGen's La Rosita Plant (natural gas)")
+
+
+            d3.select("svg")
+            .append("text")
+            .attr("x",1190)
+            .attr("y",465)
+            .style("opacity",0.7)
+            .style("font-size",10)
+            .text("both of which are in Mexico.")
+
+            
+
+      
+
+
+       
+
+
+
+
+      </script>
+  </body>
+
+</html>
