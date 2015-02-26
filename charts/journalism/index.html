@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <script src="lib/d3.js"></script>
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/underscore.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+	<title>Reporter/Editor Salaries Compare and Contrast</title>
+
+
+	<style>
+	  body {
+	    padding-left: 50px;
+	    font-family: avenir next,"Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		line-height: 1.428571429;
+		color: black;
+		background-color:#e7eff1;
+	  }
+
+	  circle {
+/*	    stroke: white;
+	    stroke-width: 1px;*/
+	    opacity: .8;
+	  }
+	  .btn-group {
+	    margin-left: 330px;
+	  }
+	  .label {
+	    fill: black;
+	    font-size: 13px;
+	    font-weight: 600;
+
+	  }
+
+	  .row{
+	  	margin-top: -15px;
+	  	margin-left: -250px;
+	  	margin-bottom: 40px;
+	  }
+
+	  .popover{
+	  	background-color: #fdfcfc;
+	  	font-size: 12px;
+	  }
+
+	  .title{
+	  	margin-left:80px;
+	  	margin-top:30px;
+	  }
+
+	  .title h1{
+	  	font-family:"Libre Baskerville", Helvetica, Arial, sans-serif;
+	  	font-weight: 1000px;
+	  	opacity: 0.8;
+	  	margin-bottom: -10px;
+
+	  }
+
+	  .title h2{
+	  	font-family:"Crimson Text", Helvetica, Arial, sans-serif;
+	  	font-weight: 800px;
+	  	opacity: 0.8;
+	  	font-size: 16px;
+	  	margin-bottom: -10px;
+	  }
+
+	  .title h3{
+	  	font-family:"Crimson Text", Helvetica, Arial, sans-serif;
+	  	font-weight: 600px;
+	  	opacity: 0.7;
+	  	font-size: 14px;
+	  	margin-bottom: 30px;
+	  }
+
+	  #chart{
+	  	margin-top: -30px;
+	  }
+
+
+
+
+	</style>
+
+</head>
+<body>
+<div class="title">
+	<h1>Reporter/Editor Salaries</br> Compare and Contrast</h1>
+	<h2>Journalists' pay has been heavily discuessed on the internet.</br> Here's a simple visualization comparing journalists and editors' salaries to the average Americans.</br>
+	Data is from May 2013 and is available to view on Bureau of Labor Statistics' website.	
+	</h2>
+	<h3>Produced by Jeremy C.F. Lin</h3>
+
+
+</div>
+<div class="row">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active" id="make,">
+          <input type="radio" name="options"> Total employment
+        </label>
+        <label class="btn btn-primary" id="type">
+          <input type="radio" name="options"> Type
+        </label>
+        <label class="btn btn-primary" id="annual_mean_wage">
+          <input type="radio" name="options"> Annual Mean Wage
+        </label>
+      </div>
+</div>
+<div id="chart"></div>
+
+
+<script>
+
+d3.csv("data.csv", function(error,data){
+
+	var width = 900, height = 900;
+ // var margin = {top: 80, right: 140, bottom: 60, left: 80},
+ //    width = 1000 - margin.left - margin.right,
+ //    height =1000 - margin.top - margin.bottom;
+    var fill = d3.scale.ordinal().range(['#ed7e4c','#b64e85','#4682B4'])
+    var svg = d3.select("#chart").append("svg")
+    			.attr("width",width)
+    			.attr("height", height);
+
+    for (var k = 0; k < data.length; k ++){
+
+    	data[k].radius = +data[k].hourly_mean_wage * 2.5;
+    	data[k].x = Math.random() * width;
+    	data[k].y = Math.random() * height;
+    }
+
+    var padding = 2;
+    var maxRadius = d3.max(_.pluck(data, 'radius'));
+
+    var getCenters = function (vname, size) {
+	var centers, map;
+	  centers = _.uniq(_.pluck(data, vname)).map(function (d) {
+	    return {name: d, value: 1};
+	  });
+
+
+	map = d3.layout.treemap().size(size).ratio(1/1);
+          map.nodes({children: centers});
+
+          return centers;
+        };
+
+    var nodes = svg.selectAll("circle")
+      .data(data);
+
+    nodes.enter().append("circle")
+      .attr("class", "node")
+      .attr("cx", function (d) { return d.x; })
+      .attr("cy", function (d) { return d.y; })
+      .attr("r", function (d) { return d.radius; })
+      .style("fill", function (d) { return fill(d.type); })
+      .on("mouseover", function (d) { showPopover.call(this, d); })
+      .on("mouseout", function (d) { removePopovers(); })
+
+    var force = d3.layout.force();
+
+    draw('Total employment');
+
+	$( ".btn" ).click(function() {
+  	draw(this.id);
+	});
+
+	function draw (varname) {
+  	var centers = getCenters(varname, [800, 800]);
+  	force.on("tick", tick(centers, varname));
+  	labels(centers)
+  	force.start();
+        	}
+
+    function tick (centers, varname) {
+      var foci = {};
+      for (var i = 0; i < centers.length; i++) {
+        foci[centers[i].name] = centers[i];
+      }
+      return function (e) {
+        for (var i = 0; i < data.length; i++) {
+          var o = data[i];
+          var f = foci[o[varname]];
+          o.y += ((f.y + (f.dy / 2)) - o.y) * e.alpha;
+          o.x += ((f.x + (f.dx / 2)) - o.x) * e.alpha;
+        }
+        nodes.each(collide(.11))
+          .attr("cx", function (d) { return d.x; })
+          .attr("cy", function (d) { return d.y; });
+      }
+    }
+
+
+	function labels (centers) {
+	          svg.selectAll(".label").remove();
+
+	          svg.selectAll(".label")
+	          .data(centers).enter().append("text")
+	          .attr("class", "label")
+	          .text(function (d) { return d.name })
+	          .attr("transform", function (d) {
+	            return "translate(" + (d.x + (d.dx / 2)) + ", " + (d.y + 20) + ")";
+	          });
+	        }
+
+	        function removePopovers () {
+	          $('.popover').each(function() {
+	            $(this).remove();
+	          }); 
+	        }
+
+	        function showPopover (d) {
+	          $(this).popover({
+	            placement: 'auto top',
+	            container: 'body',
+	            trigger: 'manual',
+	            html : true,
+	            content: function() { 
+	              return "<strong>Occupation:</strong> " + d.type + "<br/><strong>Employment:</strong>  " + d.employment + "<br/><strong>Industry:</strong>  " + d.industry + 
+	                     "<br/><strong>Annual Mean Wage:</strong>  $" + d.annual_mean_wage + "<br/><strong>Hourly Mean Wage:</strong>  $" + d.hourly_mean_wage; 
+	            }
+	          });
+	          $(this).popover('show')
+	        }
+
+	        function collide(alpha) {
+	          var quadtree = d3.geom.quadtree(data);
+	          return function (d) {
+	            var r = d.radius + maxRadius + padding,
+	                nx1 = d.x - r,
+	                nx2 = d.x + r,
+	                ny1 = d.y - r,
+	                ny2 = d.y + r;
+	            quadtree.visit(function(quad, x1, y1, x2, y2) {
+	              if (quad.point && (quad.point !== d)) {
+	                var x = d.x - quad.point.x,
+	                    y = d.y - quad.point.y,
+	                    l = Math.sqrt(x * x + y * y),
+	                    r = d.radius + quad.point.radius + padding;
+	                if (l < r) {
+	                  l = (l - r) / l * alpha;
+	                  d.x -= x *= l;
+	                  d.y -= y *= l;
+	                  quad.point.x += x;
+	                  quad.point.y += y;
+	                }
+	              }
+	              return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+	            });
+	          };
+	        }
+
+
+
+
+
+}
+	);
+
+
+</script>
+
+</body>
+</html>
