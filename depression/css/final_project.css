@@ -1,0 +1,217 @@
+
+        body{
+            background-color: rgba(0,0,0,0.9);
+            color:white;
+            font-family: 'Crimson Text', serif;
+        }  
+        .landing{
+            background-image: url(../photos/landing.png);
+            background-size:cover;
+            min-height: 800px;
+/*            background-attachment: fixed;*/
+        }
+        
+        a:hover{
+            color:#dda61d;
+        }
+        
+        .title1{
+            font-size: 85px;
+            color:#dda61d;
+            padding-top: 55px;
+        }
+          
+        .title2{
+            font-size:28px;
+            padding-top: 20px;
+            padding-bottom: 180px;
+        }
+        
+        .byline{
+            font-size:17px;
+            margin-top:5px;
+            
+        }
+
+        a{
+            color:white;
+        }
+        
+
+
+        .btn-go{
+            border-radius: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 35px auto 0 650px;
+            text-align: center;
+            font-size: 18px;
+            padding: 0 15px;
+            line-height: 44px;
+            font-family:arial;
+        }
+
+        .btn{
+            display: inline-block;
+            vertical-align: middle;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+        }
+
+        .btn:hover{
+            background-color:#dda61d;
+        }
+          
+        .title3{
+            font-size:28px;
+            padding-top: 40px;
+            color:#a3a3a3;
+        }
+        
+        .title4{
+            font-family: "Libre Baskerville",'Crimson Text', serif;
+            font-size:35px;
+        }
+          
+        .title5{
+            font-size:20px;
+            padding-top: 30px;
+            color:#a3a3a3;
+        }
+          
+        .title6{
+            font-size:20px;
+            padding-top: 10px;
+            color:#a3a3a3;
+        }
+          
+        .title7{
+            font-family: "Libre Baskerville",'Crimson Text', serif;
+            font-size:25px;
+            padding-top:60px;
+        }
+        
+        .title8{
+            font-size:28px;
+            margin:20px 30px 30px 30px;
+        }
+          
+        
+        .category{
+            font-size:20px;
+            font-family: "abel";
+            color:white;
+            background-color: #3d454f;
+            margin-left:20px;
+            margin-right:20px;
+            cursor: pointer;
+        }
+        
+        .image{
+            background-size:cover;
+            width:200px;
+            height: 150px;
+            margin:10px;
+            cursor: pointer;
+        }
+        
+        .image_small{
+            background-size:cover;
+            width:100px;
+            height: 80px;
+            margin:10px;
+            cursor: pointer;
+        }
+          
+        .one{
+            background-image: url(../photos/1/profile2.jpg);
+        }
+          
+        .two{
+            background-image: url(../photos/2/profile2.jpg);        
+        }
+          
+        .three{
+            background-image: url(../photos/3/profile2.jpg);
+        }
+          
+        .four{
+            background-image: url(../photos/4/profile2.jpg);
+        }
+          
+        .five{
+            background-image: url(../photos/5/profile2.jpg);
+        }
+          
+        .six{
+            background-image: url(../photos/9/profile2.jpg);
+        }
+          
+        .seven{
+            background-image: url(../photos/7/profile2.jpg);
+        }
+          
+        .eight{
+            background-image: url(../photos/8/profile2.jpg);
+        }
+          
+        .one_active{
+            background-image: url(../photos/1/profile1.jpg);
+        }
+          
+        .two_active{
+            background-image: url(../photos/2/profile1.jpg);
+        }
+        
+        .three_active{
+            background-image: url(../photos/3/profile1.jpg);
+        }
+          
+        .four_active{
+            background-image: url(../photos/4/profile1.jpg);
+        }
+          
+        .five_active{
+            background-image: url(../photos/5/profile1.jpg);
+        }
+          
+        .six_actvie{
+            background-image: url(../photos/9/profile1.jpg);
+        }
+          
+        .seven_active{
+            background-image: url(../photos/7/profile1.jpg);
+        }
+          
+        .eight_active{
+            background-image: url(../photos/8/profile1.jpg);
+        }
+        
+      
+        .wrapper{
+            width: 80%; 
+            max-width: 850px; 
+            margin: 30px auto 10px auto; 
+        }
+
+        .thumbmails_section{
+            margin-top: 250px;
+            margin-bottom: 250px;
+        }
+          
+        .explain{
+            padding-top:100px;
+        }
+        
+        .options{
+            padding-top:20px;
+        }
+
+        .passive{
+            display: none;
+        }
+
+        
+          
+      
