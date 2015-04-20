@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
         });
     
         $("#img-five").on("click",function(){
-            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/118019156?color=ffffff&title=0&byline=0&portrait=0&badge=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/125315224?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
         });
     
         $("#img-six").on("click",function(){
@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
         });
     
         $("#img-seven").on("click",function(){
-            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/125089843?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/125483385?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
         });
     
         $("#img-eight").on("click",function(){
@@ -49,7 +49,7 @@ jQuery(document).ready(function($){
         });
     
         $("#img-small-five").on("click",function(){
-            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/118019156?color=ffffff&title=0&byline=0&portrait=0&badge=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/125315224?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
         });
     
         $("#img-small-six").on("click",function(){
@@ -57,7 +57,7 @@ jQuery(document).ready(function($){
         });
     
         $("#img-small-seven").on("click",function(){
-            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/125089843?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+            $("#videoHolder").html('<iframe src="https://player.vimeo.com/video/125483385?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
         });
     
         $("#img-small-eight").on("click",function(){
