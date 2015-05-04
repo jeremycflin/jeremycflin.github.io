@@ -458,15 +458,15 @@ d3.json("world_countries.json", function(data){
           return i * 20;
         })
         .attr("r",function(d){
-          if( +d.value > 700000){ return 45 }
-            else if( +d.value > 500000){return 40}
-            else if( +d.value > 100000){ return 35}
-            else if (+d.value > 50000){return 30}
-            else if (+d.value > 10000){return 25}  
-            else if (+d.value > 5000){return 20}
-            else if (+d.value > 1000){return 15}
-            else if (+d.value > 500){return 10}        
-            else{ return 5 };
+          if( +d.value > 700000){ return 40 }
+            else if( +d.value > 500000){return 35}
+            else if( +d.value > 100000){ return 30}
+            else if (+d.value > 50000){return 25}
+            else if (+d.value > 10000){return 20}  
+            else if (+d.value > 5000){return 15}
+            else if (+d.value > 1000){return 10}
+            else if (+d.value > 500){return 5}        
+            else{ return 3 };
 
         })
         });
@@ -475,29 +475,29 @@ d3.json("world_countries.json", function(data){
         d3.select("svg")
           .append("circle")
           .attr("cx",width/12)
-          .attr("cy",(height - height/2.6))
-          .attr("r",40)
+          .attr("cy",(height - height/3))
+          .attr("r",35)
           .attr('class', 'legendCircle');
 
         d3.select("svg") 
           .append("circle")
           .attr("cx",width/12)
-          .attr("cy",(height - height/4))
-          .attr("r",30)
+          .attr("cy",(height - height/4.6))
+          .attr("r",25)
           .attr('class', 'legendCircle');
 
           d3.select("svg") 
           .append("circle")
           .attr("cx",width/12)
-          .attr("cy",(height - height/6.5))
-          .attr("r",20)
+          .attr("cy",(height - height/7.3))
+          .attr("r",15)
           .attr('class', 'legendCircle');
 
           d3.select("svg") 
           .append("circle")
           .attr("cx",width/12)
           .attr("cy",(height - height/10.5))
-          .attr("r",10)
+          .attr("r",5)
           .attr('class', 'legendCircle');
 
         d3.select("svg") 
@@ -521,7 +521,7 @@ d3.json("world_countries.json", function(data){
         d3.select("svg") 
           .append("text")
           .attr("x",width/28)
-          .attr("y",(height - height/2.1))
+          .attr("y",(height - height/2.3))
           .text("Stateless Population")
           .style("font-family","avenir next")
           .style("font-size","15")
@@ -529,28 +529,28 @@ d3.json("world_countries.json", function(data){
 
         d3.select("svg") 
           .append("text")
-          .attr("x",width/7)
-          .attr("y",(height - height/2.7))
+          .attr("x",width/7.5)
+          .attr("y",(height - height/3.2))
           .text("More than 500000")
           .attr("class","legendText");
 
         d3.select("svg") 
           .append("text")
-          .attr("x",width/7)
-          .attr("y",(height - height/4.2))
+          .attr("x",width/7.5)
+          .attr("y",(height - height/4.7))
           .text("50000")
           .attr("class","legendText");
 
         d3.select("svg") 
           .append("text")
-          .attr("x",width/7)
-          .attr("y",(height - height/7))
+          .attr("x",width/7.5)
+          .attr("y",(height - height/7.5))
           .text("5000")
           .attr("class","legendText");
 
          d3.select("svg") 
           .append("text")
-          .attr("x",width/7)
+          .attr("x",width/7.5)
           .attr("y",(height - height/11))
           .text("Less than 500")
           .attr("class","legendText");
