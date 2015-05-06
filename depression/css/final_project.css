@@ -16,15 +16,15 @@
         }
         
         .title1{
-            font-size: 85px;
+            font-size: 90px;
             color:#dda61d;
-            padding-top: 55px;
+            padding-top: 75px;
         }
           
         .title2{
-            font-size:28px;
-            padding-top: 20px;
-            padding-bottom: 180px;
+            font-size:35px;
+            padding-top: -15px;
+            padding-bottom: 90px;
         }
         
         .byline{
@@ -94,18 +94,33 @@
         
         .title8{
             font-size:28px;
-            margin:20px 30px 30px 30px;
+            margin:10px 30px 20px 30px;
+        }
+
+        .title9{
+            font-size:20px;
+            padding-top: 5px;
+            color:#a3a3a3;
         }
           
         
         .category{
-            font-size:20px;
-            font-family: "abel";
+            font-size:18px;
+            font-family: "Libre Baskerville","abel";
             color:white;
-            background-color: #3d454f;
+/*            background-color: #3d454f;*/
             margin-left:20px;
             margin-right:20px;
             cursor: pointer;
+            display:none;
+            color:white;
+            font-weight: 600;
+            margin-top:-7px;
+
+        }
+
+        .category:hover{
+            color:#dda61d;
         }
         
         .image{
@@ -150,6 +165,7 @@
           
         .seven{
             background-image: url(../photos/7/profile2.jpg);
+    
         }
           
         .eight{
@@ -176,7 +192,7 @@
             background-image: url(../photos/5/profile1.jpg);
         }
           
-        .six_actvie{
+        .six_active{
             background-image: url(../photos/9/profile1.jpg);
         }
           
@@ -212,6 +228,3 @@
             display: none;
         }
 
-        
-          
-      
