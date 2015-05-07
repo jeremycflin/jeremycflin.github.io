@@ -6,9 +6,19 @@
         }  
         .landing{
             background-image: url(../photos/landing.png);
-            background-size:cover;
+            background-size:100% auto;
             min-height: 800px;
+            background-position:center bottom;
+            background-repeat:no-repeat;
 /*            background-attachment: fixed;*/
+        }
+
+        @media (max-width: 900px){
+
+            .landing{
+                background-size:140% auto;
+            }
+
         }
         
         a:hover{
@@ -18,7 +28,7 @@
         .title1{
             font-size: 90px;
             color:#dda61d;
-            padding-top: 75px;
+            padding-top: 10px;
         }
           
         .title2{
@@ -37,13 +47,16 @@
             color:white;
         }
         
+        .scroll_wrapper{
+            text-align: center;
+        }
 
 
         .btn-go{
             border-radius: 0;
             text-transform: uppercase;
             font-weight: bold;
-            margin: 35px auto 0 650px;
+            margin: 35px auto 0 auto;
             text-align: center;
             font-size: 18px;
             padding: 0 15px;
