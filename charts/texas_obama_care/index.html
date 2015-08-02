@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Obama Care Enrollment in Texas</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-z__K2Tz1ZKAxvmiZ1mB7rxi9LY4_0JE">
+    </script>
+    <style>
+    .map{
+      min-height: 600px;
+    }
+
+     .my-legend .legend-title {
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 90%;
+    }
+    .my-legend .legend-scale ul {
+      margin: 0;
+      padding: 0;
+      float: left;
+      list-style: none;
+    }
+    .my-legend .legend-scale ul li {
+      display: block;
+      float: left;
+      width: 50px;
+      margin-bottom: 6px;
+      text-align: center;
+      font-size: 80%;
+      list-style: none;
+    }
+    .my-legend ul.legend-labels li span {
+      display: block;
+      float: left;
+      height: 15px;
+      width: 50px;
+    }
+    .my-legend .legend-source {
+      font-size: 70%;
+      color: #999;
+      clear: both;
+    }
+    .my-legend a {
+      color: #777;
+    }
+
+    .income{
+      clear:left;
+    }
+
+    .empty{
+      border: dashed grey 1px;
+    }
+
+    .my-legend{
+      font-family: "helvetica neue";
+      margin-bottom: 50px;
+      margin-top: 30px;
+    }
+
+    .title{
+    font-family:Helvetica,"avenir next", Arial, sans-serif;
+    font-size:40px;
+    color:rgb(33, 113, 181);
+    line-height: 1.1em;
+    font-weight: 600;
+
+    }
+
+    .byline{
+    font-family: 'helvetica neue', sans-serif;
+    font-size:16px;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.1em;
+    margin-top: 20px;
+    color:#616161;
+    margin-bottom: 30px;
+    }
+
+    .text{
+    font-family: 'helvetica neue', sans-serif;
+    font-size:17px;
+    line-height: 1.5em;
+  /*  font-weight: 200;*/
+    margin-bottom: 10px;
+    margin-top:10px;
+    }
+
+
+    </style>
+     <script type="text/javascript">
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// Global variables 
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+    var styles = [
+      {
+        featureType: "administrative",
+        stylers: [
+          { gamma: 0 },
+          { visibility: "simplified" }
+        ]
+      },{
+        featureType: "road.arterial",
+        // elementType: "labels.text.stroke",
+        stylers: [
+          { gamma: -30 },
+          { visibility: "off" },
+          { strokeWeight: 3},
+          { strokeColor: "black"}
+        ]
+      },
+      {
+        featureType: "landscape.man_made  ",
+        stylers: [
+          { visibility: "simplified" },
+
+        ]
+      },
+      {
+        featureType: "transit",
+        stylers: [
+          { visibility: "off" },
+        ]
+      }
+    ];
+
+//      var styles = [
+// {
+//         featureType: "administrative",
+//         stylers: [
+//           { visibility: "off" }
+//         ]
+//       },{
+//         featureType: "poi.park",
+//         stylers: [
+//           { visibility: "off" }
+//         ]
+//       },
+//       {
+//         elementType: "all ",
+//         stylers: [
+//           { invert_lightness: "true" }
+//         ]
+//       }
+//     ];
+////////////////////////////////////////////////    
+////////////////////////////////////////////////
+// Austin Map 1/////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+function drawMap(){
+    var map;
+    function initialize() {
+      // Create a base map.
+      map = new google.maps.Map(document.getElementById('texas'), {
+        zoom: 5,
+        center: {lat: 31.0000, lng: -100.0000},
+        disableDefaultUI: true,
+        // // mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoomControl:true
+
+         
+      });
+
+      map.setOptions({styles: styles});
+
+      // Load a GeoJSON from a local file
+      map.data.loadGeoJson('test2.geojson');
+
+  // Set and apply styling to the stateLayer
+  map.data.setStyle(function(feature) {
+    return {
+      fillColor: getColor(feature.getProperty('Sheet1_percent')),
+      fillOpacity: 0.8,
+      strokeColor: 'white',
+      strokeWeight: 0,
+   
+    };
+  });
+function getColor(Sheet1_percent) {
+
+     return Sheet1_percent > 6 ? '#034e7b' :
+      Sheet1_percent > 5 ? '#0570b0':
+      Sheet1_percent > 4 ? '#3690c0' :
+      Sheet1_percent > 3 ? '#74a9cf' :
+      Sheet1_percent > 2 ? '#a6bddb' :
+      Sheet1_percent > 1 ? '#d0d1e6' :
+      Sheet1_percent > 0 ? '#f1eef6' :
+      'white';
+    
+  }
+        }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+}
+
+
+
+
+////////////////////////////////////////////////    
+////////////////////////////////////////////////
+// Austin Map 1/////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+function drawMap2(){
+    var map;
+    function initialize() {
+      // Create a base map.
+      map = new google.maps.Map(document.getElementById('texas2'), {
+         zoom: 5,
+        center: {lat: 31.0000, lng: -100.0000},
+        disableDefaultUI: true,
+        // mapTypeId: google.maps.MapTypeId.ROADMAP
+         scrollwheel: false,
+         zoomControl:true
+      });
+
+      map.setOptions({styles: styles});
+
+      // Load a GeoJSON from a local file
+      map.data.loadGeoJson('test2.geojson');
+
+  // Set and apply styling to the stateLayer
+  map.data.setStyle(function(feature) {
+    return {
+      fillColor: getColor(feature.getProperty('Sheet1_income')),
+      fillOpacity: 0.8,
+      strokeColor: 'white',
+      strokeWeight: 0,
+    };
+  });
+function getColor(Sheet1_income) {
+
+   return Sheet1_income > 173000 ? '#005a32':
+      Sheet1_income > 66000 ? '#238443' :
+      Sheet1_income > 54000 ? '#41ab5d':
+      Sheet1_income > 46000 ? '#78c679' :
+      Sheet1_income > 41000 ? '#addd8e' :
+      Sheet1_income > 34000 ? '#d9f0a3' :
+      Sheet1_income > 0 ? '#ffffcc' :
+      'white';
+  }
+        }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+}
+
+
+
+
+
+
+////////////////////////////////////////////////    
+////////////////////////////////////////////////
+// Austin Map 1/////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+function drawAustinPercent(){
+    var map;
+    function initialize() {
+      // Create a base map.
+      map = new google.maps.Map(document.getElementById('austinPercent'), {
+        zoom: 9,
+        center: {lat: 30.2500, lng: -97.7500},
+        disableDefaultUI: true,
+        // mapTypeId: google.maps.MapTypeId.ROADMAP
+         scrollwheel: false
+      });
+
+      map.setOptions({styles: styles});
+
+      // Load a GeoJSON from a local file
+      map.data.loadGeoJson('test2.geojson');
+
+  // Set and apply styling to the stateLayer
+  map.data.setStyle(function(feature) {
+    return {
+      fillColor: getColor(feature.getProperty('Sheet1_percent')),
+      fillOpacity: 0.8,
+      strokeColor: 'white',
+      strokeWeight: 0,
+   
+    };
+  });
+function getColor(Sheet1_percent) {
+
+     return Sheet1_percent > 6 ? '#034e7b' :
+      Sheet1_percent > 5 ? '#0570b0':
+      Sheet1_percent > 4 ? '#3690c0' :
+      Sheet1_percent > 3 ? '#74a9cf' :
+      Sheet1_percent > 2 ? '#a6bddb' :
+      Sheet1_percent > 1 ? '#d0d1e6' :
+      Sheet1_percent > 0 ? '#f1eef6' :
+      'white';
+
+    
+  }
+        }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+}
+
+
+drawMap();
+drawMap2();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <h1 class=" text-center title">Obama Care Enrollment in Texas</h1>
+   <!--  <h3 class="byline textcenter">Data visualizations produced by <a href="https://twitter.com/Jeremy_CF_Lin" target="_blank">Jeremy C.F. Lin</a></h3> --> 
+    </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+    <p class="text text-center">Take a look at the Texas ZIP codes with ACA plans data, as well as federal data to compare health insurance enrollment and median household income. Data viz produced by <a href="https://twitter.com/Jeremy_CF_Lin" target="_blank">Jeremy C.F. Lin</a>. </br>A more detailed piece can be read on the <a href="texastribune.org" target="_blank">Texas Tribune</a>.</p>
+    </div>    
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class='my-legend'>
+        <div class='legend-title'>Percentage of enrollment</div>
+        <div class='legend-scale'>
+          <ul class='legend-labels'>
+            <li><span class ="empty" style='background:#ffffff;'></span>N/A</li>
+            <li><span style='background:#f1eef6;'></span>0 - 1%</li>
+            <li><span style='background:#d0d1e6;'></span>1 - 2%</li>
+            <li><span style='background:#a6bddb;'></span>2 - 3%</li>
+            <li><span style='background:#74a9cf;'></span>3 - 4%</li>
+            <li><span style='background:#3690c0;'></span>4 - 5%</li>
+            <li><span style='background:#0570b0;'></span>5 - 6%</li>
+            <li><span style='background:#034e7b;'></span>< 6%</li>
+          </ul>
+        </div>
+        </div>
+
+      </div>  
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+    <div id="texas" class="map"></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      
+
+
+        <div class='my-legend income'>
+        <div class='legend-title'>Median household income</div>
+        <div class='legend-scale'>
+          <ul class='legend-labels'>
+            <li><span class ="empty" style='background:#ffffff;'></span>N/A</li>
+            <li><span style='background:#ffffcc;'></span>0 - 34</li>
+            <li><span style='background:#d9f0a3;'></span>34 - 41</li>
+            <li><span style='background:#addd8e;'></span>41 - 46</li>
+            <li><span style='background:#78c679;'></span>46 - 54</li>
+            <li><span style='background:#41ab5d;'></span>54 - 66</li>
+            <li><span style='background:#238443;'></span>66 - 173</li>
+            <li><span style='background:#005a32;'></span>< 173</li>
+            <li><span style='background:#ffffff;'></span>  (Thousands)</li>
+          </ul>
+        </div>
+        </div>
+      </div>  
+    </div>
+    </div>
+    </div>
+
+
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+    <div id="texas2" class="map"></div>
+    </div>
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
