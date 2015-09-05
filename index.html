@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jeremy C.F. Lin - Portfolio">
     <meta name="keywords" content="Jeremy, Jeremy CF Lin, Jeremy C.F. Lin, Lin, Data, Visualization, Freelance, Data Viz, Taiwan, Bay Area, Journalism">
     <meta name="author" content="Jeremy C.F. Lin">
-<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico">
-
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Jeremy C.F. Lin</title>
 
-
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="images/favicon.ico">
 
-    <!-- Custom CSS -->
-    <link href="css/thumbnail-gallery.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
     <!-- Google Analytics -->
 
      <script>
@@ -46,336 +41,296 @@
 
     </script>
     <style>
-        .profile_pic{
-            background-image: url("images/photo/profile_1.jpg");
-            background-size: cover;
-            width:200px;
-            height:200px;
-            padding: 50px;
-            margin-top: 80px;
-        
-        }
-        
-        .profile_pic_adjusted{
-            background-image: url("images/photo/profile_2.jpg");
-            background-size:cover;
-            width:200px;
-            height:200px;
-            padding: 50px;
-            margin-top: 80px;
-        }
-    
-        .thumbnail{
-            border-color: transparent;
-            border-top:20px;
-        }
-        
-        .font1{
-            font-weight: 800;
-            font-size: 60px;
-            font-family: 'Oswald', sans-serif;
-            text-align: center;
-            color: #337ab7;
+ /*    body{
+      background-color: rgba(245,245,245,0.4);
+     } */
 
-        }
-        
-        .font2{
-            font-weight: 800;
-            font-size: 60px;
-            font-family: 'Oswald';
-            text-align: center;
-            color: #556270;
-        }
-        
-        .introduction {
-            font-weight: 400;
-            color: #9c9fa0;
-            font-size: 21px;
-            font-family: "Roboto", Helvetica, Arial, sans-serif;
-            font-family: 'Roboto', sans-serif;
-            margin: 30px;
-            font-weight: 400;
-        }
-        
-        .portfolio{
-            margin-top: 30px;
-        }
-        
-        .portfolio-titile{
-            font-family: 'Archivo Narrow' ,Open Sans Condensed, Avenir Next LT Pro,Jaapokki enchance, Anders;
-            font-weight: 400;
-            font-size: 20px;
-            margin: 0;
-            padding-top:-10px;
-            padding-bottom: 0px;
-            color: #337ab7;
-            margin-top: -5px;
-        }
-        
-        .category{
-            font-family: 'Archivo Narrow','Open Sans', sans-serif;
-            color: #9c9fa0;
-            font-weight: 200;
-            font-size: 16px;
-            margin-bottom:10px;
-            margin-top:5px;
-            padding: 0px;
-        }
-        
-        .cv-title{
-            font-weight: 800;
-            font-size: 33px;
-            font-family: 'Oswald', sans-serif;
-            color: #337ab7;
-            margin-top: 35px;
-            margin-bottom: 20px;
-        }
-        
-        .cv1{
-            font-weight: 600;
-            font-size: 25px;
-            font-family: 'Archivo Narrow';
-            color: #556270;
-            margin-top: 20px;
-        }
-        
-        .cv2{
-            font-weight: 400;
-            font-size: 20px;
-            font-family: 'Archivo Narrow';
-            color: #7c7f80;
-            margin-top:5px;
-            margin-bottom: 5px;
-            
-        }
-        
-        li{
-            font-weight: 400;
-            color: #9c9fa0;
-            font-size: 15px;
-            margin-top: 10px;
-            font-family: "Roboto", Helvetica, Arial, sans-serif;
-            
-        }
-        
-        .page-header2{
-            padding-bottom: 1px;
-            border-bottom: 2px solid #eee;
-        }
-        
-  /*      body{
-              background-color: white;
-        }*/
-        
-        img:hover{
-            opacity:0.6;
-        }
-    
-        #portfolio{
-            margin-top: 50px;
-        }
-        
-        .profile_wrap{
-            width: 50%; 
-            max-width: 250px; 
-            margin: 0px auto 0px auto; 
-        }
+     .intro h1{
+      margin-left: -20px;
+      padding-bottom: 0.4em;
 
-        .image{
-            max-width: 150px !important;
-            max-height: 112px !important;
-        }
+     } 
 
-        .container{max-width: 850px !important;}
+     .intro{
+      margin-bottom: 3em;
+     }
 
-         nav{
-            opacity:0.6 !important;
-          /*  background-color: #9c9fa0 !important;*/
-            border-color: #f2f2f2 !important;
-            border-bottom-width: 3px !important;
+     .intro .font1{
+     /*  color:rgba(51,122,183,1);*/
+       color:rgba(29, 168, 183,1);
+       font-family:"Oswald";
+       font-size:1.4em;
+     }
 
-        }
+     .intro .font2{
+      font-family:"Oswald";
+     }
+
+     .font1{
+      font-family: 'Libre Baskerville','Crimson Text';
+      font-size: 1.2em;
+      font-weight: 600;
+     }
+
+     .font2{
+      font-family: 'Crimson Text';
+      opacity:0.8;
+      font-size: 1.4em;
+      font-weight: 600;
+     }
+
+     p{
+      font-family: 'Crimson Text';
+      font-size:1.3em;
+      opacity:0.9;
+     }
+
+     .icon a{
+      background-color: white;
+     }
+
+     img{
+      max-width: 150px !important;
+      height:auto;
+      margin-left: 1.5em;
+     }
+
+     a{
+      /*background-color: rgba(204,235,255,0.6);*/
+      background-color: rgba(230, 255, 0, 0.5);
+     /* background-color:rgba(255,179,213,0.3);*/
+     }
+
+     a{
+      color:rgba(0, 0, 0, 0.8) !important;
+     }
+
+     a:hover{
+      color:rgba(45,90,163,1) !important;
+      background-color: rgba(204,235,255,0.6) !important;
+     }
+
+     .filter{
+      filter: saturate(50%);
+      -webkit-filter: saturate(50%);
+  
+     /* filter: none;
+      -webkit-filter: none;   */
+    }
+
+     .filter:hover {
+      filter: none;
+      -webkit-filter: none;
+      /*filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);*/
+    }
+
+    .portfolio{
+      max-width: 900px !important;
+    }
+
+    .portfolio-titile{
+      font-family: 'Archivo Narrow','avenir next','Libre Baskerville','Crimson Text';
+      font-size: 1.3em;
+      margin-top: 1.0em;
+      /*background-color: rgba(217, 240, 255, 0.6);*/
+    /*  background-color:rgba(204,235,255,0.6);*/
+      padding:0.1em;
+      opacity:0.8;
+     /* font-weight: 500;*/
+    }
+
+    .category{
+      font-family:'avenir next';
+      font-size: 0.9em;
+      font-weight: 500;
+      margin-top: -8px;
+      opacity:0.8;
+    }
+
+    li{
+      font-family:'avenir next';
+      font-size: 1.0em;
+    }
+
+    .cv-title{
+      /*font-family: 'Libre Baskerville';*/
+      font-family: 'Oswald', sans-serif;
+      font-size:2.0em;
+      margin-bottom: 0.6em;
+    }
+
+    .title{
+      padding-right: -80px;
+     /* background-color: rgba(255,179,213,0.3);*/
+    }
+
+    .pink{
+      width:20px;
+      min-height: 30px;
+      background-color: rgba(255,179,213,0.3);
+    }
+
+    footer p{
+      font-size: 1.1em;
+    }
+
+    .container{
+      max-width: 1000px;
+    }
+
 
     </style>
-
-</head>
-
-<body>
-
-<!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#about">About <i class="fa fa-bar-chart"></i></a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio <i class="fa fa-area-chart"></i></a>
-                    </li>
-                    <li>
-                        <a href="#resume">Resume <i class="fa fa-line-chart"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    
-    
-    
-    
-    
-<!-- about -->
-     <!-- Page Content -->
-    <div class="profile_wrap">
-     <div class="profile_pic" id="about"></div>
-    </div>    
-    <div class="container">
+  </head>
+  <body>
+    <!-- Intro -->
+    <div class="container intro">
     <div class="row">
-        <div class="col-lg-12">
-        <h1 class="text-center page-header"><span class="font1">JEREMY</span><span class="font2"> C.F.</span><span class="font1"> LIN</span></h1>
-        
-            <p class="text-center introduction">I am a graphic reporter/developer at <a href="http://journalism.berkeley.edu/students/jeremy_cf_lin/" target="_blank" >UCBerkeley, Graduate School of Journalism</a>.<br> Previously a <a href="http://www.google.com/get/journalismfellowship/winners-2015.html" target="_blank" >2015 Google Journalism Fellow</a> embedded at <a href="http://www.texastribune.org/" target="_blank">The Texas Tribune</a>.<br>I will be interning with <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> graphic dept this winter.
-                <!-- <br> Previously, I worked at <a href="https://intelligencia.io/" target="_blank" >Intelligencia</a> and <a href="http://www.ltn.com.tw//" target="_blank" >Liberty Times</a>. --></br>I code, draw, write and build things on the Internet.<br>You can download my resume <a href="cv/CV_2015.07.pdf" target="_blank" >here</a>. <br>I don't play in the NBA.</p>
-            
-   
-        <div class="col-lg-12 col-sm-9 text-center">
-        <a href="mailto:jeremycflin@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
-        <a href="https://twitter.com/Jeremy_CF_Lin" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
-        <a href="https://www.facebook.com/jeremycflin" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
-        <a href="https://www.linkedin.com/pub/jeremy-c-f-lin/6a/a06/426" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
-        <a href="https://github.com/jeremycflin" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-        
-        </div>
-        </div>
-    </div>    
-</div>
+    <div class="col-sm-10 col-sm-offset-1"> 
+      <h1 class="text-center page-header"><span class="font1">JEREMY</span><span class="font2"> C.F.</span><span class="font1"> LIN</span></h1>
+      <p class="text-center">I am a graphic reporter/developer at <a href="http://journalism.berkeley.edu/students/jeremy_cf_lin/" target="_blank" >UCBerkeley, Graduate School of Journalism</a>.<br> Previously a <a href="http://www.google.com/get/journalismfellowship/winners-2015.html" target="_blank" >2015 Google Journalism Fellow</a> embedded at <a href="http://www.texastribune.org/" target="_blank">The Texas Tribune</a>.<br>I will be interning with <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> graphic dept this winter.
+      <!-- <br> Previously, I worked at <a href="https://intelligencia.io/" target="_blank" >Intelligencia</a> and <a href="http://www.ltn.com.tw//" target="_blank" >Liberty Times</a>. --></br>I code, draw, write and build things on the Internet.<br>You can download my resume <a href="cv/CV_2015.07.pdf" target="_blank" >here</a>. <br>I don't play in the NBA.</p>
 
-    
-    
-<!-- work samples-->
-    <div class="container" id="portfolio">
+    <div class="col-lg-12 col-sm-9 text-center icon">
+    <a href="mailto:jeremycflin@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+    <a href="https://twitter.com/Jeremy_CF_Lin" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="https://www.facebook.com/jeremycflin" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/pub/jeremy-c-f-lin/6a/a06/426" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    <a href="https://github.com/jeremycflin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+    </div>
+    </div>
+    </div>
+    </div>
 
-        <div class="row">
+    <!-- portfolio -->
+    <div class="container portfolio">
+    <div class="row">
+    <!-- Google Fellowship -->
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="http://bit.ly/1PdtQbY" target="_blank">
+          <img class="img-responsive filter"  src="images/blog/logo2.gif" alt="What I learned at the Tribune">
+        </a>     
+        <a href="http://bit.ly/1PdtQbY" target="_blank">
+          <p class="text-center portfolio-titile">Google Fellowship</p>
+        </a>
+        <p class="category text-center">News Apps Blog</p>
+      </div> 
 
-<!-- Google Fellowship -->
-           <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="http://bit.ly/1PdtQbY" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/blog/logo2.gif" alt="What I learned at the Tribune">
-                </a>     
-                <a href="http://bit.ly/1PdtQbY" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Google Fellowship</p></a>
-                <p class="category text-center">News Apps Blog</p>
-            </div> 
+    <!-- Freestanding Emergency Rooms -->
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank">
+          <img class="img-responsive filter"  src="images/emergency/map2.gif" alt="freestanding emergency rooms in texas">
+        </a>     
+        <a href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank">
+          <p class="text-center portfolio-titile">Emergency Rooms</p></a>
+        <p class="category text-center">Texas Tribune</p>
+      </div>
 
-<!-- Freestanding Emergency Rooms -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/emergency/map2.gif" alt="freestanding emergency rooms in texas">
-                </a>     
-                <a href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Emergency Rooms</p></a>
-                <p class="category text-center">Texas Tribune</p>
-            </div>
+    <!-- Texas Health Care -->
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="http://trib.it/1LNYCIW" target="_blank">
+          <img class="img-responsive filter"  src="images/texas_health/health2.gif" alt="Obama Care">
+        </a>     
+        <a href="http://trib.it/1LNYCIW" target="_blank">
+          <p class="text-center portfolio-titile">ObamaCare</p>
+        </a>
+        <p class="category text-center">Texas Tribune</p>
+      </div>
 
-<!-- Texas Health Care -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="http://trib.it/1LNYCIW" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/texas_health/health2.gif" alt="Obama Care">
-                </a>     
-                <a href="http://trib.it/1LNYCIW" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">ObamaCare</p></a>
-                <p class="category text-center">Texas Tribune</p>
-            </div>
-
-<!-- Texas solar -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/texas_solar/solar2.gif" alt="solar">
-                </a>     
-                <a href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Solar Production</p></a>
-                <p class="category text-center">Texas Tribune</p>
-            </div>
+    <!-- Texas solar -->
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank">
+          <img class="img-responsive filter"  src="images/texas_solar/solar2.gif" alt="solar">
+        </a>     
+        <a href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank">
+          <p class="text-center portfolio-titile">Solar Production</p>
+        </a>
+        <p class="category text-center">Texas Tribune</p>
+      </div>
 
 
-<!-- license fees -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image" src="images/liscense_fee/fees2.gif" 
-                    alt="liscense fees">
-                </a>     
-                <a href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Liscense Fees</p></a>
-                <p class="category text-center">Texas Tribune</p>
-            </div>
+    <!-- license fees -->
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank">
+        <img class="img-responsive filter" src="images/liscense_fee/fee.gif" 
+            alt="liscense fees">
+        </a>     
+        <a href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank">
+          <p class="text-center portfolio-titile">Liscense Fees</p>
+        </a>
+        <p class="category text-center">Texas Tribune</p>
+      </div>
 
 
 <!-- Obama Care -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/texas_obama_care/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/obama_care/obama2.gif" alt="obama_care">
-                </a>     
-                <a href="charts/texas_obama_care/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">ACA Enrollment</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="charts/texas_obama_care/index.html" target="_blank">
+          <img class="img-responsive filter"  src="images/obama_care/obama2.gif" alt="obama_care">
+        </a>     
+        <a href="charts/texas_obama_care/index.html" target="_blank">
+          <p class="text-center portfolio-titile">ACA Enrollment</p>
+        </a>
+        <p class="category text-center">Personal</p>
+      </div>
 
 <!-- republican -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/republican/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/republican/love2.gif" alt="port">
-                </a>     
-                <a href="charts/republican/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Illustrated Politicians</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="charts/republican/index.html" target="_blank" data-toggle="modal">
+          <img class="img-responsive filter"  src="images/republican/love2.gif" alt="port">
+        </a>     
+        <a href="charts/republican/index.html" target="_blank" data-toggle="modal">
+          <p class="text-center portfolio-titile">Illustrated Politicians</p>
+        </a>
+        <p class="category text-center">Personal</p>
+      </div>
 
 
 <!-- port story -->
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/port/port2.gif" alt="port">
-                </a>     
-                <a href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">The Long Shore</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank">
+          <img class="img-responsive filter"  src="images/port/port2.gif" alt="port">
+        </a>     
+        <a href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank">
+          <p class="text-center portfolio-titile">The Long Shore</p>
+        </a>
+        <p class="category text-center">Personal</p>
+      </div>
 
 <!-- Chinese students -->
 
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="depression/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/chinese/chinese2.gif" alt="stateless">
-                </a>     
-                <a href="depression/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Against All Odds</p></a>
-                <p class="category text-center">Personal</p>
-            </div>  
+      <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="depression/index.html" target="_blank">
+            <img class="img-responsive filter"  src="images/chinese/chinese2.gif" alt="stateless">
+          </a>     
+          <a href="depression/index.html" target="_blank">
+            <p class="text-center portfolio-titile">Against All Odds</p>
+          </a>
+          <p class="category text-center">Personal</p>
+      </div>  
         
 <!--Stateless-->
 
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/stateless/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/stateless/stateless2.gif" alt="stateless">
-                </a>     
-                <a href="charts/stateless/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Stateless Population</p></a>
-                <p class="category text-center">Personal</p>
-            </div> 
+      <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="charts/stateless/index.html" target="_blank">
+            <img class="img-responsive filter"  src="images/stateless/stateless2.gif" alt="stateless">
+          </a>     
+          <a href="charts/stateless/index.html" target="_blank">
+            <p class="text-center portfolio-titile">Stateless Population</p>
+          </a>
+          <p class="category text-center">Personal</p>
+      </div> 
 
 <!-- Worldmap -->
 
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/world_population/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/world_map/world_map2.gif" alt="population">
-                </a>     
-                <a href="charts/world_population/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">World Population</p></a>
-                <p class="category text-center">Personal</p>
-            </div>                       
+      <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="charts/world_population/index.html" target="_blank">
+            <img class="img-responsive filter"  src="images/world_map/world_map2.gif" alt="population">
+          </a>     
+          <a href="charts/world_population/index.html" target="_blank">
+            <p class="text-center portfolio-titile">World Population</p>
+          </a>
+          <p class="category text-center">Personal</p>
+      </div>                       
             
 <!-- Story Template 2 -->
 <!--             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -388,13 +343,15 @@
             
 <!-- Journalist Pay -->
             
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/journalism/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/journalism/journalism2.gif" alt="Reporter Salaries">
-                </a>     
-                <a href="charts/journalism/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Journalist Salaries</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="charts/journalism/index.html" target="_blank">
+            <img class="img-responsive filter"  src="images/journalism/journalism2.gif" alt="Reporter Salaries">
+          </a>     
+          <a href="charts/journalism/index.html" target="_blank">
+            <p class="text-center portfolio-titile">Journalist Salaries</p>
+          </a>
+          <p class="category text-center">Personal</p>
+      </div>
             
 <!-- Story Template 1 -->
 <!--              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -406,27 +363,29 @@
             </div> -->
             
 <!-- Cali. Eenergy Breakdown Linechart -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/california_energy_linechart/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/california_energy_linechart/california_energy_2.gif" alt="Thumbnail of Energy Breakdown in California">
-                </a>     
-                <a href="charts/california_energy_linechart/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Energy Breakdown</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="charts/california_energy_linechart/index.html" target="_blank">
+            <img class="img-responsive filter"  src="images/california_energy_linechart/california_energy_2.gif" alt="Thumbnail of Energy Breakdown in California">
+          </a>     
+          <a href="charts/california_energy_linechart/index.html" target="_blank">
+            <p class="text-center portfolio-titile">Energy Breakdown</p>
+          </a>
+          <p class="category text-center">Personal</p>
+      </div>
             
 <!-- Earthquakes -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/earthquakes/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/earthquakes/earthquakes2.gif" alt="Thumbnail of Seismic Hazards in USA">
-                </a>     
-                <a href="charts/earthquakes/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Seismic Hazards</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="charts/earthquakes/index.html" target="_blank" data-toggle="modal">
+            <img class="img-responsive filter"  src="images/earthquakes/earthquakes2.gif" alt="Thumbnail of Seismic Hazards in USA">
+        </a>     
+        <a href="charts/earthquakes/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Seismic Hazards</p></a>
+        <p class="category text-center">Personal</p>
+     </div>
             
 <!-- Syria -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/syria/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/syria/syria2.gif" alt="Thumbnail of Syrian Civil War">
+             <div class="col-lg-3 col-md-4 col-xs-6">
+                <a class="img-rounded" href="charts/syria/index.html" target="_blank" data-toggle="modal">
+                    <img class="img-responsive filter"  src="images/syria/syria2.gif" alt="Thumbnail of Syrian Civil War">
                 </a>     
                 <a href="charts/syria/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Syrian Civil War</p></a>
                 <p class="category text-center">Personal</p>
@@ -451,9 +410,9 @@
             </div> -->
             
 <!-- Cali Energy Production -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="charts/california_energy/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/california_energy/energy2.gif" alt="Thumbnail of Energy Breakdown in California">
+             <div class="col-lg-3 col-md-4 col-xs-6">
+                <a class="img-rounded" href="charts/california_energy/index.html" target="_blank" data-toggle="modal">
+                    <img class="img-responsive filter"  src="images/california_energy/energy2.gif" alt="Thumbnail of Energy Breakdown in California">
                 </a>     
                 <a href="charts/california_energy/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Cali. Energy Viz</p></a>
                 <p class="category text-center">Personal</p>
@@ -471,18 +430,18 @@
 -->
             
 <!-- Honey -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/honey/honey_2.gif" alt="Thumbnail of Honey Production">
+             <div class="col-lg-3 col-md-4 col-xs-6">
+                <a class="img-rounded" href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal">
+                    <img class="img-responsive filter"  src="images/honey/honey_2.gif" alt="Thumbnail of Honey Production">
                 </a>     
                 <a href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Honey Production</p></a>
                 <p class="category text-center">Oakland North</p>
             </div>
             
 <!-- Richmond -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/richmond_map1/richmond_map2.gif" alt="Thumbnail of Richmond Election Turnout">
+             <div class="col-lg-3 col-md-4 col-xs-6">
+                <a class="img-rounded" href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal">
+                    <img class="img-responsive filter"  src="images/richmond_map1/richmond_map2.gif" alt="Thumbnail of Richmond Election Turnout">
                 </a>     
                 <a href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Richmond Election</p></a>
                 <p class="category text-center">KQED</p>
@@ -521,8 +480,8 @@
 
 <!-- Health Care -->
              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/health_care/health_care2.gif" alt="Thumbnail of Health Care Spending in USA">
+                <a class="img-rounded" href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal">
+                    <img class="img-responsive filter"  src="images/health_care/health_care2.gif" alt="Thumbnail of Health Care Spending in USA">
                 </a>     
                 <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Health Care Spending</p></a>
                 <p class="category text-center">Personal</p>
@@ -530,29 +489,29 @@
             
 <!-- Energy in Germany -->
              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal">
-                    <img class="img-responsive image"  src="images/nuclear/nuclear2.gif" alt="Thumbnail of Energy Breakdown in Germany">
+                <a class="img-rounded" href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal">
+                    <img class="img-responsive filter"  src="images/nuclear/nuclear2.gif" alt="Thumbnail of Energy Breakdown in Germany">
                 </a>     
                 <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Energy in Germany</p></a>
                 <p class="category text-center">Personal</p>
             </div>
-            
 
-        </div>
+    </div>
+    <hr>    
+    </div>
 
-        <hr>
-        
-        
-        <!--  CV -->
-        <div class="container" id="resume">
-            <div class="row">
-            <div class="col-lg-12">
-                <h1 class="cv-title">Experience</h1>         
-                <!-- ONA -->                
-                <p class="cv1">Graphic Editor Intern</p>
-                <p class="cv2"><a href="http://www.nytimes.com/" target="_blank">The New York Times</a></p>
-                <p class="cv2">New York City, New York</p>
-                <p class="cv2">Anticipated November 2015 - February 2016 (Acceptance confirmed)</p>
+<!--  CV -->
+        <div class="container">
+           <div class="row">
+              <div class="col-sm-10 col-sm-offset-1"> 
+               
+                <h1 class="cv-title"><span class="title">Experience</span></h1>
+                <!-- ONA -->       
+
+                <p class="font1">Graphic Editor Intern</p>
+                <p class="font2"><a href="http://www.nytimes.com/" target="_blank">The New York Times</a></p>
+                <p class="font2">New York City, New York</p>
+                <p class="font2">Anticipated November 2015 - February 2016 (Acceptance confirmed)</p>
                 <ul>
                     <li>I was chosen from the pool of 3000 applicants to participate in the New York Times internship program.</li>                            
                 </ul>
@@ -566,12 +525,12 @@
         
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-10 col-sm-offset-1"> 
                 <!-- ONA -->           
-                <p class="cv1">Graphic/data reporter, developer</p>
-                <p class="cv2"><a href="http://ona15.journalists.org/student-newsroom/" target="_blank">Online News Association</a></p>
-                <p class="cv2">Los Angeles, California</p>
-                <p class="cv2">Anticipated September 2015 (Acceptance confirmed)</p>
+                <p class="font1">Graphic/data reporter, developer</p>
+                <p class="font2"><a href="http://ona15.journalists.org/student-newsroom/" target="_blank">Online News Association</a></p>
+                <p class="font2">Los Angeles, California</p>
+                <p class="font2">Anticipated September 2015 (Acceptance confirmed)</p>
         </div>    
             </div>
             </div>
@@ -580,12 +539,12 @@
         
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">        
+            <div class="col-sm-10 col-sm-offset-1"> 
                 <!-- Google -->                
-                <p class="cv1">Google Journalism Fellow</p>
-                <p class="cv2"><a href="http://www.texastribune.org/" target="_blank">The Texas Tribune & Google</a></p>
-                <p class="cv2">Austin, Texas & Mountainview, California</p>
-                <p class="cv2">June 2015 - August 2015</p>
+                <p class="font1">Google Journalism Fellow</p>
+                <p class="font2"><a href="http://www.texastribune.org/" target="_blank">The Texas Tribune & Google</a></p>
+                <p class="font2">Austin, Texas & Mountainview, California</p>
+                <p class="font2">June 2015 - August 2015</p>
                 <ul>
                     <li>I was named a Google Journalism Fellow from the pool of 1400 applicants.</li>
 
@@ -602,12 +561,12 @@
 
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">        
+            <div class="col-sm-10 col-sm-offset-1">    
                 <!-- Freelance -->                
-                <p class="cv1">Freelance Data Visualization Designer & Environmental Journalist</p>
-                <p class="cv2">Freelance</p>
-                <p class="cv2">San Francisco Bay Area</p>
-                <p class="cv2">August 2014 – Present</p>
+                <p class="font1">Freelance Data Visualization Designer & Environmental Journalist</p>
+                <p class="font2">Freelance</p>
+                <p class="font2">San Francisco Bay Area</p>
+                <p class="font2">August 2014 – Present</p>
                 <ul>
                                         <li>Designing data visualizations for various publications, including<a href="http://www.kqed.org/" target="_blank"> KQED</a>,<a href="http://oaklandnorth.net/" target="_blank"> Oakland North</a>, and <a href="https://richmondconfidential.org/" target="_blank"> Richmond Confidential</a>.</li>
 
@@ -622,11 +581,11 @@
         <!-- Intelligencia -->   
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">              
-                <p class="cv1">Design Intern</p>
-                <p class="cv2"><a href="https://intelligencia.io/" target="_blank">Intelligencia</a></p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">July 2013 – December 2013</p>
+            <div class="col-sm-10 col-sm-offset-1">             
+                <p class="font1">Design Intern</p>
+                <p class="font2"><a href="https://intelligencia.io/" target="_blank">Intelligencia</a></p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">July 2013 – December 2013</p>
                 <ul>
                                         <li>Assisted in the development of web-based reading and annotation platform "<a href="https://intelligencia.io/" target="_blank">Intelligencia</a>".</li>
 
@@ -640,11 +599,11 @@
         <!-- Military -->        
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-                <p class="cv1">Administrative Cadre</p>
-                <p class="cv2"><a href="http://www.judicial.gov.tw/" target="_blank">Taiwan Ministry of Justice</a>, Alternative Military Service</p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">December 2012 – November 2013</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+                <p class="font1">Administrative Cadre</p>
+                <p class="font2"><a href="http://www.judicial.gov.tw/" target="_blank">Taiwan Ministry of Justice</a>, Alternative Military Service</p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">December 2012 – November 2013</p>
                 <ul>
                                         <li>Performed statistical analyses of regional crime rates and criminal sentencing irregularities, such as gender inequalities.</li>
                                         <li>Supervised the daily performance, conduct, and scheduling of lower-ranking personnel.</li>                                       
@@ -658,11 +617,11 @@
         <div class="container">
         <div id="resume"></div>
             <div class="row">
-            <div class="col-lg-12">
-                <p class="cv1">Online Marketing Intern & Project Representative</p>
-                <p class="cv2"><a href="http://www.3digitalminds.com/" target="_blank">3digitalminds</a></p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">November 2011 – March 2012</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+                <p class="font1">Online Marketing Intern & Project Representative</p>
+                <p class="font2"><a href="http://www.3digitalminds.com/" target="_blank">3digitalminds</a></p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">November 2011 – March 2012</p>
                 <ul>
                                         <li> Offered local marketing strategies based on risk-assessment analyses.</li>
                                         <li>Worked with small business owners to implement company’s online group buying service “Gomai.”</li>
@@ -675,11 +634,11 @@
         <!-- The Liberty Times -->          
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-                <p class="cv1">Staff Writer</p>
-                <p class="cv2"><a href="http://www.ltn.com.tw/" target="_blank">The Liberty Times</a>, Breaking News Department</p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">July 2011 – February 2012</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+                <p class="font1">Staff Writer</p>
+                <p class="font2"><a href="http://www.ltn.com.tw/" target="_blank">The Liberty Times</a>, Breaking News Department</p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">July 2011 – February 2012</p>
                 <ul>
                                         <li> Produced content for national, international, and economic desks and translated breaking news from international news agencies.</li>
                                         <li>Authored updated coverage of live news events, including the Taiwanese presidential debates, Grammy awards, Academy Awards, and United Nations assemblies.</li>
@@ -692,11 +651,11 @@
         <!-- Lung YingTai -->         
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-                <p class="cv1">News Contact</p>
-                <p class="cv2"><a href="http://www.civictaipei.org/" target="_blank">Lung YingTai Cultural Foundation</a></p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">February 2009 – November 2010</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+                <p class="font1">News Contact</p>
+                <p class="font2"><a href="http://www.civictaipei.org/" target="_blank">Lung YingTai Cultural Foundation</a></p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">February 2009 – November 2010</p>
                 <ul>
                                         <li>Liaisoned with over 70 media and news organizations to provide background information for speakers and special events.</li>
                                         <li>Produced pre- and post-event press releases for distribution to news agencies and educational institutions.</li>
@@ -709,11 +668,11 @@
         <!-- Central News Agency -->        
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-                <p class="cv1">Journalist Intern</p>
-                <p class="cv2"><a href="http://www.cna.com.tw/" target="_blank">Central News Agency</a>, Sports & Entertainment Department</p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">July 2010 – September 2010</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+                <p class="font1">Journalist Intern</p>
+                <p class="font2"><a href="http://www.cna.com.tw/" target="_blank">Central News Agency</a>, Sports & Entertainment Department</p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">July 2010 – September 2010</p>
                 <ul>
                                         <li>Interviewed high-profile celebrities, professional athletes, and politicians.</li>
                                         <li> Covered two stories per day for public events, cultural exhibitions, and athletic events.</li>
@@ -728,109 +687,98 @@
 
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-            <h1 class="cv-title">Awards &amp; Honors</h1>
-                <p class="cv1">Online News Association Student Newsroom</p>
-                <p class="cv2"><a href="http://ona15.journalists.org/student-newsroom/" target="_blank">Online News Association</a>.</p>
-                <p class="cv2">Los Angeles, California</p>
-                <p class="cv2">July 2015</p>             
-            	<p class="cv1">Departmental Scholarship</p>
-                <p class="cv2"><a href="http://journalism.berkeley.edu/" target="_blank">University of California, Berkeley, Graduate School of Journalism</a>.</p>
-                <p class="cv2">Berkeley, California</p>
-                <p class="cv2">May 2015</p>              
-                <p class="cv1">Google Journalism Fellowship at The Texs Tribune</p>
-                <p class="cv2"><a href="http://www.google.com/get/journalismfellowship/winners-2015.html" target="_blank">Google</a> & <a href="http://www.texastribune.org/" target="_blank">The Texs Tribune</a>.</p>
-                <p class="cv2">Austin, Texas & Mountain View, California</p>
-                <p class="cv2">March 2015</p>
-                <p class="cv1">Dean's Merit Fellowship</p>
-                <p class="cv2"><a href="http://journalism.berkeley.edu/" target="_blank">University of California, Berkeley, Graduate School of Journalism</a>.</p>
-                <p class="cv2">Berkeley, California</p>
-                <p class="cv2">August 2014</p>
-                <p class="cv1">Dean’s recognition for top 1% of entire Journalism Department</p>
-                <p class="cv2"><a href="http://jou.pccu.edu.tw/" target="_blank">Chinese Culture University, Department of Journalism</a>.</p>
-                <p class="cv2">Taipei, Taiwan</p>
-                <p class="cv2">September 2009</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+            <hr>
+            <h1 class="cv-title"><span class="title">Awards &amp; Honors</span></h1>
+                <p class="font1">Online News Association Student Newsroom</p>
+                <p class="font2"><a href="http://ona15.journalists.org/student-newsroom/" target="_blank">Online News Association</a>.</p>
+                <p class="font2">Los Angeles, California</p>
+                <p class="font2">July 2015</p>             
+              <p class="font1">Departmental Scholarship</p>
+                <p class="font2"><a href="http://journalism.berkeley.edu/" target="_blank">University of California, Berkeley, Graduate School of Journalism</a>.</p>
+                <p class="font2">Berkeley, California</p>
+                <p class="font2">May 2015</p>              
+                <p class="font1">Google Journalism Fellowship at The Texs Tribune</p>
+                <p class="font2"><a href="http://www.google.com/get/journalismfellowship/winners-2015.html" target="_blank">Google</a> & <a href="http://www.texastribune.org/" target="_blank">The Texs Tribune</a>.</p>
+                <p class="font2">Austin, Texas & Mountain View, California</p>
+                <p class="font2">March 2015</p>
+                <p class="font1">Dean's Merit Fellowship</p>
+                <p class="font2"><a href="http://journalism.berkeley.edu/" target="_blank">University of California, Berkeley, Graduate School of Journalism</a>.</p>
+                <p class="font2">Berkeley, California</p>
+                <p class="font2">August 2014</p>
+                <p class="font1">Dean’s recognition for top 1% of entire Journalism Department</p>
+                <p class="font2"><a href="http://jou.pccu.edu.tw/" target="_blank">Chinese Culture University, Department of Journalism</a>.</p>
+                <p class="font2">Taipei, Taiwan</p>
+                <p class="font2">September 2009</p>
         </div>    
             </div>
             </div>
-        <h2 class="page-header2"></h2> 
+
 
         <!-- Skills and Lanuages-->      
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-            <h1 class="cv-title">Skills</h1>
+            <div class="col-sm-10 col-sm-offset-1"> 
+            <hr>
+            <h1 class="cv-title"><span class="title">Skills<span class="title"></h1>
                 <li>Data Visualization & Design: D3.js, Adobe Illustrator, Adobe Photoshop, Twitter Reverb, OpenRefine, MySQL, Responsive Design, R</li>
                 <li>Mapping: Leaflet, CartoDB, QGIS, Google Maps API</li>
                 <li>Front-end: HTML, CSS, Bootstrap, JavaScript, JQuery, SCSS, API implementation</li>
                 <!-- <li>Back-end: Python, Django </li> -->
-                <li>Others: Adobe Audition, Adobe Premiere, WordPress, Git(Version Control)</li>
+                <li>Others: Adobe Audition, Adobe Premiere, WordPress, Git (Version Control)</li>
 
          </div>    
             </div>
             </div>
-        <h2 class="page-header2"></h2> 
+        
         <div class="container">
             <div class="row">
-            <div class="col-lg-12"> 
-            <h1 class="cv-title">Languages</h1>
+            <div class="col-sm-10 col-sm-offset-1"> 
+            <hr>
+            <h1 class="cv-title"><span class="title">Languages</span></h1>
                 <li>Mandarin Chinese</li>
                 <li>English</li>
                 <li>Taiwanese</li>
         </div>    
             </div>
             </div>
-        <h2 class="page-header2"></h2> 
+   
 
         <!-- Education-->  
         <div class="container">
             <div class="row">
-            <div class="col-lg-12">
-            <h1 class="cv-title">Education</h1>
-                <p class="cv1">MJ, Journalism, New Media Track</p>
-                <p class="cv2"><a href="http://journalism.berkeley.edu/" target="_blank">University of California, Berkeley, Graduate School of Journalism</a>.</p>
-                <p class="cv2">Berkeley, California</p>
-                <p class="cv2">May 2016 (Expected)</p>
-                <p class="cv1">BA, Journalism</p>
-                <p class="cv2"><a href="http://jou.pccu.edu.tw/" target="_blank">Chinese Culture University</a>.</p>
-                <p class="cv2">Taipei, Taiwan</p>
-               <p class="cv2">May 2012</p>
+            <div class="col-sm-10 col-sm-offset-1"> 
+            <hr>
+            <h1 class="cv-title"><span class="title">Education</span></h1>
+                <p class="font1">MJ, Journalism, New Media Track</p>
+                <p class="font2"><a href="http://journalism.berkeley.edu/" target="_blank">University of California, Berkeley, Graduate School of Journalism</a>.</p>
+                <p class="font2">Berkeley, California</p>
+                <p class="font2">May 2016 (Expected)</p>
+                <p class="font1">BA, Journalism</p>
+                <p class="font2"><a href="http://jou.pccu.edu.tw/" target="_blank">Chinese Culture University</a>.</p>
+                <p class="font2">Taipei, Taiwan</p>
+               <p class="font2">May 2012</p>
+                <hr>
 
         </div>    
             </div>
             </div>
-        <h2 class="page-header2"></h2> 
 
-        <!-- Footer -->
+            <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
+
                     <p class="text-center">Copyright &copy; Jeremy C.F. Lin</p>
                 </div>
             </div>
         </footer>
 
-    </div>
-    <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <script>
-    jQuery(document).ready(function($){
-
-        $(".profile_pic").hover(
-  function () {
-    $(this).toggleClass("profile_pic_adjusted")      
-  }
-);
-                
-    });
-    </script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    
-
-</body>
-
+    <script src="js/jquery.js"></script>
+  </body>
 </html>
