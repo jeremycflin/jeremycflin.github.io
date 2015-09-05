@@ -94,9 +94,18 @@
      }
 
      img{
-      max-width: 150px !important;
+      max-width: 160px !important;
       height:auto;
       margin-left: 1.5em;
+     }
+
+     .card{
+      /*max-height: 150px !important;*/
+      height:140px !important;
+     }
+
+     .card .portfolio-titile{
+      margin-top: -10px;
      }
 
      a{
@@ -110,13 +119,17 @@
      }
 
      a:hover{
-      color:rgba(45,90,163,1) !important;
-      background-color: rgba(204,235,255,0.6);
+      /*background-color: rgba(204,235,255,0.6);*/
+      background-color: rgba(255,179,213,0.4);
+     }
+
+     i:hover{
+      color:rgba(29, 168, 183,1) !important;
      }
 
      .filter{
-      filter: saturate(50%);
-      -webkit-filter: saturate(50%);
+      filter: grayscale(80%);
+      -webkit-filter: grayscale(80%);
   
      /* filter: none;
       -webkit-filter: none;   */
@@ -130,18 +143,18 @@
     }
 
     .portfolio{
-      max-width: 800px !important;
+      max-width: 830px !important;
     }
 
     .portfolio-titile{
-      font-family: 'Archivo Narrow','avenir next','Libre Baskerville','Crimson Text';
+      font-family: 'Libre Baskerville','Crimson Text';
       font-size: 1.3em;
       margin-top: 1.0em;
       /*background-color: rgba(217, 240, 255, 0.6);*/
     /*  background-color:rgba(204,235,255,0.6);*/
       padding:0.1em;
       opacity:0.8;
-     /* font-weight: 500;*/
+      color:black;
     }
 
     .category{
@@ -149,7 +162,7 @@
       font-size: 0.9em;
       font-weight: 500;
       margin-top: -8px;
-      opacity:0.8;
+      color:rgba(0,0,0,0.6);
     }
 
     li{
@@ -169,10 +182,20 @@
      /* background-color: rgba(255,179,213,0.3);*/
     }
 
-    .pink{
-      width:20px;
-      min-height: 30px;
-      background-color: rgba(255,179,213,0.3);
+    .source{
+      font-family: 'Archivo Narrow','avenir next';
+      font-size: 1.1em;
+      color:rgba(0,0,0,0.9);
+    }
+
+    .left_bar{
+      width:10px;
+      margin-top: 25px;
+      min-height: 130px;
+      background-color: rgba(255,179,213,0.4);
+      /*background-color: rgba(217, 240, 255, 0.8);*/
+      float:left;
+      margin-right:-10px; 
     }
 
     footer p{
@@ -181,6 +204,10 @@
 
     .container{
       max-width: 1000px;
+    }
+
+    .col-lg-3 {
+      margin-top: 2em !important;
     }
 
 
@@ -214,10 +241,18 @@
         <a class="img-rounded" href="http://bit.ly/1PdtQbY" target="_blank">
           <img class="img-responsive filter"  src="images/blog/logo2.gif" alt="What I learned at the Tribune">
         </a>     
-        <a href="http://bit.ly/1PdtQbY" target="_blank">
+        <!-- <a href="http://bit.ly/1PdtQbY" target="_blank">
           <p class="text-center portfolio-titile">Google Fellowship</p>
         </a>
-        <p class="category text-center">News Apps Blog</p>
+        <p class="category text-center">News Apps Blog</p> -->
+      </div> 
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="http://bit.ly/1PdtQbY" target="_blank">
+          <p class="portfolio-titile">Google Fellowship</p>
+        </a>
+        <p class="category source">News Apps Blog</p>
+        <p class="category">A blog post I wrote for the Tribune on What I have learned during my Google Journalism Fellowship.</p>
       </div> 
 
     <!-- Freestanding Emergency Rooms -->
@@ -225,32 +260,59 @@
         <a class="img-rounded" href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank">
           <img class="img-responsive filter"  src="images/emergency/map2.gif" alt="freestanding emergency rooms in texas">
         </a>     
-        <a href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank">
+        <!-- <a href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank">
           <p class="text-center portfolio-titile">Emergency Rooms</p></a>
-        <p class="category text-center">Texas Tribune</p>
+        <p class="category text-center">Texas Tribune</p> -->
       </div>
+
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/" target="_blank">
+          <p class="portfolio-titile">Emergency Rooms</p>
+        </a>
+        <p class="category source">Texas Tribune</p>
+        <p class="category">A data viz on the raise of Texas freestanding emergency rooms. Built with d3.js and JavaScript.</p>
+      </div> 
 
     <!-- Texas Health Care -->
       <div class="col-lg-3 col-md-4 col-xs-6">
         <a class="img-rounded" href="http://trib.it/1LNYCIW" target="_blank">
           <img class="img-responsive filter"  src="images/texas_health/health2.gif" alt="Obama Care">
         </a>     
-        <a href="http://trib.it/1LNYCIW" target="_blank">
+        <!-- <a href="http://trib.it/1LNYCIW" target="_blank">
           <p class="text-center portfolio-titile">ObamaCare</p>
         </a>
-        <p class="category text-center">Texas Tribune</p>
+        <p class="category text-center">Texas Tribune</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="http://trib.it/1LNYCIW" target="_blank">
+          <p class="portfolio-titile">ObamaCare</p>
+        </a>
+        <p class="category source">Texas Tribune</p>
+        <p class="category">A series of choropleth maps on healcare enrollment and income. Built with d3.js, JavaScript, Google Earth, Google Maps API and QGIS.</p>
+      </div> 
+
+
 
     <!-- Texas solar -->
       <div class="col-lg-3 col-md-4 col-xs-6">
         <a class="img-rounded" href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank">
           <img class="img-responsive filter"  src="images/texas_solar/solar2.gif" alt="solar">
         </a>     
-        <a href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank">
+       <!--  <a href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank">
           <p class="text-center portfolio-titile">Solar Production</p>
         </a>
-        <p class="category text-center">Texas Tribune</p>
+        <p class="category text-center">Texas Tribune</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/" target="_blank">
+          <p class="portfolio-titile">Solar Production</p>
+        </a>
+        <p class="category source">Texas Tribune</p>
+        <p class="category">A dataviz on Texas solar production. Built with d3.js and JavaScript.</p>
+      </div> 
 
 
     <!-- license fees -->
@@ -259,11 +321,19 @@
         <img class="img-responsive filter" src="images/liscense_fee/fee.gif" 
             alt="liscense fees">
         </a>     
-        <a href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank">
+        <!-- <a href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank">
           <p class="text-center portfolio-titile">Liscense Fees</p>
         </a>
-        <p class="category text-center">Texas Tribune</p>
+        <p class="category text-center">Texas Tribune</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="http://www.texastribune.org/2015/08/03/31-days-professional-fees/" target="_blank">
+          <p class="portfolio-titile">Liscense Fees</p>
+        </a>
+        <p class="category source">Texas Tribune</p>
+        <p class="category">llustrations on how the Texas legislature eliminated license fees for some professions. Drew in Illustrator, built with Texas Tribune Graphic Kit.</p>
+      </div> 
 
 
 <!-- Obama Care -->
@@ -271,22 +341,38 @@
         <a class="img-rounded" href="charts/texas_obama_care/index.html" target="_blank">
           <img class="img-responsive filter"  src="images/obama_care/obama2.gif" alt="obama_care">
         </a>     
-        <a href="charts/texas_obama_care/index.html" target="_blank">
+        <!-- <a href="charts/texas_obama_care/index.html" target="_blank">
           <p class="text-center portfolio-titile">ACA Enrollment</p>
         </a>
-        <p class="category text-center">Personal</p>
+        <p class="category text-center">Personal</p> -->
       </div>
+      <div class="left_bar"></div>
+       <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/texas_obama_care/index.html" target="_blank">
+          <p class="portfolio-titile">ACA Enrollment</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">Two choropleth maps on healcare enrollment and income. Built with QGIS, Google Maps API, Google Earth.</p>
+      </div> 
 
 <!-- republican -->
       <div class="col-lg-3 col-md-4 col-xs-6">
         <a class="img-rounded" href="charts/republican/index.html" target="_blank" data-toggle="modal">
           <img class="img-responsive filter"  src="images/republican/love2.gif" alt="port">
         </a>     
-        <a href="charts/republican/index.html" target="_blank" data-toggle="modal">
+        <!-- <a href="charts/republican/index.html" target="_blank" data-toggle="modal">
           <p class="text-center portfolio-titile">Illustrated Politicians</p>
         </a>
-        <p class="category text-center">Personal</p>
+        <p class="category text-center">Personal</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/republican/index.html" target="_blank">
+          <p class="portfolio-titile">Illustrated Politicians</p>
+        </a>
+        <p class="category source">Personal, work in progress</p>
+        <p class="category">llustrations on American politicians. Drew in Illustrator and AI2HTML.</p>
+      </div> 
 
 
 <!-- port story -->
@@ -294,11 +380,19 @@
         <a class="img-rounded" href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank">
           <img class="img-responsive filter"  src="images/port/port2.gif" alt="port">
         </a>     
-        <a href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank">
+        <!-- <a href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank">
           <p class="text-center portfolio-titile">The Long Shore</p>
         </a>
-        <p class="category text-center">Personal</p>
+        <p class="category text-center">Personal</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="https://media.journalism.berkeley.edu/projects/2015/20150511_port/index.html" target="_blank">
+          <p class="portfolio-titile">The Long Shore</p>
+        </a>
+        <p class="category source">Class assignment</p>
+        <p class="category">I made this news package. Built with Bootstrap, JavaScript. Story written by <a href="https://twitter.com/BrettMmurphy">Brett Murphy</a> and <a href="https://twitter.com/whitemanjf">Justin Whiteman</a>.</p>
+      </div> 
 
 <!-- Chinese students -->
 
@@ -306,11 +400,19 @@
           <a class="img-rounded" href="depression/index.html" target="_blank">
             <img class="img-responsive filter"  src="images/chinese/chinese2.gif" alt="stateless">
           </a>     
-          <a href="depression/index.html" target="_blank">
+          <!-- <a href="depression/index.html" target="_blank">
             <p class="text-center portfolio-titile">Against All Odds</p>
           </a>
-          <p class="category text-center">Personal</p>
+          <p class="category text-center">Personal</p> -->
       </div>  
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="depression/index.html" target="_blank">
+          <p class="portfolio-titile">Against All Odds</p>
+        </a>
+        <p class="category source">Class assignment</p>
+        <p class="category">A closer look at Chinese students' struggles. Built with Bootstrap, JavaScript. Story by <a href="https://twitter.com/Jeremy_CF_Lin">Jeremy Lin</a>, <a href="https://twitter.com/shangshi0716">Chloe Shi</a>, <a href="https://twitter.com/RichConFan">Fan Fei</a> and <a href="https://twitter.com/Jieqian_Zhang">Jieqian Zhang</a>.</p>
+      </div> 
         
 <!--Stateless-->
 
@@ -318,10 +420,18 @@
           <a class="img-rounded" href="charts/stateless/index.html" target="_blank">
             <img class="img-responsive filter"  src="images/stateless/stateless2.gif" alt="stateless">
           </a>     
-          <a href="charts/stateless/index.html" target="_blank">
+<!--           <a href="charts/stateless/index.html" target="_blank">
             <p class="text-center portfolio-titile">Stateless Population</p>
           </a>
-          <p class="category text-center">Personal</p>
+          <p class="category text-center">Personal</p> -->
+      </div> 
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="depression/index.html" target="_blank">
+          <p class="portfolio-titile">Living Between Borders</p>
+        </a>
+        <p class="category source">Class assignment</p>
+        <p class="category">A package on global stateless population. Built with d3.js, JavaScript. Story and video by <a href="https://twitter.com/lakitalki">Lakshmi Sarah</a>.</p>
       </div> 
 
 <!-- Worldmap -->
@@ -330,11 +440,19 @@
           <a class="img-rounded" href="charts/world_population/index.html" target="_blank">
             <img class="img-responsive filter"  src="images/world_map/world_map2.gif" alt="population">
           </a>     
-          <a href="charts/world_population/index.html" target="_blank">
+          <!-- <a href="charts/world_population/index.html" target="_blank">
             <p class="text-center portfolio-titile">World Population</p>
           </a>
-          <p class="category text-center">Personal</p>
-      </div>                       
+          <p class="category text-center">Personal</p> -->
+      </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/world_population/index.html" target="_blank">
+          <p class="portfolio-titile">World Population</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A choropleth map on global population. Built with d3.js, JavaScript.</p>
+      </div>                        
             
 <!-- Story Template 2 -->
 <!--             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -351,11 +469,19 @@
           <a class="img-rounded" href="charts/journalism/index.html" target="_blank">
             <img class="img-responsive filter"  src="images/journalism/journalism2.gif" alt="Reporter Salaries">
           </a>     
-          <a href="charts/journalism/index.html" target="_blank">
+         <!--  <a href="charts/journalism/index.html" target="_blank">
             <p class="text-center portfolio-titile">Journalist Salaries</p>
           </a>
-          <p class="category text-center">Personal</p>
+          <p class="category text-center">Personal</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/journalism/index.html" target="_blank">
+          <p class="portfolio-titile">Journalist Salaries</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A data viz on journalist salaries. Built with d3.js, bootstrap and JavaScript.</p>
+      </div>   
             
 <!-- Story Template 1 -->
 <!--              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -371,29 +497,53 @@
           <a class="img-rounded" href="charts/california_energy_linechart/index.html" target="_blank">
             <img class="img-responsive filter"  src="images/california_energy_linechart/california_energy_2.gif" alt="Thumbnail of Energy Breakdown in California">
           </a>     
-          <a href="charts/california_energy_linechart/index.html" target="_blank">
+          <!-- <a href="charts/california_energy_linechart/index.html" target="_blank">
             <p class="text-center portfolio-titile">Energy Breakdown</p>
           </a>
-          <p class="category text-center">Personal</p>
+          <p class="category text-center">Personal</p> -->
       </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/california_energy_linechart/index.html" target="_blank">
+          <p class="portfolio-titile">Energy Breakdown</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A data viz on California energy breakdown. Built with d3.js and JavaScript.</p>
+      </div>   
             
 <!-- Earthquakes -->
       <div class="col-lg-3 col-md-4 col-xs-6">
         <a class="img-rounded" href="charts/earthquakes/index.html" target="_blank" data-toggle="modal">
             <img class="img-responsive filter"  src="images/earthquakes/earthquakes2.gif" alt="Thumbnail of Seismic Hazards in USA">
         </a>     
-        <a href="charts/earthquakes/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Seismic Hazards</p></a>
-        <p class="category text-center">Personal</p>
-     </div>
+        <!-- <a href="charts/earthquakes/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Seismic Hazards</p></a>
+        <p class="category text-center">Personal</p> -->
+      </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/california_energy_linechart/index.html" target="_blank">
+          <p class="portfolio-titile">Seismic Hazards</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A data viz on seismic hazards in America, using a live API. Built with QGIS and Leaflet.</p>
+      </div>   
             
 <!-- Syria -->
-             <div class="col-lg-3 col-md-4 col-xs-6">
-                <a class="img-rounded" href="charts/syria/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive filter"  src="images/syria/syria2.gif" alt="Thumbnail of Syrian Civil War">
-                </a>     
-                <a href="charts/syria/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Syrian Civil War</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="charts/syria/index.html" target="_blank" data-toggle="modal">
+          <img class="img-responsive filter"  src="images/syria/syria2.gif" alt="Thumbnail of Syrian Civil War">
+        </a>     
+        <!-- <a href="charts/syria/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Syrian Civil War</p></a>
+        <p class="category text-center">Personal</p> -->
+      </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/syria/index.html" target="_blank">
+          <p class="portfolio-titile">Syrian Civil War</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A data viz documents violent events in the Syrian civil war from the start of 2011 to the end of the first quarter of 2013. Built with CartoDB.</p>
+      </div>   
             
 <!-- Gas Plant Map -->           
 <!--              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -414,13 +564,21 @@
             </div> -->
             
 <!-- Cali Energy Production -->
-             <div class="col-lg-3 col-md-4 col-xs-6">
-                <a class="img-rounded" href="charts/california_energy/index.html" target="_blank" data-toggle="modal">
-                    <img class="img-responsive filter"  src="images/california_energy/energy2.gif" alt="Thumbnail of Energy Breakdown in California">
-                </a>     
-                <a href="charts/california_energy/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Cali. Energy Viz</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+       <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="charts/california_energy/index.html" target="_blank" data-toggle="modal">
+              <img class="img-responsive filter"  src="images/california_energy/energy2.gif" alt="Thumbnail of Energy Breakdown in California">
+          </a>     
+          <!-- <a href="charts/california_energy/index.html" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Cali. Energy Viz</p></a>
+          <p class="category text-center">Personal</p> -->
+      </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="charts/california_energy/index.html" target="_blank">
+          <p class="portfolio-titile">Cali. Energy Viz</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A data viz on California energy breakdown, using ca.gov data. Built with d3.js.</p>
+      </div>   
             
 <!-- J200 -->           
 <!--
@@ -434,22 +592,39 @@
 -->
             
 <!-- Honey -->
-             <div class="col-lg-3 col-md-4 col-xs-6">
-                <a class="img-rounded" href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal">
-                    <img class="img-responsive filter"  src="images/honey/honey_2.gif" alt="Thumbnail of Honey Production">
-                </a>     
-                <a href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Honey Production</p></a>
-                <p class="category text-center">Oakland North</p>
-            </div>
+       <div class="col-lg-3 col-md-4 col-xs-6">
+          <a class="img-rounded" href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal">
+              <img class="img-responsive filter"  src="images/honey/honey_2.gif" alt="Thumbnail of Honey Production">
+          </a>     
+          <!-- <a href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Honey Production</p></a>
+          <p class="category text-center">Oakland North</p> -->
+      </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank">
+          <p class="portfolio-titile">Honey Production</p>
+        </a>
+        <p class="category source">Oakland North</p>
+        <p class="category">An infographic on honey production in California. Story written by <a href="https://twitter.com/lakitalki">Lakshmi Sarah</a>. Infographic made in Illustrator.</p>
+      </div>   
+
             
 <!-- Richmond -->
-             <div class="col-lg-3 col-md-4 col-xs-6">
-                <a class="img-rounded" href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal">
-                    <img class="img-responsive filter"  src="images/richmond_map1/richmond_map2.gif" alt="Thumbnail of Richmond Election Turnout">
-                </a>     
-                <a href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Richmond Election</p></a>
-                <p class="category text-center">KQED</p>
-            </div>
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <a class="img-rounded" href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal">
+          <img class="img-responsive filter"  src="images/richmond_map1/richmond_map2.gif" alt="Thumbnail of Richmond Election Turnout">
+        </a>     
+        <!-- <a href="http://ww2.kqed.org/news/2014/11/15/Richmond-at-large-voting-demographic-breakdown" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Richmond Election</p></a>
+        <p class="category text-center">KQED</p> -->
+     </div>
+     <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="https://oaklandnorth.net/2015/02/04/hidden-honey-a-standard-for-whats-in-the-jar-may-be-on-the-way/" target="_blank">
+          <p class="portfolio-titile">Richmond Election</p>
+        </a>
+        <p class="category source">KQED</p>
+        <p class="category">A series of infographics on Richmond election. Story by <a href="https://twitter.com/BrettMmurphy">Brett Murphy</a>. Made in Illustrator.</p>
+      </div>   
             
 <!-- Richmond -->
 <!--
@@ -483,22 +658,38 @@
             
 
 <!-- Health Care -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="img-rounded" href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal">
-                    <img class="img-responsive filter"  src="images/health_care/health_care2.gif" alt="Thumbnail of Health Care Spending in USA">
-                </a>     
-                <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Health Care Spending</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+       <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+          <a class="img-rounded" href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal">
+              <img class="img-responsive filter"  src="images/health_care/health_care2.gif" alt="Thumbnail of Health Care Spending in USA">
+          </a>     
+         <!--  <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Health Care Spending</p></a>
+          <p class="category text-center">Personal</p> -->
+      </div>
+      <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/health-care1.png" target="_blank">
+          <p class="portfolio-titile">Health Care Spending</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">A series of small multiples on global health care spending. Made in Illustrator.</p>
+      </div>   
             
 <!-- Energy in Germany -->
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="img-rounded" href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal">
-                    <img class="img-responsive filter"  src="images/nuclear/nuclear2.gif" alt="Thumbnail of Energy Breakdown in Germany">
-                </a>     
-                <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Energy in Germany</p></a>
-                <p class="category text-center">Personal</p>
-            </div>
+     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a class="img-rounded" href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal">
+            <img class="img-responsive filter"  src="images/nuclear/nuclear2.gif" alt="Thumbnail of Energy Breakdown in Germany">
+        </a>     
+        <!-- <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank" data-toggle="modal"><p class="text-center portfolio-titile">Energy in Germany</p></a>
+        <p class="category text-center">Personal</p> -->
+    </div>
+    <div class="left_bar"></div>
+      <div class="col-lg-3 col-md-4 col-xs-6 card">
+        <a href="https://jeremycflindotcom.files.wordpress.com/2014/06/less-nuclear-reliant-but-not-necessarily-greener_final_edition1.png" target="_blank">
+          <p class="portfolio-titile">Energy in Germany</p>
+        </a>
+        <p class="category source">Personal</p>
+        <p class="category">An infographic on Germany's reliance on nuclear energy. Graphic made in Illustrator.</p>
+      </div> 
 
     </div>
     <hr>    
