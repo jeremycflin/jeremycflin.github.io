@@ -142,13 +142,15 @@
     }
 
      .filter:hover {
-      filter: saturate(125%);
+   /*   filter: saturate(125%);
       -webkit-filter: saturate(125%);
       -moz-filter: saturate(125%);
       -o-filter: saturate(125%);
-      -ms-filter: saturate(125%);
+      -ms-filter: saturate(125%);*/
       /*filter: grayscale(100%);
       -webkit-filter: grayscale(100%);*/
+       filter: none;
+      -webkit-filter: none;   
     }
 
     .portfolio{
@@ -767,6 +769,7 @@
 
 
 <!--  CV -->
+
         <div class="container">
            <div class="row">
               <div class="col-sm-10 col-sm-offset-1"> 
@@ -1061,6 +1064,17 @@
 
         });
 
+       $(".worksamples", this).on("mouseenter", function(){
+
+          $(this).find("img").removeClass("filter"); 
+
+        });
+
+       $(".worksamples", this).on("mouseleave", function(){
+
+          $(this).find("img").addClass("filter"); 
+
+        });
 
     });
 </script>
