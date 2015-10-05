@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+<style>
+
+body{
+  font-family: "Helvetica Neue";
+}
+
+.baseMap{
+  stroke-width:0.8px;
+  stroke:#555;
+  fill:#555;
+  opacity:0.5;
+}
+
+.globe {
+  fill: #000;
+}
+
+
+.cities_end{
+  /*fill:rgba(29, 168, 183, .5);*/
+  fill:rgba(230, 255, 0, 0.5);
+/*  254*/
+/*  fill:none;*/
+  stroke-width: 1;
+  stroke: white;
+ /* fill:none;*/
+  }
+
+.line{
+  stroke:rgba(230, 255, 0, 0.8);
+/*  stroke:rgba(253,141,3,.3);*/
+  stroke-width:1.5px;
+  fill:none;
+
+}
+
+.geo-globe {
+  fill: rgba(236,249,255,0.8);
+/*  fill:white;*/
+    }
+
+.years{
+  font-size:18px;
+  font-weight: 600;
+  font-family: "Helvetica Neue";
+  fill:black;
+  opacity: 0.8;
+}
+
+.country{
+  font-size:15px;
+  font-family: "Helvetica Neue";
+  fill:black;
+  opacity: 0.7;
+}
+
+
+
+.maps{
+
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+  .maps {
+    margin-left: 0px;
+  }
+}
+
+table{
+   font-family: "新細明體";
+}
+
+/*div {
+  outline: 1px solid black;
+}
+
+svg {
+  outline: 1px solid orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+g {
+  outline: 1px solid red;
+}*/
+
+.title{
+  text-align: center;
+}
+
+h1{
+  font-size: 50px;
+  margin-top: 10px;
+/*  color:rgb(33, 113, 181);*/
+  color:#333333;
+}
+
+h3{ 
+  font-weight: 500;
+  margin-top: -20px;
+  color:#333333;
+  opacity:0.8;
+  font-size: 15px;
+
+
+}
+
+.table{
+  max-width: 1200px;
+  margin:auto;
+  font-size: .9em;
+  color:#333333;
+}
+
+a{
+ background-color: rgba(230, 255, 0, 0.5);
+ text-decoration: none;
+ color:black;
+}
+
+a:hover{
+  background-color: rgba(255,179,213,0.4); 
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+
+
+</style>
+<body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src='arc.js/arc.js'></script>
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+<script src="js/script.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+<h1 class = "title">台灣交換學生資料庫</h1>
+<h3 class = "title">民國101至103年台灣交換學生資料，使用者可以移動滑鼠與拖曳地球儀查看詳細資料，<br>也可以利用下方資料庫內進行進階搜尋。資料來源來自教育部。製作人<a href="https://twitter.com/Jeremy_CF_Lin" target="_blank">Jeremy C.F. Lin</a>，<br>與台灣<a href="http://comm.nccu.edu.tw/index.php" target="_blank">政治大學傳播學院</a>一同合作。</h3>
+<div id="main-wrapper" class="">
+        <div id="main-content" class="container">
+            <div class="row">
+            <div id ='map' class="maps col-lg-2"></div>
+            <div id ='map2' class="maps col-lg-2"></div>
+            <div id ='map3' class="maps col-lg-2"></div>
+            </div>
+            <div class ="row">
+            <div class="table">
+              <table id="example" class="display " width="100%"></table>
+            </div>
+            </div>
+        </div>
+</div>
+
+
+
+<script>
+
+
+
+  $(".maps").css("height", $("#map").outerWidth() + "px");
+
+  var margin = {
+        top: 15,
+        right: 20,
+        bottom: 15,
+        left: 0
+    },
+    width = $(".maps").outerWidth() - margin.left - margin.right,
+    height = $(".maps").outerHeight() - margin.top - margin.bottom;
+
+  //This is the project for the globe 
+  var projection = d3.geo.orthographic()
+      .scale(height / 2)
+      .translate([width / 2, height / 2])
+      .clipAngle(90)
+      .precision(0.5);
+
+  var path = d3.geo.path()
+    .projection(projection)
+    .pointRadius(function(d) {
+        //This is where we set circle radius to show count of attendees
+        if (d.count) {
+            return Math.sqrt(d.count / Math.PI) * 1.3;
+        }
+    });
+
+  var svg =  d3.select("#map").append('svg')
+  // d3.select('#map').append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .attr('class', 'graph-svg-component')
+    .call(responsivefy) // Call function responsivefy to make the graphic reponsive according to the window width/height
+    .append('g')
+    .attr("class", "globe-g")
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  var svg2 =  d3.select("#map2").append('svg')
+  // d3.select('#map').append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .attr('class', 'graph-svg-component')
+    .call(responsivefy) // Call function responsivefy to make the graphic reponsive according to the window width/height
+    .append('g')
+    .attr("class", "globe-g")
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  var svg3 =  d3.select("#map3").append('svg')
+  // d3.select('#map').append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .attr('class', 'graph-svg-component')
+    .call(responsivefy) // Call function responsivefy to make the graphic reponsive according to the window width/height
+    .append('g')
+    .attr("class", "globe-g")
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+
+
+  var globe = svg.selectAll('path.globe').data([{
+        type: 'Sphere'
+    }])
+    .enter().append('path')
+    .attr('class', 'globe')
+    .attr('d', path);
+
+  var globe2 = svg2.selectAll('path.globe').data([{
+        type: 'Sphere'
+    }])
+    .enter().append('path')
+    .attr('class', 'globe')
+    .attr('d', path);
+
+  var globe3 = svg3.selectAll('path.globe').data([{
+        type: 'Sphere'
+    }])
+    .enter().append('path')
+    .attr('class', 'globe')
+    .attr('d', path);
+
+  queue()
+      .defer(d3.json, 'data/world_countries.json')// load geojson/topojson data
+      .defer(d3.csv, 'data/exchange_student.csv')
+      .await(ready);
+
+
+  function ready(error, world, data) {
+    if (error) throw error;
+
+    data.forEach(
+        function(d) {
+
+             d.end_lat = +d.end_lat;
+             d.end_long = +d.end_long;
+             d.start_lat = +d.start_lat;
+             d.start_long = +d.start_long;
+
+             d.greatcircle = new arc.GreatCircle({
+                    x: d.start_long,
+                    y: d.start_lat
+                }, {
+                    x: d.end_long,
+                    y: d.end_lat
+                });
+                d.line = d.greatcircle.Arc(100, {
+                    offset: 10
+                });
+                d.arc = d.line.json();
+              }
+     );
+
+    data = data.filter(function(d) {
+        if (isNaN(d.end_lat) || isNaN(d.end_long)) {
+            //Do nothing.
+        } else {
+            return d;
+        }
+    });
+
+    svg.selectAll('baseMap')
+        .data(world.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+    // .append("g")
+    .attr('class', 'baseMap');
+
+    svg2.selectAll('baseMap')
+        .data(world.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+    // .append("g")
+    .attr('class', 'baseMap');
+
+    svg3.selectAll('baseMap')
+        .data(world.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+    // .append("g")
+    .attr('class', 'baseMap');
+
+    svg.append("text")
+    .attr("class","country")
+    .attr("x", width * 0.70)
+    .attr("y", height * 0.87)
+    .text("");
+
+    svg2.append("text")
+        .attr("class","country svg2")
+        .attr("x", width * 0.70)
+        .attr("y", height * 0.87)
+        .text("");
+
+    svg3.append("text")
+        .attr("class","country svg3")
+        .attr("x", width * 0.70)
+        .attr("y", height * 0.87)
+        .text("");
+
+    svg.append("text")
+        .attr("class","country count1")
+        .attr("x", width * 0.70)
+        .attr("y", height * 0.93)
+        .text("");
+
+    svg2.append("text")
+        .attr("class","country count2")
+        .attr("x", width * 0.70)
+        .attr("y", height * 0.93)
+        .text("");
+
+    svg3.append("text")
+        .attr("class","country count3")
+        .attr("x", width * 0.70)
+        .attr("y", height * 0.93)
+        .text("");
+
+
+
+    svg.selectAll('.cities_end')
+        .data(data.filter(function(d) { return d.year === "101"  }))
+        .enter().append("path")
+        .datum(function(d) {
+            return {
+                type: "Point",
+                coordinates: [d.end_long, d.end_lat],
+                count: +d.count,
+                country: d.end_country
+            };
+        })
+        .attr("d", path)
+        .attr('class', 'cities_end')
+        .on('mouseover',function(d){
+          d3.select(".country")
+            .text(d.country)
+
+          d3.select(".count1")
+            .text(d.count + " 名學生")
+        });
+
+
+    svg2.selectAll('.cities_end')
+        .data(data.filter(function(d) { return d.year === "102"  }))
+        .enter().append("path")
+        .datum(function(d) {
+            return {
+                type: "Point",
+                coordinates: [d.end_long, d.end_lat],
+                count: +d.count,
+                country: d.end_country
+            };
+        })
+        .attr("d", path)
+        .attr('class', 'cities_end')
+        .on('mouseover',function(d){
+          d3.select(".svg2")
+            .text(d.country)
+
+          d3.select(".count2")
+            .text(d.count+ " 名學生")
+        });
+
+    svg3.selectAll('.cities_end')
+        .data(data.filter(function(d) { return d.year === "103"  }))
+        .enter().append("path")
+        .datum(function(d) {
+            return {
+                type: "Point",
+                coordinates: [d.end_long, d.end_lat],
+                count: +d.count,
+                country: d.end_country
+            };
+        })
+        .attr("d", path)
+        .attr('class', 'cities_end')
+        .on('mouseover',function(d){
+          d3.select(".svg3")
+            .text(d.country)
+
+           d3.select(".count3")
+            .text(d.count+ " 名學生")
+        });
+
+        // console.log(data)
+
+    svg.append("g")
+        .attr("class", "line")
+        .selectAll(".arc")
+        .data(data.filter(function(d) { return d.year === "101"  })
+          .map(function(d) {
+            return d.arc;
+        }))
+        .enter()
+        .append("path")
+        .attr("class", "arc")
+        .attr("d", path);
+
+    svg.append("text")
+      .attr("class","years")
+      .attr("x", width * 0.70)
+      .attr("y", height * 0.80)
+      .text('101年');
+
+    svg2.append("text")
+      .attr("class","years")
+      .attr("x", width * 0.70)
+      .attr("y", height * 0.80)
+      .text('102年');
+
+    svg3.append("text")
+      .attr("class","years")
+      .attr("x", width * 0.70)
+      .attr("y", height * 0.80)
+      .text('103年 (上半年)');
+
+    svg2.append("g")
+        .attr("class", "line")
+        .selectAll(".arc")
+        .data(data.filter(function(d) { return d.year === "102"  }).map(function(d) {
+            return d.arc;
+        }))
+        .enter()
+        .append("path")
+        .attr("class", "arc")
+        .attr("d", path);
+
+        // console.log(data);
+
+    svg3.append("g")
+        .attr("class", "line")
+        .selectAll(".arc")
+        .data(data.filter(function(d) { return d.year === "103"  }).map(function(d) {
+            return d.arc;
+        }))
+        .enter()
+        .append("path")
+        .attr("class", "arc")
+        .attr("d", path);
+  }
+
+  d3.selectAll(".maps").call( //drag on the svg element
+    d3.behavior.drag()
+    .origin(function() {
+        var r = projection.rotate();
+        return {
+            x: r[0],
+            y: -r[1]
+        }; //starting point
+    })
+    .on("drag", function() {
+        var r = projection.rotate();
+        /* update retation angle */
+        projection.rotate([d3.event.x, -d3.event.y, r[2]]);
+
+        /* redraw the map and circles after rotation */
+        svg.selectAll(".baseMap").attr("d", path);
+        svg.selectAll(".arc").attr("d", path);
+        svg.selectAll('.cities_end')
+            .attr("d", path);
+
+        svg2.selectAll(".baseMap").attr("d", path);
+        svg2.selectAll(".arc").attr("d", path);
+        svg2.selectAll('.cities_end')
+            .attr("d", path);
+
+        svg3.selectAll(".baseMap").attr("d", path);
+        svg3.selectAll(".arc").attr("d", path);
+        svg3.selectAll('.cities_end')
+            .attr("d", path);
+
+    })
+);
+
+  function responsivefy(svg) {
+    var container = d3.select(svg.node().parentNode),
+        width = parseInt(svg.style('width')),
+        height = parseInt(svg.style('height')),
+        aspect = width / height;
+
+    svg.attr('viewBox', '0 0 ' + width + ' ' + height)
+        .attr('perserveAspectRatio', 'xMinYMid')
+        .call(resize);
+
+    d3.select(window).on('resize', resize);
+
+    function resize() {
+        var targetWidth = parseInt(container.style('width'));
+        svg.attr('width', targetWidth);
+        svg.attr('height', Math.round(targetWidth / aspect));
+    }
+  }
+
+</script>
+
+</body>
+</html>
