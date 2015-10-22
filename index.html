@@ -235,6 +235,35 @@
       font-weight: 500;
     }
 
+    .element{
+      background-color: black;
+      color:white;
+      padding-left: 5px;
+      padding-right:5px;
+    }
+
+    .typed-cursor{
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+
     @media (max-width: 480px) and (min-width:370px) {
        .left_bar{
         width:8px;
@@ -296,7 +325,7 @@
     <div class="col-sm-10 col-sm-offset-1"> 
       <h1 class="text-center page-header"><span class="font1">JEREMY</span><span class="font2"> C.F.</span><span class="font1"> LIN</span></h1>
       <p class="text-center">I am a data reporter/ graphic developer at <a href="http://journalism.berkeley.edu/students/jeremy_cf_lin/" target="_blank" >UCBerkeley, Graduate School of Journalism</a>.<br> Previously a <a href="http://www.google.com/get/journalismfellowship/winners-2015.html" target="_blank" >2015 Google Journalism Fellow</a> embedded at <a href="http://www.texastribune.org/" target="_blank">The Texas Tribune</a>.<br>I will be interning with <a href="http://www.nytimes.com/" target="_blank">The New York Times</a> graphic dept this winter.
-      <!-- <br> Previously, I worked at <a href="https://intelligencia.io/" target="_blank" >Intelligencia</a> and <a href="http://www.ltn.com.tw//" target="_blank" >Liberty Times</a>. --></br>I code, draw, write and build things on the Internet.<br>You can download my resume <a href="cv/CV_2015.07.pdf" target="_blank" >here</a>. <br>I don't play in the NBA.</p>
+      <!-- <br> Previously, I worked at <a href="https://intelligencia.io/" target="_blank" >Intelligencia</a> and <a href="http://www.ltn.com.tw//" target="_blank" >Liberty Times</a>. --></br>I <span class="element"></span> things on the Internet.<br>You can download my resume <a href="cv/CV_2015.07.pdf" target="_blank" >here</a>. <br>I don't play in the NBA.</p>
 
     <div class="col-lg-12 col-sm-9 text-center icon">
     <a href="mailto:jeremycflin@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
@@ -1173,6 +1202,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="typed_lib/typed.min.js"></script>
+
     <script>
     jQuery(document).ready(function($){
 
@@ -1199,6 +1230,14 @@
           $(this).find("img").addClass("filter"); 
 
         });
+
+       $(function(){
+          $(".element").typed({
+            strings: ["code", "report", "write", "draw", "design", "build"],
+            typeSpeed: 10,
+            loop: true
+      });
+  });
 
     });
 </script>
