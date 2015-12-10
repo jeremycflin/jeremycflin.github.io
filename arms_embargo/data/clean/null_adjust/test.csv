@@ -1,0 +1,456 @@
+recipient,country,year,value
+China,Belarus,1980,0
+China,Belarus,1981,0
+China,Belarus,1982,0
+China,Belarus,1983,0
+China,Belarus,1984,0
+China,Belarus,1985,0
+China,Belarus,1986,0
+China,Belarus,1987,0
+China,Belarus,1988,0
+China,Belarus,1989,0
+China,Belarus,1990,0
+China,Belarus,1991,0
+China,Belarus,1992,0
+China,Belarus,1993,0
+China,Belarus,1994,0
+China,Belarus,1995,0
+China,Belarus,1996,0
+China,Belarus,1997,0
+China,Belarus,1998,0
+China,Belarus,1999,0
+China,Belarus,2000,0
+China,Belarus,2001,0
+China,Belarus,2002,0
+China,Belarus,2003,0
+China,Belarus,2004,0
+China,Belarus,2005,0
+China,Belarus,2006,0
+China,Belarus,2007,0
+China,Belarus,2008,0
+China,Belarus,2009,0
+China,Belarus,2010,0
+China,Belarus,2011,0
+China,Belarus,2012,0
+China,Belarus,2013,170
+China,Belarus,2014,0
+China,Canada,1980,0
+China,Canada,1981,0
+China,Canada,1982,0
+China,Canada,1983,0
+China,Canada,1984,3
+China,Canada,1985,5
+China,Canada,1986,0
+China,Canada,1987,0
+China,Canada,1988,0
+China,Canada,1989,0
+China,Canada,1990,0
+China,Canada,1991,0
+China,Canada,1992,0
+China,Canada,1993,0
+China,Canada,1994,0
+China,Canada,1995,0
+China,Canada,1996,0
+China,Canada,1997,0
+China,Canada,1998,0
+China,Canada,1999,0
+China,Canada,2000,0
+China,Canada,2001,0
+China,Canada,2002,0
+China,Canada,2003,0
+China,Canada,2004,0
+China,Canada,2005,0
+China,Canada,2006,0
+China,Canada,2007,0
+China,Canada,2008,0
+China,Canada,2009,0
+China,Canada,2010,0
+China,Canada,2011,0
+China,Canada,2012,0
+China,Canada,2013,0
+China,Canada,2014,0
+China,France,1980,0
+China,France,1981,0
+China,France,1982,3
+China,France,1983,15
+China,France,1984,0
+China,France,1985,0
+China,France,1986,0
+China,France,1987,27
+China,France,1988,38
+China,France,1989,78
+China,France,1990,62
+China,France,1991,90
+China,France,1992,89
+China,France,1993,113
+China,France,1994,117
+China,France,1995,141
+China,France,1996,141
+China,France,1997,97
+China,France,1998,102
+China,France,1999,148
+China,France,2000,132
+China,France,2001,149
+China,France,2002,186
+China,France,2003,172
+China,France,2004,264
+China,France,2005,218
+China,France,2006,183
+China,France,2007,176
+China,France,2008,215
+China,France,2009,169
+China,France,2010,193
+China,France,2011,208
+China,France,2012,223
+China,France,2013,210
+China,France,2014,204
+China,Germany (FRG),1980,7
+China,Germany (FRG),1981,2
+China,Germany (FRG),1982,12
+China,Germany (FRG),1983,12
+China,Germany (FRG),1984,12
+China,Germany (FRG),1985,12
+China,Germany (FRG),1986,12
+China,Germany (FRG),1987,12
+China,Germany (FRG),1988,12
+China,Germany (FRG),1989,12
+China,Germany (FRG),1990,12
+China,Germany (FRG),1991,12
+China,Germany (FRG),1992,12
+China,Germany (FRG),1993,16
+China,Germany (FRG),1994,12
+China,Germany (FRG),1995,12
+China,Germany (FRG),1996,18
+China,Germany (FRG),1997,8
+China,Germany (FRG),1998,8
+China,Germany (FRG),1999,14
+China,Germany (FRG),2000,8
+China,Germany (FRG),2001,8
+China,Germany (FRG),2002,6
+China,Germany (FRG),2003,8
+China,Germany (FRG),2004,20
+China,Germany (FRG),2005,12
+China,Germany (FRG),2006,12
+China,Germany (FRG),2007,10
+China,Germany (FRG),2008,3
+China,Germany (FRG),2009,3
+China,Germany (FRG),2010,3
+China,Germany (FRG),2011,3
+China,Germany (FRG),2012,3
+China,Germany (FRG),2013,11
+China,Germany (FRG),2014,7
+China,Israel,1980,0
+China,Israel,1981,0
+China,Israel,1982,0
+China,Israel,1983,0
+China,Israel,1984,0
+China,Israel,1985,0
+China,Israel,1986,0
+China,Israel,1987,0
+China,Israel,1988,0
+China,Israel,1989,0
+China,Israel,1990,28
+China,Israel,1991,28
+China,Israel,1992,28
+China,Israel,1993,28
+China,Israel,1994,28
+China,Israel,1995,28
+China,Israel,1996,28
+China,Israel,1997,28
+China,Israel,1998,38
+China,Israel,1999,38
+China,Israel,2000,28
+China,Israel,2001,28
+China,Israel,2002,0
+China,Israel,2003,0
+China,Israel,2004,0
+China,Israel,2005,0
+China,Israel,2006,0
+China,Israel,2007,0
+China,Israel,2008,0
+China,Israel,2009,0
+China,Israel,2010,0
+China,Israel,2011,0
+China,Israel,2012,0
+China,Israel,2013,0
+China,Israel,2014,0
+China,Italy,1980,0
+China,Italy,1981,0
+China,Italy,1982,0
+China,Italy,1983,0
+China,Italy,1984,0
+China,Italy,1985,0
+China,Italy,1986,5
+China,Italy,1987,9
+China,Italy,1988,5
+China,Italy,1989,5
+China,Italy,1990,2
+China,Italy,1991,2
+China,Italy,1992,0
+China,Italy,1993,0
+China,Italy,1994,0
+China,Italy,1995,0
+China,Italy,1996,0
+China,Italy,1997,0
+China,Italy,1998,0
+China,Italy,1999,0
+China,Italy,2000,0
+China,Italy,2001,0
+China,Italy,2002,0
+China,Italy,2003,0
+China,Italy,2004,0
+China,Italy,2005,0
+China,Italy,2006,0
+China,Italy,2007,0
+China,Italy,2008,0
+China,Italy,2009,0
+China,Italy,2010,0
+China,Italy,2011,0
+China,Italy,2012,0
+China,Italy,2013,0
+China,Italy,2014,0
+China,Japan,1980,0
+China,Japan,1981,0
+China,Japan,1982,0
+China,Japan,1983,0
+China,Japan,1984,0
+China,Japan,1985,0
+China,Japan,1986,0
+China,Japan,1987,0
+China,Japan,1988,0
+China,Japan,1989,15
+China,Japan,1990,30
+China,Japan,1991,0
+China,Japan,1992,0
+China,Japan,1993,0
+China,Japan,1994,0
+China,Japan,1995,0
+China,Japan,1996,0
+China,Japan,1997,0
+China,Japan,1998,0
+China,Japan,1999,0
+China,Japan,2000,0
+China,Japan,2001,0
+China,Japan,2002,0
+China,Japan,2003,0
+China,Japan,2004,0
+China,Japan,2005,0
+China,Japan,2006,0
+China,Japan,2007,0
+China,Japan,2008,0
+China,Japan,2009,0
+China,Japan,2010,0
+China,Japan,2011,0
+China,Japan,2012,0
+China,Japan,2013,0
+China,Japan,2014,0
+China,Russia,1980,0
+China,Russia,1981,0
+China,Russia,1982,0
+China,Russia,1983,0
+China,Russia,1984,0
+China,Russia,1985,0
+China,Russia,1986,0
+China,Russia,1987,0
+China,Russia,1988,0
+China,Russia,1989,0
+China,Russia,1990,0
+China,Russia,1991,0
+China,Russia,1992,1023
+China,Russia,1993,1011
+China,Russia,1994,72
+China,Russia,1995,498
+China,Russia,1996,1241
+China,Russia,1997,732
+China,Russia,1998,175
+China,Russia,1999,1465
+China,Russia,2000,2233
+China,Russia,2001,2486
+China,Russia,2002,2528
+China,Russia,2003,2076
+China,Russia,2004,2888
+China,Russia,2005,3107
+China,Russia,2006,2472
+China,Russia,2007,1324
+China,Russia,2008,1529
+China,Russia,2009,1102
+China,Russia,2010,636
+China,Russia,2011,703
+China,Russia,2012,689
+China,Russia,2013,1133
+China,Russia,2014,909
+China,Soviet Union,1980,0
+China,Soviet Union,1981,0
+China,Soviet Union,1982,0
+China,Soviet Union,1983,0
+China,Soviet Union,1984,0
+China,Soviet Union,1985,0
+China,Soviet Union,1986,0
+China,Soviet Union,1987,0
+China,Soviet Union,1988,0
+China,Soviet Union,1989,0
+China,Soviet Union,1990,81
+China,Soviet Union,1991,260
+China,Soviet Union,1992,0
+China,Soviet Union,1993,0
+China,Soviet Union,1994,0
+China,Soviet Union,1995,0
+China,Soviet Union,1996,0
+China,Soviet Union,1997,0
+China,Soviet Union,1998,0
+China,Soviet Union,1999,0
+China,Soviet Union,2000,0
+China,Soviet Union,2001,0
+China,Soviet Union,2002,0
+China,Soviet Union,2003,0
+China,Soviet Union,2004,0
+China,Soviet Union,2005,0
+China,Soviet Union,2006,0
+China,Soviet Union,2007,0
+China,Soviet Union,2008,0
+China,Soviet Union,2009,0
+China,Soviet Union,2010,0
+China,Soviet Union,2011,0
+China,Soviet Union,2012,0
+China,Soviet Union,2013,0
+China,Soviet Union,2014,0
+China,Switzerland,1980,0
+China,Switzerland,1981,0
+China,Switzerland,1982,0
+China,Switzerland,1983,0
+China,Switzerland,1984,0
+China,Switzerland,1985,0
+China,Switzerland,1986,0
+China,Switzerland,1987,0
+China,Switzerland,1988,0
+China,Switzerland,1989,0
+China,Switzerland,1990,0
+China,Switzerland,1991,0
+China,Switzerland,1992,0
+China,Switzerland,1993,0
+China,Switzerland,1994,0
+China,Switzerland,1995,0
+China,Switzerland,1996,0
+China,Switzerland,1997,33
+China,Switzerland,1998,33
+China,Switzerland,1999,65
+China,Switzerland,2000,65
+China,Switzerland,2001,65
+China,Switzerland,2002,65
+China,Switzerland,2003,65
+China,Switzerland,2004,65
+China,Switzerland,2005,65
+China,Switzerland,2006,65
+China,Switzerland,2007,65
+China,Switzerland,2008,65
+China,Switzerland,2009,65
+China,Switzerland,2010,65
+China,Switzerland,2011,65
+China,Switzerland,2012,65
+China,Switzerland,2013,65
+China,Switzerland,2014,65
+China,Ukraine,1980,0
+China,Ukraine,1981,0
+China,Ukraine,1982,0
+China,Ukraine,1983,0
+China,Ukraine,1984,0
+China,Ukraine,1985,0
+China,Ukraine,1986,0
+China,Ukraine,1987,0
+China,Ukraine,1988,0
+China,Ukraine,1989,0
+China,Ukraine,1990,0
+China,Ukraine,1991,0
+China,Ukraine,1992,18
+China,Ukraine,1993,18
+China,Ukraine,1994,11
+China,Ukraine,1995,0
+China,Ukraine,1996,65
+China,Ukraine,1997,3
+China,Ukraine,1998,8
+China,Ukraine,1999,18
+China,Ukraine,2000,29
+China,Ukraine,2001,41
+China,Ukraine,2002,58
+China,Ukraine,2003,3
+China,Ukraine,2004,33
+China,Ukraine,2005,82
+China,Ukraine,2006,128
+China,Ukraine,2007,64
+China,Ukraine,2008,54
+China,Ukraine,2009,28
+China,Ukraine,2010,0
+China,Ukraine,2011,0
+China,Ukraine,2012,632
+China,Ukraine,2013,86
+China,Ukraine,2014,132
+China,United Kingdom,1980,0
+China,United Kingdom,1981,0
+China,United Kingdom,1982,0
+China,United Kingdom,1983,0
+China,United Kingdom,1984,0
+China,United Kingdom,1985,0
+China,United Kingdom,1986,0
+China,United Kingdom,1987,5
+China,United Kingdom,1988,0
+China,United Kingdom,1989,0
+China,United Kingdom,1990,0
+China,United Kingdom,1991,0
+China,United Kingdom,1992,0
+China,United Kingdom,1993,0
+China,United Kingdom,1994,0
+China,United Kingdom,1995,0
+China,United Kingdom,1996,0
+China,United Kingdom,1997,0
+China,United Kingdom,1998,20
+China,United Kingdom,1999,40
+China,United Kingdom,2000,60
+China,United Kingdom,2001,60
+China,United Kingdom,2002,50
+China,United Kingdom,2003,50
+China,United Kingdom,2004,50
+China,United Kingdom,2005,70
+China,United Kingdom,2006,40
+China,United Kingdom,2007,40
+China,United Kingdom,2008,40
+China,United Kingdom,2009,40
+China,United Kingdom,2010,40
+China,United Kingdom,2011,40
+China,United Kingdom,2012,40
+China,United Kingdom,2013,40
+China,United Kingdom,2014,40
+China,United States,1980,0
+China,United States,1981,0
+China,United States,1982,0
+China,United States,1983,0
+China,United States,1984,59
+China,United States,1985,98
+China,United States,1986,0
+China,United States,1987,0
+China,United States,1988,14
+China,United States,1989,0
+China,United States,1990,0
+China,United States,1991,0
+China,United States,1992,0
+China,United States,1993,0.5
+China,United States,1994,35
+China,United States,1995,2
+China,United States,1996,2
+China,United States,1997,0
+China,United States,1998,0
+China,United States,1999,0
+China,United States,2000,0
+China,United States,2001,0
+China,United States,2002,0
+China,United States,2003,0
+China,United States,2004,0
+China,United States,2005,0
+China,United States,2006,0
+China,United States,2007,0
+China,United States,2008,0
+China,United States,2009,0
+China,United States,2010,0
+China,United States,2011,0
+China,United States,2012,0
+China,United States,2013,0
+China,United States,2014,0

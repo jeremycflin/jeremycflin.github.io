@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrolling Sections</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/embargo.css"/>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- showPop => the function that will be fired -->
+
+    <div class="text title" data-trigger="showPop">
+      <h1>Are Arms Embargoes Really Effective?</h1>
+      <p>A cloer look into arms transfers, embargoes and conflicts</p>
+     <!--  <p>oih  ieouhaop  sihejoajso   eijoahs  eo;ihae</p> -->
+      <p class="source">Data source: Stockholm International Peace Research Institute</p>
+      <p class="author">Produced by Jeremy C.F. Lin</p>
+    </div>
+
+   <!--  <div class="text" id="one" data-trigger="showPop">
+      
+      <p>This chart represents major conventional arms imports for four different countries. Figures are Stockholm International Peace Research Institute Trend Indicator Values (TIVs) expressed in US dollar in million. at constant 1990 prices.</p>
+      <p class="author">Data source: Stockholm International Peace Research Institute</p>
+      <div class="key" id="Chinakey"><span>China</span></div>
+      <div class="key" id="Myanmarkey"><span>Myanmar</span></div>
+      <div class="key" id="Koreakey"><span>Korea</span></div>
+      <div class="key" id="Syriakey"><span>Syria</span></div>
+    </div> -->
+
+    <div class="text" id="two">
+      <!-- <center><img src="assets/china_green.png"></center> -->
+      <h2 class="section_title" id="Chinakey">China</h2>
+      <p>Following the bloody government crackdown on Tiananmen demonstration in 1989, the European Union announced an arms embargo against China.</p>
+      <p>However, the European Union did not set a common position on which arms items would be subject to the arms embargo. And members interpreted the embargo differently.</p>
+    </div>
+
+    <div class="text" id="three">
+      <p>In any case, Russia has been by far the most important supplier of arms to China since the embargo was imposed.</p>
+    </div>
+
+    <div class="text" id="four">
+      <p>When countreis don't follow the terms can result in ineffective embargoes, however, symbolic embargoes are often equally inffective.</p>
+    </div>
+
+    <div class="text" id="five" class="fix_margin">
+      <h2 class="section_title" id="Myanmarkey">Myanmar</h2>
+      <p>This embargo against Myanmar was merely symbolic, because no EU countries were exporting arms to Myanmar anyway. And again, Russia has been the main supplier of arms to Myanmar in recent years.</p>
+    </div>
+
+    <div class="text" id="six">
+      <p>And Myanmar was not the only country where embargo was simply symbolic.</p>
+    </div>
+
+    <div class="text" id="seven">
+      <h2 class="section_title" id="Koreakey">North Korea</h2>
+      <p>Countries in the communist bloc supplied large quantities arms to North Korea in the 1980s. But that largely ceased with the end of the Cold War. And by the time the two UN and EU embargoes were imposed in 2006, almost all international arms exports to this pariah state had already ceased.</p>
+    </div>
+
+    <div class="text" id="eight">
+      <p>Again, the embargoes were largely symbolic.</p>
+    </div>
+
+    <div class="text" id="nine">
+      <h2 class="section_title" id="Syriakey">Syria</h2>
+      <p>In the 1980s, Syria received most of its arms imports from countries in the Soviet bloc, especially Czechoslovakia. Imports were low from the end of the Cold War until the years preceding the civil war. The EU and Arab League imposed an arms embargo in 2011. But Russia continued to supply arms to the Assad regime.</p>
+    </div>
+
+
+  </div>
+
+  <div id="graphic"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/queue.js"></script>
+<script src="js/chart.js"></script>
+
+</body>
+</html>
