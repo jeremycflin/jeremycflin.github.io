@@ -13,19 +13,22 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
       .attr("target","_blank")
       .attr("href",function(d) { return d.url; });
 
+
   link.append("img")
+      // .attr("src", "assets/img/lazy.png")
       .attr("src",function(d) { return "assets/img/" + d.imglink + ".png"; })
+      // .attr("data-ratio","0.6666")
       .classed("imglink", true);
 
   link.append("a")
       .classed("work-label",true)
       .text(function(d) { return d.name; });
 
-  thumbnail.append("p")
+  link.append("p")
       .classed("pub",true)
       .text(function(d){return d.pub})
 
-  thumbnail.append("p")
+  link.append("p")
       .classed("note",true)
       .text(function(d){return d.partner})
 });
@@ -39,4 +42,9 @@ jQuery(document).ready(function($){
                   loop: true
             });
       });
+
+      $('.lazy').laziestloader();
+
+
+
 });
