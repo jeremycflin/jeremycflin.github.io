@@ -42,9 +42,4 @@ jQuery(document).ready(function($){
                   loop: true
             });
       });
-
-      $('.lazy').laziestloader();
-
-
-
 });
