@@ -18,6 +18,10 @@ i{
 	margin:2px;
 }
 
+.edit{
+	text-decoration: line-through;
+}
+
 i:hover{
     color:#B21F26!important;
     background-color: white !important;
