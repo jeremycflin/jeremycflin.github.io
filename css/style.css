@@ -10,7 +10,12 @@
   margin: 1px 0 0 1px;
   float: left;
   background: #eee;
-  display: inline-block;
+  /*display: inline-block;*/
+  /*z-index: -100;*/
+}
+
+#minicontainer{
+	z-index: -10000;
 }
 
 
@@ -23,6 +28,7 @@ h1{
 	font-family:"Roboto";
 	font-size:40px;
 	font-weight: 200;
+	z-index: 10000;
 }
 
 i{

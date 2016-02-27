@@ -35,38 +35,39 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
 
 
 
-function animationTrigger (){
-  var n = 1000;
+// function animationTrigger (){
+//   var n = 1200;
 
-  var whiteblue = d3.interpolateRgb("#eee", "steelblue"),
-      blueorange = d3.interpolateRgb("steelblue", "orange"),
-      orangewhite = d3.interpolateRgb("orange", "#eee");
+//   var whiteblue = d3.interpolateRgb("#eee", "#B21F26"),
+//       blueorange = d3.interpolateRgb("#B21F26", "orange"),
+//       orangewhite = d3.interpolateRgb("orange", "#eee");
 
-  // var container = d3.select("#clip");
+//   var container = d3.select("#test").append("svg")
 
 
 
-  d3.selectAll("#clip")
-    .data(d3.range(n))
-    .enter().append("div")
-    .attr("class","animation")
-    .transition()
-      .delay(function(d, i) { return i + Math.random() * n / 4; })
-      .ease(d3.easeLinear)
-      .on("start", function repeat() {
-          d3.active(this)
-              .styleTween("background-color", function() { return whiteblue; })
-            .transition()
-              .delay(1000)
-              .styleTween("background-color", function() { return blueorange; })
-            .transition()
-              .delay(1000)
-              .styleTween("background-color", function() { return orangewhite; })
-            .transition()
-              .delay(n)
-              .on("start", repeat);
-        });
-  }
+//   container
+//     .data(d3.range(n))
+//     .enter().append("rect")
+//     .attr("class","animation")
+//     .attr("z-index", -1000)
+//     .transition()
+//       .delay(function(d, i) { return i + Math.random() * n / 4; })
+//       .ease(d3.easeLinear)
+//       .on("start", function repeat() {
+//           d3.active(this)
+//               .styleTween("background-color", function() { return whiteblue; })
+//             .transition()
+//               .delay(1000)
+//               .styleTween("background-color", function() { return blueorange; })
+//             .transition()
+//               .delay(1000)
+//               .styleTween("background-color", function() { return orangewhite; })
+//             .transition()
+//               .delay(n)
+//               .on("start", repeat);
+//         });
+//   }
 
 
 
