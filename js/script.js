@@ -15,9 +15,7 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
 
 
   link.append("img")
-      // .attr("src", "assets/img/lazy.png")
       .attr("src",function(d) { return "assets/img/" + d.imglink + ".png"; })
-      // .attr("data-ratio","0.6666")
       .classed("imglink", true);
 
   link.append("a")
@@ -34,6 +32,47 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
 });
 
 
+
+
+
+function animationTrigger (){
+  var n = 1000;
+
+  var whiteblue = d3.interpolateRgb("#eee", "steelblue"),
+      blueorange = d3.interpolateRgb("steelblue", "orange"),
+      orangewhite = d3.interpolateRgb("orange", "#eee");
+
+  // var container = d3.select("#clip");
+
+
+
+  d3.selectAll("#clip")
+    .data(d3.range(n))
+    .enter().append("div")
+    .attr("class","animation")
+    .transition()
+      .delay(function(d, i) { return i + Math.random() * n / 4; })
+      .ease(d3.easeLinear)
+      .on("start", function repeat() {
+          d3.active(this)
+              .styleTween("background-color", function() { return whiteblue; })
+            .transition()
+              .delay(1000)
+              .styleTween("background-color", function() { return blueorange; })
+            .transition()
+              .delay(1000)
+              .styleTween("background-color", function() { return orangewhite; })
+            .transition()
+              .delay(n)
+              .on("start", repeat);
+        });
+  }
+
+
+
+
+
+
 jQuery(document).ready(function($){
       $(function(){
             $(".element").typed({
@@ -43,3 +82,5 @@ jQuery(document).ready(function($){
             });
       });
 });
+
+animationTrigger()

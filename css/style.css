@@ -1,7 +1,18 @@
 
 .intro .font2{
 	opacity: .5;
+	z-index: 10000;
 }
+
+.animation {
+  width: 5px;
+  height: 5px;
+  margin: 1px 0 0 1px;
+  float: left;
+  background: #eee;
+  display: inline-block;
+}
+
 
 .intro a{
 	text-decoration: none;
