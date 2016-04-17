@@ -1,4 +1,5 @@
 name	url	imglink	pub	partner	tool
+Do Arms Embargoes Actually Work?	http://jeremycflin.github.io/do_arms_embargoes_work/	embargo	Personal, work in progress		Build with d3.js
 High Lead Levels Were Detected in Nearly 400 Flint Homes, and There May Be More	http://nyti.ms/1nTUbVn	leadmap	The New York Times	with Haeyoun Park	Build with QGIS, Illustrator
 Events That Led to Flint’s Water Crisis	http://nyti.ms/1RC9C0w	flintevent	The New York Times	with Jean Rutter and Haeyoun Park	Build with Backbone.js and Underscore.js
 The Reach of Lead in Flint’s Water Supply	http://nyti.ms/1U0Md6T	flintwater	The New York Times	with Tim Wallace	Build with QGIS, Illustrator
@@ -8,7 +9,6 @@ For the Wealthiest, a Private Tax System That Saves Them Billions	http://nyti.ms
 Second Red Alert for Beijing: Air Pollution Worsens	http://nyti.ms/1Pef9sp	beijingpollution	The New York Times	with KK Rebecca Lai	Build with d3.js, R, QGIS, Illustrator
 Poll Finds Kentuckians Split With Gov. Matt Bevin on Expanded Medicaid	http://nyti.ms/1lTJsJ7	kenpoll	The New York Times	with Abby Goodnough	Build with Mr. Chartmaker
 In Nigeria, Chinese Investment Comes With a Downside	http://nyti.ms/1SFfrHI	chineseinvest	The New York Times	with Keith Bradsher and Adam Nossite	Build with d3.js
-Are Arms Embargoes Really Effective?	http://jeremycflin.github.io/arms_embargo/index.html	embargo	Personal, work in progress		Build with d3.js
 Exchange Students From Taiwan	http://bl.ocks.org/jeremycflin/raw/436048b8bbc49e5d1598/	exchangestudent	Personal		Build with d3.js, jQuery
 ONA Award Winners By the Numbers, 2000 to 2015	http://newsroom15.journalists.org/app/awards/	awardwinner	Online News Association		Build with JavaScript
 ONA 15 Attendees: Demographic Breakdown	http://newsroom15.journalists.org/app/globe/	onaglobe	Online News Association	with Andrew Silver and Ernesto Rivera	Build with d3.js

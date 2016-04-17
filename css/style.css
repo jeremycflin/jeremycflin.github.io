@@ -162,4 +162,7 @@ img .imglink{
     	width:250px;
         height:250px;
     }
+    br{
+    	display: none;
+    }
 }
