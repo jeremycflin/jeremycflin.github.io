@@ -61,7 +61,7 @@ p{
 	opacity:0.9;
 	font-weight: 300;
 	line-height: 1.5em;
-	 -webkit-font-smoothing:antialiased;
+	/* -webkit-font-smoothing:antialiased;*/
 }
 
 a{
