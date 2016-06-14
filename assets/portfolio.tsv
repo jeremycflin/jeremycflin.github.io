@@ -1,20 +1,23 @@
 name	url	imglink	pub	partner	tool
-Port Feudal 	https://jeremycflin.github.io/port-feudal/	trucker	Embargoed	with Brett Murphy		
-The Blind Boys		blindboys	Embargoed	with Jacqui Ipp	
-Do Arms Embargoes Actually Work?	http://jeremycflin.github.io/do_arms_embargoes_work/	embargo	Personal		Build with d3.js
-High Lead Levels Were Detected in Nearly 400 Flint Homes, and There May Be More	http://nyti.ms/1nTUbVn	leadmap	The New York Times	with Haeyoun Park	Build with QGIS, Illustrator
-Events That Led to Flint’s Water Crisis	http://nyti.ms/1RC9C0w	flintevent	The New York Times	with Jean Rutter and Haeyoun Park	Build with Backbone.js and Underscore.js
-The Reach of Lead in Flint’s Water Supply	http://nyti.ms/1U0Md6T	flintwater	The New York Times	with Tim Wallace	Build with QGIS, Illustrator
-The Oregon Protest and the Battle Over Western Lands	http://nyti.ms/1mIQmRD	oregonstandoff	The New York Times	with Quoctrung Bui and Joe Burgess	Build with QGIS, Illustrator 
-State of the Presidential Campaign	http://nyti.ms/1RkKRWw	presidential	The New York Times	with KK Rebecca Lai	Build with Illustrator
-For the Wealthiest, a Private Tax System That Saves Them Billions	http://nyti.ms/1JHffCI	donortax	The New York Times	with Noam Scheiber	Build with Illustrator
-Second Red Alert for Beijing: Air Pollution Worsens	http://nyti.ms/1Pef9sp	beijingpollution	The New York Times	with KK Rebecca Lai	Build with d3.js, R, QGIS, Illustrator
-Poll Finds Kentuckians Split With Gov. Matt Bevin on Expanded Medicaid	http://nyti.ms/1lTJsJ7	kenpoll	The New York Times	with Abby Goodnough	Build with Mr. Chartmaker
-In Nigeria, Chinese Investment Comes With a Downside	http://nyti.ms/1SFfrHI	chineseinvest	The New York Times	with Keith Bradsher and Adam Nossite	Build with d3.js
-ONA Award Winners By the Numbers, 2000 to 2015	http://newsroom15.journalists.org/app/awards/	awardwinner	Online News Association		Build with JavaScript
-ONA 15 Attendees: Demographic Breakdown	http://newsroom15.journalists.org/app/globe/	onaglobe	Online News Association	with Andrew Silver and Ernesto Rivera	Build with d3.js
+Port Feudal	https://jeremycflin.github.io/port-feudal/	trucker	Personal, work in progress	with Brett Murphy	Built with d3.js, Illustrator, Photoshop, JavaScript, After Effects
+當科技公司變成媒體	https://www.twreporter.org/a/opinion-technology-media	techtomedia	報導者 (The Reporter)		
+Are Arms Embargoes Really Effective?	http://jeremycflin.github.io/do_arms_embargoes_work/	embargo	Personal		Built with d3.js, R
+紐約時報如何打造一流視覺新聞團隊	https://twreporter.atavist.com/media-nyt-graphics-department	nythowto	報導者 (The Reporter)		
+High Lead Levels Were Detected in Nearly 400 Flint Homes, and There May Be More	http://nyti.ms/1nTUbVn	leadmap	The New York Times	with Haeyoun Park	Built with QGIS, Illustrator
+Events That Led to Flint’s Water Crisis	http://nyti.ms/1RC9C0w	flintevent	The New York Times	with Jean Rutter and Haeyoun Park	Built with Backbone.js and Underscore.js
+The Reach of Lead in Flint’s Water Supply	http://nyti.ms/1U0Md6T	flintwater	The New York Times	with Tim Wallace	Built with QGIS, Illustrator
+The Oregon Protest and the Battle Over Western Lands	http://nyti.ms/1mIQmRD	oregonstandoff	The New York Times	with Quoctrung Bui and Joe Burgess	Built with QGIS, Illustrator 
+State of the Presidential Campaign	http://nyti.ms/1RkKRWw	presidential	The New York Times	with KK Rebecca Lai	Built with Illustrator
+For the Wealthiest, a Private Tax System That Saves Them Billions	http://nyti.ms/1JHffCI	donortax	The New York Times	with Noam Scheiber	Built with Illustrator
+Second Red Alert for Beijing: Air Pollution Worsens	http://nyti.ms/1Pef9sp	beijingpollution	The New York Times	with KK Rebecca Lai	Built with d3.js, R, QGIS, Illustrator
+Poll Finds Kentuckians Split With Gov. Matt Bevin on Expanded Medicaid	http://nyti.ms/1lTJsJ7	kenpoll	The New York Times	with Abby Goodnough	Built with Mr. Chartmaker
+In Nigeria, Chinese Investment Comes With a Downside	http://nyti.ms/1SFfrHI	chineseinvest	The New York Times	with Keith Bradsher and Adam Nossite	Built with d3.js
+記者為什麼要學寫程式？	https://www.twreporter.org/a/opinion-data-journalist	whyddj	報導者 (The Reporter)		
+Exchange Students From Taiwan	http://bl.ocks.org/jeremycflin/raw/436048b8bbc49e5d1598/	exchangestudent	Personal		Built with d3.js, jQuery
+ONA Award Winners By the Numbers, 2000 to 2015	http://newsroom15.journalists.org/app/awards/	awardwinner	Online News Association		Built with JavaScript
+ONA 15 Attendees: Demographic Breakdown	http://newsroom15.journalists.org/app/globe/	onaglobe	Online News Association	with Andrew Silver and Ernesto Rivera	Built with d3.js
 What I Learned During my Google Fellowship with The Texas Tribune	http://news.apps.texastribune.org/post/126677459783/what-i-learned-during-my-google-fellowship-with	googlefellowship	News Apps Blog		
-In Wealthy ZIP Codes, Freestanding ERs Find A Home	http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/	zipcode	Texas Tribune	with Edgar Walters 	Build with d3.js
+In Wealthy ZIP Codes, Freestanding ERs Find A Home	http://www.texastribune.org/2015/08/21/freestanding-emergency-rooms-rise-texas/	zipcode	Texas Tribune	with Edgar Walters 	Built with d3.js
 Obamacare Health Plans to Get Special Label	http://www.texastribune.org/2015/08/06/obamacare-plans-get-special-label/	aca	Texas Tribune	with Edgar Walters and Ryan Murphy	Built with d3.js, JavaScript, Google Maps API and QGIS
 New Law Will Help More Texans Go Solar	http://www.texastribune.org/2015/08/05/new-law-will-let-more-texans-go-solar/	texassolar	Texas Tribune	with Jim Malewitz 	Built with d3.js
 Lawmakers Ditch $200 Fee for Lawyers, Doctors, Brokers	http://www.texastribune.org/2015/08/03/31-days-professional-fees/	profees	Texas Tribune	with Aman Batheja	Drew with Illustrator
