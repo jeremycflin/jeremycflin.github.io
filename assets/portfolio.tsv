@@ -1,17 +1,19 @@
 name	url	imglink	pub	partner	tool
+What you need to know about the Zika virus	https://www.washingtonpost.com/graphics/health/zika-virus/	zikamap	Washington Post		
+為什麼我們需要長篇報導文學	https://www.twreporter.org/a/opinion-reportage-importance	longform	報導者 (The Reporter)		
 Port Feudal	https://jeremycflin.github.io/port-feudal/	trucker	Personal, work in progress	with Brett Murphy	Built with d3.js, Illustrator, Photoshop, JavaScript, After Effects
 當科技公司變成媒體	https://www.twreporter.org/a/opinion-technology-media	techtomedia	報導者 (The Reporter)		
 Are Arms Embargoes Really Effective?	http://jeremycflin.github.io/do_arms_embargoes_work/	embargo	Personal		Built with d3.js, R
 紐約時報如何打造一流視覺新聞團隊	https://twreporter.atavist.com/media-nyt-graphics-department	nythowto	報導者 (The Reporter)		
-High Lead Levels Were Detected in Nearly 400 Flint Homes, and There May Be More	http://nyti.ms/1nTUbVn	leadmap	The New York Times	with Haeyoun Park	Built with QGIS, Illustrator
-Events That Led to Flint’s Water Crisis	http://nyti.ms/1RC9C0w	flintevent	The New York Times	with Jean Rutter and Haeyoun Park	Built with Backbone.js and Underscore.js
-The Reach of Lead in Flint’s Water Supply	http://nyti.ms/1U0Md6T	flintwater	The New York Times	with Tim Wallace	Built with QGIS, Illustrator
-The Oregon Protest and the Battle Over Western Lands	http://nyti.ms/1mIQmRD	oregonstandoff	The New York Times	with Quoctrung Bui and Joe Burgess	Built with QGIS, Illustrator 
-State of the Presidential Campaign	http://nyti.ms/1RkKRWw	presidential	The New York Times	with KK Rebecca Lai	Built with Illustrator
-For the Wealthiest, a Private Tax System That Saves Them Billions	http://nyti.ms/1JHffCI	donortax	The New York Times	with Noam Scheiber	Built with Illustrator
-Second Red Alert for Beijing: Air Pollution Worsens	http://nyti.ms/1Pef9sp	beijingpollution	The New York Times	with KK Rebecca Lai	Built with d3.js, R, QGIS, Illustrator
-Poll Finds Kentuckians Split With Gov. Matt Bevin on Expanded Medicaid	http://nyti.ms/1lTJsJ7	kenpoll	The New York Times	with Abby Goodnough	Built with Mr. Chartmaker
-In Nigeria, Chinese Investment Comes With a Downside	http://nyti.ms/1SFfrHI	chineseinvest	The New York Times	with Keith Bradsher and Adam Nossite	Built with d3.js
+High Lead Levels Were Detected in Nearly 400 Flint Homes, and There May Be More	http://nyti.ms/1nTUbVn	leadmap	New York Times	with Haeyoun Park	Built with QGIS, Illustrator
+Events That Led to Flint’s Water Crisis	http://nyti.ms/1RC9C0w	flintevent	New York Times	with Jean Rutter and Haeyoun Park	Built with Backbone.js and Underscore.js
+The Reach of Lead in Flint’s Water Supply	http://nyti.ms/1U0Md6T	flintwater	New York Times	with Tim Wallace	Built with QGIS, Illustrator
+The Oregon Protest and the Battle Over Western Lands	http://nyti.ms/1mIQmRD	oregonstandoff	New York Times	with Quoctrung Bui and Joe Burgess	Built with QGIS, Illustrator 
+State of the Presidential Campaign	http://nyti.ms/1RkKRWw	presidential	New York Times	with KK Rebecca Lai	Built with Illustrator
+For the Wealthiest, a Private Tax System That Saves Them Billions	http://nyti.ms/1JHffCI	donortax	New York Times	with Noam Scheiber	Built with Illustrator
+Second Red Alert for Beijing: Air Pollution Worsens	http://nyti.ms/1Pef9sp	beijingpollution	New York Times	with KK Rebecca Lai	Built with d3.js, R, QGIS, Illustrator
+Poll Finds Kentuckians Split With Gov. Matt Bevin on Expanded Medicaid	http://nyti.ms/1lTJsJ7	kenpoll	New York Times	with Abby Goodnough	Built with Mr. Chartmaker
+In Nigeria, Chinese Investment Comes With a Downside	http://nyti.ms/1SFfrHI	chineseinvest	New York Times	with Keith Bradsher and Adam Nossite	Built with d3.js
 記者為什麼要學寫程式？	https://www.twreporter.org/a/opinion-data-journalist	whyddj	報導者 (The Reporter)		
 Exchange Students From Taiwan	http://bl.ocks.org/jeremycflin/raw/436048b8bbc49e5d1598/	exchangestudent	Personal		Built with d3.js, jQuery
 ONA Award Winners By the Numbers, 2000 to 2015	http://newsroom15.journalists.org/app/awards/	awardwinner	Online News Association		Built with JavaScript
