@@ -32,9 +32,6 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
   //     .text(function(d){return d.partner})
 });
 
-var colorfilter =  'grayscale(0%)'; 
-
-
 // function animationTrigger (){
 //   var n = 1200;
 
@@ -83,11 +80,15 @@ jQuery(document).ready(function($){
             });
 
             $('#personalFav').click(function(){
+               $(this).addClass('togglebtnPink')
                $('.TRUE').addClass('colorFilterOff')
+               $('#showAll').removeClass('togglebtnPink')
             });
 
             $('#showAll').click(function(){
+               $(this).addClass('togglebtnPink')
                $('.TRUE').removeClass('colorFilterOff')
+                $('#personalFav').removeClass('togglebtnPink')
             })
       });
 });
