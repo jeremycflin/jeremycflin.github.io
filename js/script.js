@@ -16,7 +16,8 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
 
   link.append("img")
       .attr("src",function(d) { return "assets/img/" + d.imglink + ".png"; })
-      .classed("imglink", true);
+      // .classed("imglink", true)
+      .attr("class",function(d){return d.fav + " imglink"})
 
   link.append("a")
       .classed("work-label",true)
@@ -26,13 +27,12 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
       .classed("pub",true)
       .text(function(d){return d.pub})
 
-  link.append("p")
-      .classed("note",true)
-      .text(function(d){return d.partner})
+  // link.append("p")
+  //     .classed("note",true)
+  //     .text(function(d){return d.partner})
 });
 
-
-
+var colorfilter =  'grayscale(0%)'; 
 
 
 // function animationTrigger (){
@@ -81,7 +81,15 @@ jQuery(document).ready(function($){
                   typeSpeed: 10,
                   loop: true
             });
+
+            $('#personalFav').click(function(){
+               $('.TRUE').addClass('colorFilterOff')
+            });
+
+            $('#showAll').click(function(){
+               $('.TRUE').removeClass('colorFilterOff')
+            })
       });
 });
 
-animationTrigger()
+
