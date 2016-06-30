@@ -27,9 +27,9 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
       .classed("pub",true)
       .text(function(d){return d.pub})
 
-  // link.append("p")
-  //     .classed("note",true)
-  //     .text(function(d){return d.partner})
+  link.append("p")
+      .classed("note",true)
+      .text(function(d){return d.partner})
 });
 
 // function animationTrigger (){
