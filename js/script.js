@@ -13,21 +13,19 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
       .attr("target","_blank")
       .attr("href",function(d) { return d.url; });
 
-
   link.append("img")
       .attr("src",function(d) { return "assets/img/" + d.imglink + ".png"; })
-      // .classed("imglink", true)
       .attr("class",function(d){return d.fav + " imglink"})
 
   link.append("a")
       .classed("work-label",true)
       .text(function(d) { return  d.name; });
 
-  link.append("p")
+  thumbnail.append("p")
       .classed("pub",true)
       .text(function(d){return d.pub})
 
-  link.append("p")
+  thumbnail.append("p")
       .classed("note",true)
       .text(function(d){return "With " + d.partner})
 });
