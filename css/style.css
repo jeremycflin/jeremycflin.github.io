@@ -237,4 +237,13 @@ img .imglink{
     br{
     	display: none;
     }
+
+    .intro-p{
+    	padding-left: 10px;
+    	padding-right:10px;
+    }
+
+    .escape{
+    	display:block;
+    }
 }
