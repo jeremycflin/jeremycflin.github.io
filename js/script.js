@@ -27,7 +27,7 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
 
   thumbnail.append("p")
       .classed("note",true)
-      .text(function(d){return "With " + d.partner})
+      .text(function(d){if(d.partner){return "With " + d.partner}})
 });
 
 jQuery(document).ready(function($){
