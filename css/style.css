@@ -147,6 +147,10 @@ a{
     filter: grayscale(0%);
 }
 
+#other-wrapper{
+	padding-bottom: 50px;
+}
+
 .inner-wrap{
 	/*background-color: rgba(0,0,0, 1);*/
 	background: linear-gradient(#7f0000, #206877);
@@ -197,7 +201,7 @@ a{
 
 #clip .category{
 	background-color: rgba(0,0,0, .8);
-	border-radius: 10px;
+	border-radius: 8px;
 	margin-left: 4px;
 }
 
