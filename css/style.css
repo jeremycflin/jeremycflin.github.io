@@ -225,15 +225,16 @@ a{
 
 .note{
 	font-size: 0.8em;
-	margin-top: 8px;
+	margin-top: 5px;
 	margin-bottom: 5px;
 	color: #696969;
 }
 
 .work-label{
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-weight: 800;
-	font-size: 0.9em;
+	font-size: 0.95em;
+	color: rgba(0,0,0, .7);
 }
 
 @-webkit-keyframes colorchange {
