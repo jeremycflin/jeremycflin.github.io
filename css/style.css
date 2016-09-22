@@ -89,7 +89,7 @@ a{
 
 .story {
 	display: inline-block;
-	margin-right: 74px;
+	margin-right: 70px;
 	max-width: 300px;
 	vertical-align: top;
 	border-bottom: 2px solid rgba(0,0,0, .1);
@@ -225,16 +225,15 @@ a{
 
 .note{
 	font-size: 0.8em;
-	margin-top: 5px;
+	margin-top: 8px;
 	margin-bottom: 5px;
 	color: #696969;
 }
 
 .work-label{
-	/*text-transform: uppercase;*/
-	font-weight: 800;
-	font-size: 0.95em;
-	color: rgba(0,0,0, .7);
+	/*text-transform: uppercase;
+*/	font-weight: 800;
+	font-size: 0.9em;
 }
 
 @-webkit-keyframes colorchange {
