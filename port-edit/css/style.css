@@ -280,6 +280,64 @@ hr{
 
 }
 
+/*****************/
+/*****************/
+/*****************/
+/*viz part*/
+/*****************/
+/*****************/
+/*****************/
+.g-title{
+  font-family: 'Roboto', sans-serif;
+  /*max-width: 5000px;*/
+  /*font-size: 1.7em;*/
+  /*font-size:20px;*/
+}
+
+.g-subtitle{
+ /* max-width: 250px;*/
+  font-family: 'Roboto', sans-serif;
+  /*margin-top: -10px;*/
+ /* font-weight: 300;*/
+  font-size: 15px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.data-source{
+  font-family: 'Roboto', sans-serif;
+  margin-top: -20px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#g-firstCompare path.arrow, #arrowhead {
+  fill: none;
+  stroke: black;
+}
+
+
+/*svg {
+  overflow: visible;
+}
+svg.arrow-container {
+  z-index: -1;
+}*/
+#g-firstCompare path{
+  stroke: black;
+  stroke-width: 1px
+}
+
+#g-secondCompare  path{
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+#g-secondCompare path.arrow, #arrowhead {
+  fill: none;
+  stroke: black;
+}
 
 @media (max-width: 700px) {
   #intro-video{
