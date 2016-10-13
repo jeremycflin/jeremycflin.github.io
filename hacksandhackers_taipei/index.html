@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Last Mile</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic' rel='stylesheet' type='text/css'>
+   		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+   		<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+   		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<style>
+	.slides{
+		font-family: "Karla" !important;
+	}
+
+
+
+	.highlight-links a{
+		border-bottom: 5px solid rgba(255, 0, 118, 1) !important;
+	}
+
+	.explains{
+		text-align: left;
+	}
+
+/*	h1 {
+		font-family: "Karla" !important;
+	}
+*/
+	img{
+		border:0px !important;
+	}
+
+	.margin-fixeds{
+		margin-top: -0px !important;
+	}
+
+	#goodEx{
+		margin-left: 30px;
+	}
+
+	.reveal a{
+		color: black;
+	}
+
+	</style>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>新聞上的地圖運用</h1>
+					<p><small>林辰峰 Jeremy C.F. Lin</small></p>
+				</section>
+
+				<section>
+					<h3>我是誰？</h3>
+					<a href="http://jeremycflin.github.io/" target="blank">
+						<img  data-src="assets/jeremy.jpg" height="400px">
+					</a>
+					<div class="contact-info">
+		                <a href="mailto:jeremycflin@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+		                <a href="https://twitter.com/Jeremy_CF_Lin" target="_blank"><i class="fa fa-twitter-square"></i></a>
+		                <a href="https://www.facebook.com/jeremycflin" target="_blank"><i class="fa fa-facebook-square"></i></a>
+		                <a href="https://www.linkedin.com/pub/jeremy-c-f-lin/6a/a06/426" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+		                <a href="https://github.com/jeremycflin" target="_blank"><i class="fa fa-github"></i></a>
+		            </div>
+				</section>
+				<section class="highlight-links">
+						<h3>什麼場合用什麼地圖</h3>
+						<p>NYT <a href="https://www.linkedin.com/pub/jeremy-c-f-lin/6a/a06/426" target="_blank">Amanda Cox </a>: "Intent matters most in mapping. Your map form depends
+						on what you want to show."</p>
+				</section>
+				<section>
+						<h3>衛星地圖</h3>
+						<small>NYT: The Oregon Protest and the Battle Over Western Lands</small>
+						<a href="http://www.nytimes.com/interactive/2016/01/07/us/oregon-standoff-western-lands.html?smid=pl-share" target="_blank">
+							<img  data-src="assets/locator1.png" height="450px">
+						</a>
+				</section>
+				<section>
+						<h3>衛星地圖</h3>
+						<small>NYT: Areas of Skirmishes and Protests in Hong Kong</small>
+						<a href="http://www.nytimes.com/interactive/2014/09/30/world/asia/2014-09-30-hong-kong-protest-locations.html" target="_blank">
+							<img  data-src="assets/locator2.png" height="450px">
+						</a>
+				</section>
+				<section  class="highlight-links">
+						<h3>衛星地圖</h3>
+						<p class="explains"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 標示詳細地點與區域，特別適合<a href="http://www.nytimes.com/interactive/2015/08/21/world/asia/tianjin-china-explosion-hazardous-chemical-sites.html" target="_blank">突發新聞</a></p>
+						<p class="explains"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+						忘記做尺標換算，忘記加上註解</p>
+				</section>
+				<section>
+						<h3>地勢圖</h3>
+						<small>WaPo: ‘Himalayan Viagra’: Tibet’s gold rush may be coming to an end</small>
+						<a href="https://www.washingtonpost.com/world/asia_pacific/himalayan-viagra-tibets-gold-rush-may-be-coming-to-an-end/2016/07/01/2e710d3a-2d8b-11e6-b9d5-3c3063f8332c_story.html" target="_blank">
+							<img  data-src="assets/reliefmap1.png" height="450px">
+						</a>
+				</section>
+				<section>
+						<h3>地勢圖</h3>
+						<small>WaPo: ‘A very dangerous place to be': Huge California blaze forces 82,000 evacuations</small>
+						<a href="https://www.washingtonpost.com/news/energy-environment/wp/2016/08/17/yet-another-huge-wildfire-is-consuming-southern-california/?postshare=4581471474202005&tid=ss_tw&utm_term=.171424613c86" target="_blank">
+							<img  data-src="assets/reliefmap2.png" height="450px">
+						</a>
+				</section>
+				<section  class="highlight-links">
+						<h3>地勢圖</h3>
+						<p class="explains"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 用<a href="http://www.nytimes.com/interactive/2015/09/30/world/middleeast/syria-control-map-isis-rebels-airstrikes.html" target="_blank">顏色凸顯區塊</a>，可看到<a href="https://www.washingtonpost.com/news/worldviews/wp/2016/09/02/two-american-climbers-who-set-out-for-one-of-the-himalayas-highest-peaks-two-weeks-ago-are-missing/?postshare=651472845846040&tid=ss_tw" target="_blank">高地勢區域</a><p>
+						<p class="explains"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+						畫面太亂沒重點</p>
+				</section>
+				<section>
+						<h3>地勢圖: 標示方法</h3>
+						<a href="https://www.washingtonpost.com/world/asia_pacific/himalayan-viagra-tibets-gold-rush-may-be-coming-to-an-end/2016/07/01/2e710d3a-2d8b-11e6-b9d5-3c3063f8332c_story.html" target="_blank">
+
+							<img  data-src="assets/goodpractice.png" height="450px">
+						</a>
+				</section>
+				<section>
+						<h3>地點標示圖</h3>
+						<small>WaPo: 10 great places to eat in Philadelphia, for convention-goers and the rest of us</small>
+						<a href="https://www.washingtonpost.com/lifestyle/food/10-great-places-to-eat-in-philadelphia-for-convention-goers-and-the-rest-of-us/2016/07/11/83cb713e-3ebc-11e6-a66f-aa6c1883b6b1_story.html" target="_blank">
+							<img  data-src="assets/svglocator1.png" height="450px">
+						</a>
+				</section>
+				<section>
+						<h3>地點標示圖: 也可以來拿做新聞分析</h3>
+						<small>NYT: High Lead Levels Were Detected in Nearly 400 Flint Homes, and There May Be More</small>
+						<a href="http://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share" target="_blank">
+							<img  data-src="assets/svglocator2.png" height="450px">
+						</a>
+				</section>
+				<section  class="highlight-links">
+						<h3>地點標示圖</h3>
+						<p class="explains"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 表現<a href="http://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share" target="_blank">
+密集程度與分佈</a>。適合座標重要性高以及區域難以整合的新聞。</p>
+						<p class="explains"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+						點的重疊</p>
+				</section>
+				<section>
+						<h3>Choropleth</h3>
+						<small>Texas Tribune: Obamacare Health Plans to Get Special Label</small>
+						<a href="https://www.texastribune.org/2015/08/06/obamacare-plans-get-special-label/" target="_blank">
+							<img  data-src="assets/map.png" height="450px">
+						</a>
+				</section>
+
+				<section>
+						<h3>Choropleth</h3>
+						<small>WaPo: Louisiana flooding is the country’s ‘worst natural disaster’ since Hurricane Sandy, Red Cross says</small>
+						<a href="https://www.washingtonpost.com/news/post-nation/wp/2016/08/17/louisiana-flood-victims-face-long-road-back-to-normal-i-lost-everything/?%3Ftid%3D=sm_pg&utm_term=.a2a0f9de9916" target="_blank">
+							<img  data-src="assets/color1.png" height="450px">
+						</a>
+				</section>
+				<section>
+						<h3>Choropleth</h3>
+						<small>WaPo: Despite a big year for women in politics, national legislatures are still dominated by men</small>
+						<a href="https://www.washingtonpost.com/news/worldviews/wp/2016/09/01/women-are-half-of-the-world-but-only-22-percent-of-its-parliaments/" target="_blank">
+							<img  data-src="assets/color2.png" height="280px">
+						</a>
+				</section>
+				<section class="highlight-links">
+						<h3>Choropleth</h3>
+						<p class="explains"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 展示統計標準化後的每個位置的不同處</li></p>
+						<p class="explains"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+						如果地域太小就很難比對, 完全忘記要做統計標準化</p>
+				
+				</section>
+				<section>
+						<h3>Choropleth</h3>
+						<img  data-src="assets/badmap.png" height="550px">
+				</section>
+				<section>
+						<h3>等比圓圈地圖</h3>
+						<small>WaPo: The world of coups since 1950</small>
+						<a href="https://www.washingtonpost.com/news/worldviews/wp/2016/09/01/women-are-half-of-the-world-but-only-22-percent-of-its-parliaments/" target="_blank">
+							<img  data-src="assets/coup.png" height="550px">
+						</a>
+				</section>
+				<section>
+						<h3>等比圓圈地圖</h3>
+						<small>ONA 15 Attendees: Demographic Breakdown</small>
+						<a href="http://newsroom15.journalists.org/app/globe/" target="_blank">
+							<img  data-src="assets/globe.png" height="550px">
+						</a>
+				</section>
+				<section  class="highlight-links">
+						<h3>等比圓圈地圖</h3>
+						<p class="explains"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 精準地展示數據範圍。不用做統計標準化，直接用原始數據即可。</p>
+						<p class="explains"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+						一般讀者有時候看不懂，因為人類不擅長讀面積。完全變成人口圖。如果沒有變化的話其實有時候看起來滿無聊的。</p>
+				</section>
+				<section>
+						<h3>等比圓圈地圖</h3>
+						<small>人類不擅長讀面積</small>
+						<img  data-src="assets/circles.png" height="450px">
+				</section>
+				<section>
+						<h3>熱圖</h3>
+						<small>WaPo: What you need to know about the Zika virus</small>
+						<a href="https://www.washingtonpost.com/graphics/health/zika-virus/" target="_blank">
+							<img  data-src="assets/zika.png" height="550px">
+						</a>
+				</section>
+				<section  class="highlight-links">
+						<h3>熱圖</h3>
+						<p class="explains"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 展示集中區域，將注意力放在數據與地理邊界沒辦法完全吻合的區塊。</p>
+						<p class="explains"><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+						顏色和分顏色的臨界點沒有統計意義。</p>
+				</section>
+				<section>
+						<h3>Cartogram</h3>
+						<small>WaPo: What a real ‘Brexit Britain’ would look like</small>
+						<a href="https://www.washingtonpost.com/news/worldviews/wp/2016/06/29/what-a-real-brexit-britain-would-look-like/?postshare=731467212368077&tid=ss_tw" target="_blank">
+							<img  data-src="assets/uk.png" height="450px">
+						</a>
+				</section>
+				<section>
+						<h3>不是有了經緯度就一定要做成地圖</h3>
+						<small>WaPo: Trump claims his golf courses are worth tens of millions. Until the tax bill arrives</small>
+						<a href="https://www.washingtonpost.com/politics/how-much-does-trump-claim-his-golf-courses-are-worth-it-depends-who-needs-to-know/2016/08/21/71828f3a-5f3c-11e6-9d2f-b1a3564181a1_story.html" target="_blank">
+							<img  data-src="assets/trump.png" height="550px">
+						</a>
+				</section>
+				<section>
+						<h3>不是有了經緯度就一定要做成地圖</h3>
+						<small>WaPo: The world is getting better at paid maternity leave. The U.S. is not</small>
+						<a href="https://www.washingtonpost.com/news/worldviews/wp/2016/08/13/the-world-is-getting-better-at-paid-maternity-leave-the-u-s-is-not/" target="_blank">
+							<img  data-src="assets/maternity.png" height="400px">
+						</a>
+				</section>
+				<section class="highlight-links">
+						<h3>資源</h3>
+						<p class="explains">Mapping: <a href="http://www.qgistutorials.com/en/">QGIS</a>, Adobe Illustrator, <a href="https://d3js.org/">D3.js</a> (<a href="https://medium.com/@ccanipe/building-a-u-s-election-basemap-with-d3-js-and-topojson-fa4b5ab5175d#.8h7tfylb8">interactive</a> or small-multiples), <a href="http://leafletjs.com/">Leaflet</a>, <a href="http://a.tiles.mapbox.com/v3/mapbox/maps.html">Mapbox</a></p>
+						<p class="explains">Projections: <a href="http://projectionwizard.org/">Projection Wizard</a></p>
+						<p class="explains">Geocoding: <a href="http://www.findlatitudeandlongitude.com/batch-geocode/#.V__a7JMrJPt">Batch Geocode</a></p>
+						<p class="explains">Geo-data: <a href="http://www.naturalearthdata.com/">Natural Earth</a>, <a href="http://dwtkns.com/srtm30m/">30-Meter SRTM Tile Downloader</a>, <a href="http://earthexplorer.usgs.gov/">Earth Explorer</a>, <a href="https://earthdata.nasa.gov/">NASA</a></p>
+						<p class="explains">Simplify Geo-data : <a href="http://www.mapshaper.org/">Mapshaper</a></p>
+				</section>
+				<section class="highlight-links">
+						<h3>資源</h3>
+						<p class="explains">Reading: <a href="https://medium.com/@jeremylin/%E5%A6%82%E4%BD%95%E8%A3%BD%E4%BD%9C%E6%96%B0%E8%81%9E%E5%9C%B0%E5%9C%96-70994893c88b#.v065gyk5p">如何製作新聞地圖</a>, <a href="https://medium.com/twreporter/%E8%A8%98%E8%80%85%E5%8F%AF%E4%BB%A5%E5%A6%82%E4%BD%95%E6%87%89%E7%94%A8%E5%9C%B0%E7%90%86%E8%B3%87%E8%A8%8A%E7%B3%BB%E7%B5%B1qgis-87f0d943bfbf#.5pj0dsva2">記者可以怎麼運用地理資訊系統QGIS？,</a> <a href="https://medium.com/@ccanipe/building-a-u-s-election-basemap-with-d3-js-and-topojson-fa4b5ab5175d#.8h7tfylb8">Building a U.S. Election Basemap with D3.js and TopoJSON</a></p>
+						<p class="explains">Who to follow: <a href="https://twitter.com/nytgraphics">NYT Graphics</a>, <a href="https://twitter.com/PostGraphics">Post Graphics</a>, <a href="https://twitter.com/wallacetim">Tim Wallace</a>, <a href="https://twitter.com/driven_by_data">Gregor Aisch</a>, <a href="https://twitter.com/dwtkns">Derek Watkins</a><a href="https://twitter.com/LazaroGamio">Lazaro Gamio</a>, <a href="https://twitter.com/KarklisCarto">Laris Karklis</a></p>
+				</section>
+				<section class="highlight-links">
+						<h3>最重要的資源</h3>
+						<h1>GOOGLE!</h1>
+				</section>
+
+
+					
+					
+					
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
