@@ -289,7 +289,7 @@ function drawSecondCompare(){
     .datum([[10,5],[30,-30]])
     .attr("d", swoopy)
     .attr("class","highschoolLabel")
-    .style("opacity",0)
+    // .style("opacity",0)
     
   g.append("path")
     .attr("class","paid")
@@ -297,7 +297,7 @@ function drawSecondCompare(){
     .datum([[220,0],[215,-30]])
     .attr("d", swoopy)
     .attr("class","foreignLabel")
-    .style("opacity",0)
+    // .style("opacity",0)
 
   g.append("path")
     .attr("class","paid")
@@ -305,7 +305,7 @@ function drawSecondCompare(){
     .datum([[239,0],[250,-40]])
     .attr("d", swoopy)
     .attr("class","hispanicLabel")
-    .style("opacity",0)
+    // .style("opacity",0)
 
 
   g.append("text")
