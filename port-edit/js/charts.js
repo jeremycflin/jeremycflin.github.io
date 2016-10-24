@@ -127,7 +127,7 @@ function drawFirstCompare(){
   g.append("rect")
     .attr({"class": "overlay" , "width": width + margin.left + margin.right  , "height": height + margin.top + margin.bottom})
     .style("opacity",0)
-    .on("click",update)
+    // .on("click",update)
 
   function update(){
     d3.select("#lbLegal").transition()
@@ -323,7 +323,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","hispanicLabel")
-    .style("opacity",0)
+    
 
   g.append("text")
     .attr("x",width/1.4)
@@ -332,7 +332,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","hispanicLabel")
-    .style("opacity",0)
+    
 
   g.append("text")
     .attr("x",width/1.9)
@@ -341,7 +341,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","foreignLabel")
-    .style("opacity",0)
+    
 
   g.append("text")
     .attr("x",width/1.9)
@@ -350,7 +350,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","foreignLabel")
-    .style("opacity",0)
+    
 
   g.append("text")
     .attr("x",0)
@@ -359,7 +359,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","highschoolLabel")
-    .style("opacity",0)
+    
 
   g.append("text")
     .attr("x",0)
@@ -368,7 +368,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","highschoolLabel")
-    .style("opacity",0)
+    
 
   // g.append("text")
   //   .attr("x",width/1.4)
@@ -398,15 +398,15 @@ function drawSecondCompare(){
   //   .attr("class","paid")
   //   .style("opacity",0)
 
-  var mySquare= g.append("rect")
-    .attr("x",0)
-    .attr("y",0)
+  // var mySquare= g.append("rect")
+  //   .attr("x",0)
+  //   .attr("y",0)
 
-  mySquare
-    .attr("width",total)
-    .attr("height",total)
-    .attr("id","Alldrivers")
-    .style("fill","#D3D3D3")
+  // mySquare
+  //   .attr("width",total)
+  //   .attr("height",total)
+  //   .attr("id","Alldrivers")
+  //   .style("fill","#D3D3D3")
 
   g.append("text")
     .attr("x",width*0.17)
@@ -427,7 +427,7 @@ function drawSecondCompare(){
   g.append("rect")
     .attr({"class": "overlay" , "width": width + margin.left + margin.right  , "height": height + margin.top + margin.bottom})
     .style("opacity",0)
-    .on("click",update)
+    // .on("mousemover",update)
 
   function update(){
 
