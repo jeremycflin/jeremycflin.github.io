@@ -265,10 +265,7 @@ function drawSecondCompare(){
     .attr("width",foreign)
     .attr("height",foreign)
     .style("fill","rgba(255,0,118,.6)")
-    // .style("stroke-dasharray","5, 5")
-    // .style("stroke","black")
-    // .style("stroke-width",1.5)
-
+ 
 
 
 
@@ -289,7 +286,7 @@ function drawSecondCompare(){
     .datum([[10,5],[30,-30]])
     .attr("d", swoopy)
     .attr("class","highschoolLabel")
-    // .style("opacity",0)
+    .style("opacity",0)
     
   g.append("path")
     .attr("class","paid")
@@ -297,7 +294,7 @@ function drawSecondCompare(){
     .datum([[220,0],[215,-30]])
     .attr("d", swoopy)
     .attr("class","foreignLabel")
-    // .style("opacity",0)
+    .style("opacity",0)
 
   g.append("path")
     .attr("class","paid")
@@ -305,7 +302,7 @@ function drawSecondCompare(){
     .datum([[239,0],[250,-40]])
     .attr("d", swoopy)
     .attr("class","hispanicLabel")
-    // .style("opacity",0)
+    .style("opacity",0)
 
 
   g.append("text")
@@ -315,6 +312,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","smallChartLabel")
+    // .style("opacity",0)
 
   g.append("text")
     .attr("x",width/1.4)
@@ -323,6 +321,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","hispanicLabel")
+    .style("opacity",0)
     
 
   g.append("text")
@@ -332,6 +331,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","hispanicLabel")
+    .style("opacity",0)
     
 
   g.append("text")
@@ -341,6 +341,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","foreignLabel")
+    .style("opacity",0)
     
 
   g.append("text")
@@ -350,6 +351,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","foreignLabel")
+    .style("opacity",0)
     
 
   g.append("text")
@@ -359,6 +361,7 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","highschoolLabel")
+    .style("opacity",0)
     
 
   g.append("text")
@@ -368,45 +371,47 @@ function drawSecondCompare(){
     .style("font-family","roboto")
     .style("font-size","13px")
     .attr("class","highschoolLabel")
+    .style("opacity",0)
     
 
-  // g.append("text")
-  //   .attr("x",width/1.4)
-  //   .attr("y",height/2.3)
-  //   .text("$tktktk")
-  //   .style("font-family","roboto")
-  //   .style("font-size","13px")
-  //   .attr("class","smallChartLabel")
+  g.append("text")
+    .attr("x",width/1.4)
+    .attr("y",height/2.3)
+    .text("$tktktk")
+    .style("font-family","roboto")
+    .style("font-size","13px")
+    .attr("class","smallChartLabel")
+    .style("opacity",0)
 
   
 
-  // g.append("text")
-  //   .attr("x",0)
-  //   .attr("y",-60)
-  //   .text("Total paid")
-  //   .style("font-family","roboto")
-  //   .style("font-size","13px")
-  //   .attr("class","paid")
-  //   .style("opacity",0)
+  g.append("text")
+    .attr("x",0)
+    .attr("y",-60)
+    .text("Total paid")
+    .style("font-family","roboto")
+    .style("font-size","13px")
+    .attr("class","paid")
+    .style("opacity",0)
 
-  // g.append("text")
-  //   .attr("x",0)
-  //   .attr("y",-40)
-  //   .text("$2442213")
-  //   .style("font-family","roboto")
-  //   .style("font-size","13px")
-  //   .attr("class","paid")
-  //   .style("opacity",0)
+  g.append("text")
+    .attr("x",0)
+    .attr("y",-40)
+    .text("$2442213")
+    .style("font-family","roboto")
+    .style("font-size","13px")
+    .attr("class","paid")
+    .style("opacity",0)
 
-  // var mySquare= g.append("rect")
-  //   .attr("x",0)
-  //   .attr("y",0)
+  var mySquare= g.append("rect")
+    .attr("x",0)
+    .attr("y",0)
 
-  // mySquare
-  //   .attr("width",total)
-  //   .attr("height",total)
-  //   .attr("id","Alldrivers")
-  //   .style("fill","#D3D3D3")
+  mySquare
+    .attr("width",total)
+    .attr("height",total)
+    .attr("id","Alldrivers")
+    .style("fill","#D3D3D3")
 
   g.append("text")
     .attr("x",width*0.17)
@@ -416,18 +421,18 @@ function drawSecondCompare(){
     .attr("class","smallChartLabel")
     .attr("id","revealTwo")
 
-  // g.append("text")
-  //   .attr("x",width*0.03)
-  //   .attr("y",height/2.18)
-  //   .text("That's 10% of total payment")
-  //   .style("font-family","roboto")
-  //   .attr("class","paid")
-  //   .style("opacity",0)
+  g.append("text")
+    .attr("x",width*0.03)
+    .attr("y",height/2.18)
+    .text("That's 10% of total payment")
+    .style("font-family","roboto")
+    .attr("class","paid")
+    .style("opacity",0)
 
   g.append("rect")
     .attr({"class": "overlay" , "width": width + margin.left + margin.right  , "height": height + margin.top + margin.bottom})
     .style("opacity",0)
-    // .on("mousemover",update)
+    .on("click",update)
 
   function update(){
 

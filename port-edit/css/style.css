@@ -179,6 +179,7 @@ hr{
   font-size: 3em;
   margin-bottom: -10px;
   font-weight: 100;
+
 }
 
 #main-header h2{
@@ -469,9 +470,13 @@ path {
     display:none;
   }
 
-  .g-graphic{
-  margin-top: 30px;
-}
+    .g-graphic{
+    margin-top: 30px;
+  }
+
+  .next-chapter {
+    padding-right: 10px;
+  }
 
 
 }
