@@ -62,6 +62,12 @@ hr{
   margin-top: 100px;
 }
 
+.previous{
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
 .next-chapter a{
   color:black;
   text-decoration: none;
@@ -83,8 +89,26 @@ hr{
   font-style: bold;
   padding-bottom: 6px;
   -webkit-animation:colorchange 5s infinite alternate;
+
   /*border-bottom: 3px solid #B21F26; */
   /*padding-left: 50px;*/
+}
+
+.next-wrapper{
+  float: right;
+}
+.previous-wrapper{
+  float: left;
+}
+
+.previous-title{
+  font-size: 40px;
+  margin-top: -15px;
+  font-style: bold;
+  padding-bottom: 6px;
+  -webkit-animation:colorchange 5s infinite alternate;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 .next-title-pre{
@@ -145,6 +169,15 @@ hr{
   transform: translate(-50%, -50%);
 }
 
+#intro-video-two{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  width:auto;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
 .story_intro p{
   margin-bottom: 1.5em;
   font-size: 1.2em;
@@ -157,6 +190,10 @@ hr{
 
 
 #header-container{
+  min-width: 100%;
+}
+
+#header-container-two{
   min-width: 100%;
 }
 
@@ -249,6 +286,35 @@ hr{
   font-weight: 400;
   margin-top: 2.8em;
 }
+
+.conversation{
+  /*font-family: "Georgia";*/
+  /*-webkit-font-smoothing:antialiased;*/
+  letter-spacing: 1.3px;
+
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.transcript{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.transcript p{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Georgia";
+}
+
+.full-width-video{
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+
+
 /*****************/
 /*****************/
 /*****************/
@@ -261,6 +327,25 @@ hr{
     height: auto;
     margin-top: 2.8em;
     margin-bottom: 0;
+}
+
+img.lazy{
+  display:block; 
+  width: 100%; 
+}
+
+.escape{
+  text-indent: 0;
+}
+
+.lazy{
+  opacity:0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.ll-loaded{
+  opacity: 1;
 }
 
 .caption{
@@ -309,6 +394,18 @@ hr{
   /*top:60%;*/
 }
 
+#julioQuote{
+  color:white;
+  /*margin-left:5%;*/
+  position: absolute; 
+  width: 50%;
+  /*line-height: 150%;*/
+  padding: 0 20px;
+  line-height: 1.2em;
+  bottom: 30px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), 0px 0px 10px #8aa7c1;
+}
+
 
 .interview{
   font-size: .5em;
@@ -325,12 +422,7 @@ hr{
 /*****************/
 /*****************/
 /*****************/
-#illustration-room{
-/*  position: relative;*/
-  font-size: 2.5em;
-  line-height: 1.2em;
-  color:white;
-}
+
 
 .illustration-top-layer{
   position: absolute;
@@ -351,12 +443,102 @@ hr{
   /*font-size:20px;*/
 }
 
+.g-subtitle{
+ /* max-width: 250px;*/
+  font-family: 'Roboto', sans-serif;
+  /*margin-top: -10px;*/
+ /* font-weight: 300;*/
+  font-size: 15px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
 .data-source{
   font-family: 'Roboto', sans-serif;
   margin-top: -20px;
   font-size: 12px;
   font-weight: 300;
 }
+
+.line{
+  stroke:#ccc;
+  stroke-width:.8;
+  fill:none;
+}
+
+.LA{
+  stroke:#FF0076;
+  stroke-width:2;
+}
+
+.nonLA{
+  stroke:black;
+  fill:none;
+}
+
+.nonLAcir{
+  fill:black;
+}
+
+.recession{
+  fill:#FF0076;
+  opacity:.1;
+}
+
+.ygrid .tick{
+  stroke:#666666;
+  stroke-width:1.5px;
+  stroke-dasharray:2, 2;
+  shape-rendering: crispEdges;
+}
+
+.ygrid .tick text{
+  stroke:#7e7e7e;
+  stroke-dasharray:none;
+  stroke-width:0px;
+  font-size: 11px;
+  font-family: 'Roboto', airal, sans-serif;
+  fill:#7e7e7e;
+}
+
+.axis text{
+  font-size: 11px;
+  font-family: 'Roboto', airal, sans-serif;
+  fill:#7e7e7e;
+}
+
+.xgrid .tick text{
+  font: 11px sans-serif;
+  fill:#7e7e7e;
+}
+
+#g-multiline path { 
+    stroke: #;
+    stroke-width: ;
+    fill: none;
+}
+
+.x .tick text{
+  opacity: 0;
+}
+
+.y .tick text{
+  opacity: 0;
+}
+
+.ports{
+  font: 13px arial;
+  stroke-width:0px;
+}
+
+.LAports{
+  fill:#FF0076;
+  font-weight: 600;
+}
+
+
+
+
 
 path.arrow, #arrowhead {
     fill: none;
@@ -369,6 +551,18 @@ path {
     stroke: black;
   }
 
+#g-multiline .voronoi path {
+    fill: none;
+    pointer-events: all;
+    stroke: none;
+  }
+
+#g-multiline .domain{
+  stroke: none;
+}
+
+
+
 @media(max-width: 1000px){
 	#jesseQuote{
 	  color: #2a2a2a;;
@@ -380,6 +574,14 @@ path {
 
   #kelseyQuote
   {
+    color: #2a2a2a;;
+      position: relative; 
+      width: 100%;
+      padding: 5px ;
+      bottom: 0;
+  }
+
+  #julioQuote{
     color: #2a2a2a;;
       position: relative; 
       width: 100%;

@@ -240,11 +240,27 @@ function drawSecondCompare(){
       .attr("stroke-linejoin", "bevel")
       .attr("points", "-6.75,-6.75 0,0 -6.75,6.75");
 
+  var highschooldotted= g.append("rect")
+    .attr("x",0)
+    .attr("y",0)
+    // .attr("width",total)
+    // .attr("height",total)
+    .attr({
+          'width': highschool,
+          'height': highschool
+        })
+    .style("fill","rgba(255,0,118,1)")
+    // .style("fill","none")
+    // .style("stroke-dasharray","5, 5")
+    // .style("stroke","black")
+    // .style("stroke-width",1.5)
+
   var bigSquaredotted= g.append("rect")
     .attr("x",0)
     .attr("y",0)
     .attr("width",total)
     .attr("height",total)
+
     .style("fill","none")
     .style("stroke-dasharray","5, 5")
     .style("stroke","black")
