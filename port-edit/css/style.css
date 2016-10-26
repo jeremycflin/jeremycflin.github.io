@@ -329,24 +329,24 @@ hr{
     margin-bottom: 0;
 }
 
-img.lazy{
+/*img.lazy{
   display:block; 
   width: 100%; 
-}
+}*/
 
 .escape{
   text-indent: 0;
 }
 
-.lazy{
+/*.lazy{
   opacity:0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
-}
+}*/
 
-.ll-loaded{
+/*.ll-loaded{
   opacity: 1;
-}
+}*/
 
 .caption{
 	font-size: 0.8em;
