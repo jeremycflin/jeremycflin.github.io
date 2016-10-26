@@ -5,14 +5,18 @@ jQuery(document).ready(function($){
     $("#header-container").width($(window).width()); 
     
     $("#header-container-two").height($(window).height()); 
+
+    $("#header-container-three").width($(window).width()); 
     
-    $('.audio').jabradoodle();
+    // $('.audio').jabradoodle();
     
     $(window).on("load resize", function(){ 
         $("#header-container").height($(window).height());
         $("#header-container").width($(window).width()); 
         $("#header-container-two").height($(window).height());
         $("#header-container-two").width($(window).width()); 
+         // $("#header-container-three").height($(window).height());
+        $("#header-container-three").width($(window).width()); 
         var s = skrollr.init();
 });  
     
@@ -42,7 +46,7 @@ jQuery(document).ready(function($){
 
 
 // ugliest hack in history right here.
-  // window.setTimeout(function(){
-  //   $("body").removeAttr("style");
-  // }, 500);
+  window.setTimeout(function(){
+    $("body").removeAttr("style");
+  }, 500);
 });

@@ -115,7 +115,7 @@ function drawFirstCompare(){
     .style("font-family","roboto")
     .attr("class","smallChartLabel")
     .attr("id","reveal")
-     .style("opacity",0)
+     .style("opacity",1)
 
   g.append("text")
     .attr("x",width*0.03)
@@ -128,7 +128,7 @@ function drawFirstCompare(){
   g.append("rect")
     .attr({"class": "overlay" , "width": width + margin.left + margin.right  , "height": height + margin.top + margin.bottom})
     .style("opacity",0)
-    // .on("click",update)
+    .on("click",update)
 
   function update(){
     d3.select("#lbLegal").transition()
@@ -500,8 +500,8 @@ function drawMultiLine(){
   var container = d3.select('#g-multiline');
 
   var margin = {top:10, right: 80, bottom: 30, left: 30},
-  width = 300 - margin.left - margin.right,
-  height = 550 - margin.top - margin.bottom;
+  width = 350 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
 
   var parseYear = d3.time.format("%Y").parse;
 
@@ -613,10 +613,10 @@ function drawMultiLine(){
 
     g.append("line")
       .style("stroke", "black")  // colour the line
-      .attr("x1", 125)     // x position of the first end of the line
-      .attr("y1", 238)      // y position of the first end of the line
-      .attr("x2", 115)     // x position of the second end of the line
-      .attr("y2", 238);   
+      .attr("x1", 155)     // x position of the first end of the line
+      .attr("y1", 168)      // y position of the first end of the line
+      .attr("x2", 140)     // x position of the second end of the line
+      .attr("y2", 168);   
 
     dataNest
       .filter(function(d){return d.key!=="Los Angeles, CA" || d.key!=="Long Beach, CA"})
