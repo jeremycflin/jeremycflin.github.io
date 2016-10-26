@@ -543,7 +543,7 @@ function drawMultiLine(){
     .y(function(d) { return y(d.Value); })
     .clipExtent([[-margin.left, -margin.top], [width + margin.right, height + margin.bottom]]);
 
-  d3.csv("../data/container_data.csv", function(error,data){
+  d3.csv("../port-edit/data/container_data.csv", function(error,data){
     if (error) throw error; 
 
     data.forEach(function(d) {
