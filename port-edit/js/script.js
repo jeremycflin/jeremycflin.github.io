@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     
     $("#header-container").width($(window).width()); 
     
-    $("#header-container-two").height($(window).height()); 
+    $("#header-container-two").height($(window).width()); 
 
     $("#header-container-three").width($(window).width()); 
     
@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
     $(window).on("load resize", function(){ 
         $("#header-container").height($(window).height());
         $("#header-container").width($(window).width()); 
-        $("#header-container-two").height($(window).height());
+        // $("#header-container-two").height($(window).height());
         $("#header-container-two").width($(window).width()); 
          // $("#header-container-three").height($(window).height());
         $("#header-container-three").width($(window).width()); 
