@@ -1,4 +1,15 @@
 
+function promptPass(){
+  var pass = prompt("Sorry! We are currently embargoing this story.");
+  if(pass!="USAToday"){
+    alert('Sorry mom, you cannot see this!');
+    promptPass();
+  }else{
+    alert('Good password!');
+  }
+}
+
+
 jQuery(document).ready(function($){
     $('.lazy').laziestloader();
     
@@ -19,6 +30,9 @@ jQuery(document).ready(function($){
         $("#header-container-three").width($(window).width()); 
         var s = skrollr.init();
 });  
+
+
+promptPass();
     
 // $(function(){
 //       $("#second_quote").typed({
