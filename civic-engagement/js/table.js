@@ -104,7 +104,7 @@ var createTable = {
         var facebookLink = social.append("a")
           .classed("url",true)
           .attr("target","_blank")
-          .style("margin", 20)
+          // .style("margin", 20)
           .attr("href",function(d) { return "https://facebook.com/" + d["facebook_account"]; })
           // .style("margin", 20)
           // .attr("margin", 20)
@@ -119,7 +119,7 @@ var createTable = {
             .classed("fa fa-facebook-square",true)
             .style("color", "white")
             .attr("aria-hidden", true)
-            .style("padding", 20)
+            // .style("padding", 20)
 
 
         twitterLink.append("i")
