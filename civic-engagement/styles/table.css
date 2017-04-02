@@ -43,15 +43,23 @@
  
 }
 
-/*.tablelRow{
-	 border-bottom: 1px solid #808080;
+.tablelRow{
+	 /*border-bottom: 1px solid #808080;*/
+	 cursor: pointer;
+	 transition: all .25s;
 }
-*/
+
+.tablelRow:hover{
+	background-color: #181523;
+}
+
 .g-congress-img{
-	max-height: 60px;
+/*	max-width: 49px;*/
 	-webkit-filter: grayscale(85%); 
     filter: grayscale(85%);
     opacity: 0.8;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .congress_photo_div{	
@@ -127,7 +135,7 @@ td.lowerRow{
 
 .url{
 	color: white;
-	margin: 20px !important;
+	/*margin: 20px !important;*/
 }
 
 i{
@@ -192,4 +200,13 @@ i{
 	/*border-bottom: solid black 1px !important;*/
 }
 
+.reset-search {
+  	pointer: none;
+    /*display: inline-block;*/
+}
+
+.transparent{
+	opacity: 0;
+	pointer: none;
+}
 
