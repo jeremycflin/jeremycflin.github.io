@@ -6,10 +6,25 @@ $(document).ready(function() {
 
     });
 
-    $.getJSON("../assets/data/us.json", function(us) {
-        createMap.init(us);
+    // $.getJSON("../assets/data/us.json", function(us) {
+    //     createMap.init(us);
 
-    });
+    // });
+    // var url = '../assets/data/congress_info_115.json';
+    // var url_wind = '../assets/data/us.json';
+
+    // $.when(
+    //     $.getJSON(url),
+    //     $.getJSON(url_wind)
+    // ).done(function(data, us) {
+    //     createTable.init(data);
+    //     createCongressName.init(data);
+    //     createMap.init(us);
+
+    // });
+    chamberFilter()
+    var rowLimit = 10;
+        showMore(rowLimit)
 
 });
 
@@ -19,11 +34,14 @@ var sanitizeNames = function(string){
     return theString
 }
 
+
+
+
 var createTable = {
     init: function(data){
         var selection = d3.select("#congress-member-info").select("tbody")
             
-
+        //buidling table
         var tr = selection.selectAll("tr")
             .data(data)
             .enter()
@@ -58,7 +76,6 @@ var createTable = {
                      return "congress_photo_div" + " " + "d-img"
                 }
             })
-            // .classed("congress_photo_div", true)
 
         congress_div.append("img")
             .attr("src",function(d) {  
@@ -99,15 +116,11 @@ var createTable = {
 
         var social = tr.append("td").classed("social", true)
 
-
-
         var facebookLink = social.append("a")
           .classed("url",true)
           .attr("target","_blank")
-          // .style("margin", 20)
+          .style("margin", 20)
           .attr("href",function(d) { return "https://facebook.com/" + d["facebook_account"]; })
-          // .style("margin", 20)
-          // .attr("margin", 20)
 
         var twitterLink = social.append("a")
           .classed("url socialTwitter",true)
@@ -119,7 +132,7 @@ var createTable = {
             .classed("fa fa-facebook-square",true)
             .style("color", "white")
             .attr("aria-hidden", true)
-            // .style("padding", 20)
+            .style("padding", 20)
 
 
         twitterLink.append("i")
@@ -127,15 +140,47 @@ var createTable = {
             .style("color", "white")
             .attr("aria-hidden", true)
 
- 
 
-
-
-
+        //buidling hidable rows
 
         $('#congress-member-info > tbody > tr')
             .closest('tr')
             .after("<tr class='hideableRow'><td class='lowerRow'></td><td class='expandable lowerRow'></td></tr>")
+
+        //passing in data
+        d3.selectAll(".hideableRow")
+            .data(data)
+            .attr("class", function(d){console.log(d["district"]);
+                  if(d["middle_name"] && d["district"]){
+                    var string = d["first_name"] + d["middle_name"]+d["last_name"]
+
+                    return "hideableRow house-table contactInfo" + sanitizeNames(string)
+                }else if (d["middle_name"] && d["district"] == "undefined"){
+                    var string = d["first_name"] + d["middle_name"]+d["last_name"]
+
+                    return "hideableRow senate-table contactInfo" + sanitizeNames(string)
+
+                }else if((d["middle_name"] == null &&  d["district"])||(d["middle_name"] == "" &&  d["district"])){
+                    var string = d["first_name"] + d["last_name"]
+
+                    return "hideableRow house-table contactInfo" + sanitizeNames(string)
+                  
+                }
+                else if(d["middle_name"] == null &&  d["district"] == "undefined"){
+                    var string = d["first_name"] + d["last_name"]
+
+                    return "hideableRow senate-table contactInfo" + sanitizeNames(string)
+                  
+                }
+
+                else{
+                    var string = d["first_name"] + d["last_name"]
+                    return "hideableRow senate-table contactInfo" + sanitizeNames(string)
+                }
+            })
+
+
+
 
         $(".expandable").closest('td').attr("colspan", 4)
 
@@ -159,13 +204,7 @@ var createTable = {
 
 
         $(".expandable").append("<p class='web'><a class='weblink'>Website:</a></p><p class='phone'>Phone:</p>")
-        // $(".expandable > p").addClass("hide")
 
-        $(".tablelRow").click(function(event) {
-                  
-                $(this).next().find('p').toggleClass("hide");
-        
-            });
 
         d3.selectAll(".phone")
             .data(data)
@@ -180,33 +219,8 @@ var createTable = {
             })
 
 
+        expand();
 
-
-        function expand() {
-            var animation_height = $(window).innerHeight() * 0.8;
-            var ratio = Math.round( (1 / animation_height) * 10000 ) / 10000;
-
-            $('.tablelRow').each(function() {
-                
-                var objectTop = $(this).offset().top;
-                var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-                
-                if ( objectTop < windowBottom ) {
-                    if ( objectTop < windowBottom - animation_height ) {
-                        $(this).next().find('p').removeClass("hide");
-                     
-
-                    } else {
-                         $(this).next().find('p').addClass("hide")
-                    }
-                } else {
-                    $(this).next().find('p').addClass("hide")
-                }
-            });
-        }
-
-        // expand();
-        $(window).scroll(function() {expand();});
 
 
     
@@ -214,8 +228,8 @@ var createTable = {
    
 
 
-        var rowLimit = 20;
-        $('table > tbody > tr:gt(' + (19) + ')').addClass("hide")
+       
+        // $('table > tbody > tr:gt(' + (9) + ')').addClass("hide")
         
 
         $.fn.extend({
@@ -225,62 +239,105 @@ var createTable = {
         });
 
 
-        function showMore(rowLimit){
-            $('.more-entries').click(function() {
-                $(".more-entries").toggleText('see less', 'see more').toggleClass("filter-enabled")
-
-                // $(".more-entries").addClass("hide")
-
-                // if has class selected 
-                // if(){
-
-                // }
-
-                $('table > tbody > tr:gt(' + (rowLimit - 1) + ')').toggleClass("hide")
-
-                // if not have class selected
-
-                // $('.selected').toggleClass("hide")
-                d3.selectAll(".selected").classed('hide',false)
-            }
-                )}
-
-
-        showMore(rowLimit)
-
-        function chamberFilter(){
-            $(".filter-senate").click(function(){
-                // $(".senate-table").addClass("selected")
-                d3.selectAll(".senate-table").classed('hide',false)
-                d3.selectAll(".house-table").classed('hide',true)
-                // d3.selectAll(".house-table").classed('hide',true)
-                d3.selectAll(".filter-senat").classed('filter-enabled"',true)
-                d3.selectAll(".filter-house").classed('filter-enabled"',false)
-                // $(".senate-table").css("display","unset")
-                // $(".filter-senate").toggleClass("filter-enabled")
-            })
-
-            $(".filter-house").click(function(){
-       
-                // $(".senate-table").addClass("hide")
-                d3.selectAll(".senate-table").classed('hide',true)
-                d3.selectAll(".house-table").classed('hide',false)
-                d3.selectAll(".filter-senat").classed('filter-enabled"',false)
-                d3.selectAll(".filter-house").classed('filter-enabled"',true)
-                // $(".filter-house").toggleClass("filter-enabled")
-            })
-
-        }
-
-        chamberFilter()
-
-
         
+
+
 
 
 
     }
 } 
+var chamberFilter = function (){
+            $(".filter-senate").click(function(){
+
+                $(".senate-table").removeClass("hide")
+                $(".house-table").addClass("hide")
+
+                // d3.selectAll(".senate-table").classed('hide',false)
+                // d3.selectAll(".house-table").classed('hide',true)
+          
+                d3.selectAll(".filter-senat").classed('filter-enabled',true)
+                d3.selectAll(".filter-house").classed('filter-enabled',false)
+           
+               
+                $(".more-entries").addClass("hide")
+                $(".reset-search").addClass("transparent")
+
+                chosenSelectionReset()
+
+                })
+
+            $(".filter-house").click(function(){
+       
+                // $(".senate-table").addClass("hide")
+                $(".house-table").removeClass("hide")
+                $(".senate-table").addClass("hide")
+                // d3.selectAll(".senate-table").classed('hide',true)
+                // d3.selectAll(".house-table").classed('hide',false)
+
+
+                d3.selectAll(".filter-senat").classed('filter-enabled',false)
+                d3.selectAll(".filter-house").classed('filter-enabled',true)
+
+                $(".more-entries").addClass("hide")
+
+
+                $(".reset-search").addClass("transparent")
+                chosenSelectionReset()
+                // $(".filter-house").toggleClass("filter-enabled")
+            })
+
+        }
+
+var chosenSelectionReset = function(){
+    var theSelect = $("#name-search-dropdown").find('select')
+
+    theSelect.val('').addClass("transparent")
+    theSelect.trigger("chosen:updated")
+}
+
+var expand = function(){
+    $(".tablelRow").click(function(event) {             
+            $(this).next().find('p').slideToggle()
+        });
+    $(".expandable > p").addClass("hide")
+}
+
+var showMore = function (rowLimit){
+        $('.more-entries').click(function() {
+            $(".more-entries").toggleText('see less', 'see more')
+
+            // $(".more-entries").addClass("hide")
+
+            // if has class selected 
+            // if(){
+
+            // }
+
+            $('table > tbody > tr:gt(' + (rowLimit - 1) + ')').toggleClass("hide")
+
+            // if not have class selected
+
+            // $('.selected').toggleClass("hide")
+            // d3.selectAll(".selected").classed('hide',false)
+        }
+     )}
+
+// var showAll = function(){
+//      $('.senate-table').removeClass("hide")
+// }
+
+var reset = function(){
+    $("#congress-member-info > tbody > tr").removeClass("hide")
+    $(".expandable > p").css("display", "none")
+}
+
+// reset()
+$(".reset-search").click(function(event){
+    $(this).addClass("transparent")
+    chosenSelectionReset()
+    reset()
+})
 
 var createCongressName ={
     init: function(data){
@@ -313,7 +370,25 @@ var createCongressName ={
             // 'width' : 'auto'
         }).change(function(){
             var selected = $(this).val();
-            $("#"+selected).siblings().addClass("hide");
+
+            // $('.tablelRow').addClass()
+            reset()
+            $('.tablelRow').not("#"+selected).addClass("hide");
+            $('.hideableRow').not(".contactInfo"+selected).addClass("hide");
+            $(".contactInfo"+ selected + "> .expandable > p").css("display", "block");
+
+
+
+            
+
+
+
+            // $("#"+selected).siblings().addClass("hide");
+
+            $(".reset-search").removeClass('transparent')
+
+            // $("#"+selected).next().find('p').removeClass("hide");
+
 
             // $("#"+selected).css("background-color","blue")
         })
@@ -321,36 +396,6 @@ var createCongressName ={
 }
 
 
-var createMap = {
-    init: function(us){
-
-    // var width = 1200,
-    //     height = 900;
-
-    var margin = {top:50, right: 80, bottom: 30, left: 30},
-      width = 1200 - margin.left - margin.right,
-      height = 900 - margin.top - margin.bottom;
-
-    var projection = d3.geoAlbersUsa() .scale(1100)
-                   // .translate( [width / 2, height / 2]);
-    var path = d3.geoPath()
-        .projection(projection);
-
-    var svg = d3.select("#search-map").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-
-    svg.append("path")
-          .attr("class", "states")
-          .datum(topojson.feature(us, us.objects.states))
-          .attr("d", path);
-
-
-  
-
-
-    }
-}
 
 
 
