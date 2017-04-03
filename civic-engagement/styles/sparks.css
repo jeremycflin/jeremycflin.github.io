@@ -1,13 +1,15 @@
-#g-sparks{
+.g-sparks{
 	max-width: 900px;
+	margin-top: 0px;
 }
+
 
 .small-multiple-sparks{
 	width: 90px;
 	height: 45px;
 	display: inline-block;
 	background-color: #181523;
-	margin: 3px 5px 3px 5px;
+	margin: 3px 5px 3px 0px;
 	vertical-align: top;
 	box-shadow: 4px 4px 7px -2px rgba(211,211,211, .1);
 }
@@ -21,4 +23,10 @@
 	font-size: 10px;
 	line-height: 1.2em;
 	padding-left: 5px;
+}
+
+.g-sparks-title{
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 16px;
 }

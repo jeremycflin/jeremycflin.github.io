@@ -151,7 +151,7 @@ var createTable = {
         //passing in data
         d3.selectAll(".hideableRow")
             .data(data)
-            .attr("class", function(d){console.log(d["district"]);
+            .attr("class", function(d){
                   if(d["middle_name"] && d["district"]){
                     var string = d["first_name"] + d["middle_name"]+ d["last_name"]
 
@@ -359,15 +359,40 @@ var createCongressName ={
 var createSparkCharts = {
     init: function(data){
 
-    var sparksContainer = d3.select("#g-sparks");
+    var sparksSenateContainer = d3.select("#g-senate-sparks");
 
-    var sparks = sparksContainer.selectAll(".spark-charts")
-        .data(data)
+    var senateSparks = sparksSenateContainer.selectAll(".spark-senate-charts")
+        .data(data.filter(function(d){
+            // console.log(d)
+            return d["district"] == null
+        }))
         .enter()
         .append("div")
         .attr("class", "small-multiple-sparks")
 
-    sparks.append("p")
+    senateSparks.append("p")
+        .text(function(d) {  
+                    if(d["middle_name"]){
+                        return d["first_name"] + " " + d["middle_name"]+ " "+d["last_name"] 
+                    }else{
+                        return d["first_name"] + " " + d["last_name"] 
+                    }
+                    
+                })
+        .attr("class", "sparks-rep-names")
+
+    var sparksSenateContainer = d3.select("#g-house-sparks");
+
+    var senateSparks = sparksSenateContainer.selectAll(".spark-house-charts")
+        .data(data.filter(function(d){
+            // console.log(d)
+            return d["district"] !== null
+        }))
+        .enter()
+        .append("div")
+        .attr("class", "small-multiple-sparks")
+
+    senateSparks.append("p")
         .text(function(d) {  
                     if(d["middle_name"]){
                         return d["first_name"] + " " + d["middle_name"]+ " "+d["last_name"] 
