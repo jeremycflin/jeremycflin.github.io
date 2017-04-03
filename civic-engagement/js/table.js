@@ -3,6 +3,7 @@ $(document).ready(function() {
     $.getJSON("../assets/data/congress_info_115.json", function(data) {
         createTable.init(data);
         createCongressName.init(data);
+        createSparkCharts.init(data);
 
     });
 
@@ -23,8 +24,8 @@ $(document).ready(function() {
 
     // });
     chamberFilter()
-    var rowLimit = 10;
-        showMore(rowLimit)
+    var rowLimit = 20;
+    showMore(rowLimit)
 
 });
 
@@ -152,11 +153,11 @@ var createTable = {
             .data(data)
             .attr("class", function(d){console.log(d["district"]);
                   if(d["middle_name"] && d["district"]){
-                    var string = d["first_name"] + d["middle_name"]+d["last_name"]
+                    var string = d["first_name"] + d["middle_name"]+ d["last_name"]
 
                     return "hideableRow house-table contactInfo" + sanitizeNames(string)
                 }else if (d["middle_name"] && d["district"] == "undefined"){
-                    var string = d["first_name"] + d["middle_name"]+d["last_name"]
+                    var string = d["first_name"] + d["middle_name"] +d ["last_name"]
 
                     return "hideableRow senate-table contactInfo" + sanitizeNames(string)
 
@@ -166,7 +167,7 @@ var createTable = {
                     return "hideableRow house-table contactInfo" + sanitizeNames(string)
                   
                 }
-                else if(d["middle_name"] == null &&  d["district"] == "undefined"){
+                else if((d["middle_name"] == null &&  d["district"] == "undefined") || (d["middle_name"] == null &&  d["district"] == null)){
                     var string = d["first_name"] + d["last_name"]
 
                     return "hideableRow senate-table contactInfo" + sanitizeNames(string)
@@ -174,7 +175,7 @@ var createTable = {
                 }
 
                 else{
-                    var string = d["first_name"] + d["last_name"]
+                    var string = d["first_name"]+ d["middle_name"]  + d["last_name"]
                     return "hideableRow senate-table contactInfo" + sanitizeNames(string)
                 }
             })
@@ -184,22 +185,6 @@ var createTable = {
 
         $(".expandable").closest('td').attr("colspan", 4)
 
- 
-       
-   
-        // function checkChamber(){
-
-        //     if ($(this).closest("tr").hasClass("senate-table")){
-        //         $(this).addClass("senate-table");
-        //             }else{
-        //                $(this).addClass("house-table");
-        //         }
-        //     console.log($(this).prevAll())
-        // }
-            
-    
-   
-        // $(".hideableRow").each(checkChamber())
 
 
 
@@ -229,14 +214,14 @@ var createTable = {
 
 
        
-        // $('table > tbody > tr:gt(' + (9) + ')').addClass("hide")
+        $('table > tbody > tr:gt(' + (19) + ')').addClass("hide")
         
 
-        $.fn.extend({
-            toggleText: function(a, b){
-                return this.text(this.text() == a ? b : a);
-            }
-        });
+        // $.fn.extend({
+        //     toggleText: function(a, b){
+        //         return this.text(this.text() == a ? b : a);
+        //     }
+        // });
 
 
         
@@ -253,17 +238,17 @@ var chamberFilter = function (){
                 $(".senate-table").removeClass("hide")
                 $(".house-table").addClass("hide")
 
-                // d3.selectAll(".senate-table").classed('hide',false)
-                // d3.selectAll(".house-table").classed('hide',true)
+
           
-                d3.selectAll(".filter-senat").classed('filter-enabled',true)
+                d3.selectAll(".filter-senate").classed('filter-enabled',true)
                 d3.selectAll(".filter-house").classed('filter-enabled',false)
            
                
                 $(".more-entries").addClass("hide")
                 $(".reset-search").addClass("transparent")
-
+                
                 chosenSelectionReset()
+                
 
                 })
 
@@ -276,14 +261,15 @@ var chamberFilter = function (){
                 // d3.selectAll(".house-table").classed('hide',false)
 
 
-                d3.selectAll(".filter-senat").classed('filter-enabled',false)
+                d3.selectAll(".filter-senate").classed('filter-enabled',false)
                 d3.selectAll(".filter-house").classed('filter-enabled',true)
 
                 $(".more-entries").addClass("hide")
 
-
                 $(".reset-search").addClass("transparent")
+
                 chosenSelectionReset()
+              
                 // $(".filter-house").toggleClass("filter-enabled")
             })
 
@@ -305,27 +291,12 @@ var expand = function(){
 
 var showMore = function (rowLimit){
         $('.more-entries').click(function() {
-            $(".more-entries").toggleText('see less', 'see more')
-
-            // $(".more-entries").addClass("hide")
-
-            // if has class selected 
-            // if(){
-
-            // }
-
+            $(this).addClass("hide")
             $('table > tbody > tr:gt(' + (rowLimit - 1) + ')').toggleClass("hide")
 
-            // if not have class selected
-
-            // $('.selected').toggleClass("hide")
-            // d3.selectAll(".selected").classed('hide',false)
         }
      )}
 
-// var showAll = function(){
-//      $('.senate-table').removeClass("hide")
-// }
 
 var reset = function(){
     $("#congress-member-info > tbody > tr").removeClass("hide")
@@ -371,32 +342,44 @@ var createCongressName ={
         }).change(function(){
             var selected = $(this).val();
 
-            // $('.tablelRow').addClass()
+
             reset()
             $('.tablelRow').not("#"+selected).addClass("hide");
             $('.hideableRow').not(".contactInfo"+selected).addClass("hide");
             $(".contactInfo"+ selected + "> .expandable > p").css("display", "block");
-
-
-
-            
-
-
-
-            // $("#"+selected).siblings().addClass("hide");
-
+            $(".chamber-filter").removeClass("filter-enabled")
             $(".reset-search").removeClass('transparent')
 
-            // $("#"+selected).next().find('p').removeClass("hide");
-
-
-            // $("#"+selected).css("background-color","blue")
         })
     }
 }
 
 
 
+var createSparkCharts = {
+    init: function(data){
+
+    var sparksContainer = d3.select("#g-sparks");
+
+    var sparks = sparksContainer.selectAll(".spark-charts")
+        .data(data)
+        .enter()
+        .append("div")
+        .attr("class", "small-multiple-sparks")
+
+    sparks.append("p")
+        .text(function(d) {  
+                    if(d["middle_name"]){
+                        return d["first_name"] + " " + d["middle_name"]+ " "+d["last_name"] 
+                    }else{
+                        return d["first_name"] + " " + d["last_name"] 
+                    }
+                    
+                })
+        .attr("class", "sparks-rep-names")
+
+    }
+}
 
 
 

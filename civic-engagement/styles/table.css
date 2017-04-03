@@ -27,7 +27,7 @@
 
 .contact-info-heads{
 	text-align: left;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 #congress-database table{
@@ -117,11 +117,11 @@ td.lowerRow{
 }
 
 .chamber-filter:hover{
-	background-color: darkgrey;
+	background-color: lightgrey;
 }
 
 .filter-enabled{
-	background-color: darkgrey;
+	background-color: lightgrey;
 }
 
 .more-entries{
@@ -139,7 +139,7 @@ td.lowerRow{
 }
 
 i{
-	padding: 30px;
+	padding: 10px;
 }
 
 
