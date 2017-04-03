@@ -35,7 +35,7 @@
 }
 
 #congress-member-info td{
-   
+   	font-size: 14px;
     padding-top: 3px;
     padding-bottom: 0px;
     -webkit-font-smoothing: antialiased;
@@ -60,11 +60,13 @@
     opacity: 0.8;
     max-width: 100%;
     max-height: 100%;
+    /*max-height: 50px;*/
 }
 
 .congress_photo_div{	
-	max-height: 60px;
-	max-width: 49px;
+	max-height: 47.6px;
+	max-width: 39px;
+	/*margin-right: 5px;*/
 }
 
 .r-img{
@@ -78,11 +80,13 @@
 
 
 .g-congress-photo-container{
-	width:70px;
+	width:39px;
 }
 
 .g-congress-name{
 	width: 30%;
+	padding-left: 8px;
+
 }
 
 td.lowerRow{
@@ -104,8 +108,8 @@ td.lowerRow{
 	background-color: #3B3636;
 	color: white;
 	border:none;
-	border-radius: 7px;
-	font-size: 14px;
+	border-radius: 8px;
+	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 600;
 	letter-spacing: 1px;
@@ -152,7 +156,7 @@ i{
         /*width:200px;*/
         height: auto;
         padding: 5px 0 3px 2px;
-        font-size: 1.2em;
+        font-size: 1.1em;
         line-height: 1.2em;
         box-shadow: none;
         border-top: none;
