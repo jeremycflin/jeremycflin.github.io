@@ -20,7 +20,7 @@ a{
 }
 
 .landing-wrapper{
-	background-color: rgba(0,0,0, .9);
+	background-color: #0a061b;
 /*	background: linear-gradient(#273463, #8B4256);*/
 	height:900px;
 	width:auto;
@@ -109,7 +109,7 @@ a{
 .others_imglink{
 	width: 190px;
 	height: 190px;
-	opacity: .4;
+	/*opacity: .4;*/
 }
 
 .others_imglink:hover{
@@ -123,11 +123,13 @@ a{
 
 
 .others-inner-wrap{
-	background-color: rgba(0,0,0, 1);
+	/*background-color: rgba(0,0,0, 1);*/
 	width: 190px;
 	height: 190px;
 	text-decoration: none;	
 	box-shadow: 4px 4px 7px -2px rgba(0,0,0,.3);
+	-webkit-filter: grayscale(95%);
+    filter: grayscale(95%);
 /*	-webkit-filter: grayscale(90%);
     filter: grayscale(90%);*/
 }
@@ -136,7 +138,7 @@ a{
 .others-inner-wrap:hover{
 	transition: all .4s;
     opacity: 1;
-    background-color: white;
+   /* background-color: white;*/
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
@@ -147,7 +149,7 @@ a{
 
 .inner-wrap{
 	/*background-color: rgba(0,0,0, 1);*/
-	background: linear-gradient(#7f0000, #206877);
+	/*background: linear-gradient(#7f0000, #206877);*/
 /*	background: linear-gradient(135deg,rgba(255,101,100,.4) 0,rgba(255,101,100,0) 50%,rgba(255,101,100,0) 100%),linear-gradient(45deg,rgba(40,0,215,0) 0,rgba(40,0,215,0) 50%,rgba(40,0,215,.4) 100%),linear-gradient(transparent 1%,rgba(0,0,0,.8) 100%);
 */	width: 300px;
 	height: 200px;
@@ -162,12 +164,15 @@ a{
     filter: grayscale(0%);
     transition: all .4s;
     opacity: 1;
+  
 }
 
 .inner-wrap img:hover{
 	transition: all .4s;
     opacity: 1;
-    background-color: white;
+      -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  /*  background-color: white;*/
 }
 
 .inner-wrap p{
@@ -177,7 +182,9 @@ a{
 .inner-wrap img{
 	width: 100%;
 	height: 200px;
-	opacity: .5;
+	-webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+	/*opacity: .5;*/
 }
 
 .category{
@@ -201,26 +208,32 @@ a{
 
 #other-wrapper .category{
 	margin-bottom: 5px;
-	margin-top: 15px;
+	margin-top: 18px;
 	max-width: 100px;
 	color: white;
 	padding: 5px;
 	z-index: 10000;
 	position: absolute;
 	font-size: 0.8em;
+	background-color: rgba(0,0,0, .8);
+	border-radius: 8px;
+
 
 
 }
 
 .others_pub{
 	margin-bottom: 5px;
-	margin-top: 0px;
+	margin-top: 5px;
+	margin-left: 5px;
 	max-width: 150px;
 	color: white;
 	padding: 5px;
 	z-index: 10000;
 	position: absolute;
 	font-size: 0.8em;
+	background-color: rgba(0,0,0, .8);
+	border-radius: 8px;
 }
 
 .note{
@@ -235,6 +248,10 @@ a{
 */	font-weight: 800;
 	font-size: 0.9em;
 }
+
+
+
+
 
 @-webkit-keyframes colorchange {
       0% {

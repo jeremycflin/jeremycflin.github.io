@@ -65,9 +65,9 @@ d3.tsv("assets/portfolio.tsv",function(portfolio) {
   var others_inner = others_link.append("div")
     .attr("class","others-inner-wrap")
 
-  others_inner.append("p")
-    .classed("category",true)
-    .text(function(d) { return  d.cat; });
+  // others_inner.append("p")
+  //   .classed("category",true)
+  //   .text(function(d) { return  d.cat; });
 
   others_inner.append("p")
     .classed("others_pub",true)
