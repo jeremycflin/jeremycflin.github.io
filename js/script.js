@@ -41,19 +41,28 @@ d3.tsv("data.tsv",function(portfolio) {
       .text(function(d){return d.name})
 
 
-$(window).load(function() {  
+// $(window).load(function() {  
 
+//     var elem = document.querySelector('.grid');
+//     var msnry = new Masonry( elem, {
+//     // options
+//     itemSelector: '.grid-item',
+//     columnWidth: 180,
+//     gutter: 15
+
+//   });
+// });
+
+
+setTimeout(function() {
     var elem = document.querySelector('.grid');
     var msnry = new Masonry( elem, {
     // options
     itemSelector: '.grid-item',
     columnWidth: 180,
     gutter: 15
-
-  });
-});
-
-
+        });
+    }, 100);
 
 });
 
