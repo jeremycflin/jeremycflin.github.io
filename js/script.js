@@ -41,38 +41,21 @@ d3.tsv("data.tsv",function(portfolio) {
       .text(function(d){return d.name})
 
 
+$(window).load(function() {  
 
-  var elem = document.querySelector('.grid');
-  var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: 180,
-  gutter: 15
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: 180,
+    gutter: 15
 
+  });
 });
-
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.grid', {
-  // options
-});
-
-// d3.select('body')
-//   .style("background", "linear-gradient(0deg, #30cfd0, #330867)")
-//   .style("background-size", "cover")
-
 
 
 
 });
-
-// $( document ).ready(function() {
-//       $('.grid').masonry({
-//     // options
-//     itemSelector: '.grid-item',
-//     columnWidth: 200
-//   });
-// });
 
 
 
