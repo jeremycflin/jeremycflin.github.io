@@ -41,32 +41,29 @@ d3.tsv("data.tsv",function(portfolio) {
       .text(function(d){return d.name})
 
 
-// $(window).load(function() {  
 
-//     var elem = document.querySelector('.grid');
-//     var msnry = new Masonry( elem, {
-//     // options
-//     itemSelector: '.grid-item',
-//     columnWidth: 180,
-//     gutter: 15
-
-//   });
-// });
+$(document).ready(function () {
+    var $elem = $('.grid');
 
 
-setTimeout(function() {
-    var elem = document.querySelector('.grid');
-    var msnry = new Masonry( elem, {
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: 180,
-    gutter: 15
-        });
-    }, 100);
+  $elem.imagesLoaded(function () {
+    $elem.masonry();
+
+    $elem.masonry({
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: 180,
+      gutter: 15
+    });
+
+
+
+    });
+
 
 });
 
-
+});
 
 
 
