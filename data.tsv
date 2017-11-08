@@ -1,11 +1,13 @@
 slug	url	name	pub
-poll	http://www.politico.com/interactives/2017/politico-morning-consult-poll/?lo=ap_f1	How America feels about Trump	Politico
+vaElection	https://www.politico.com/interactives/elections/2017/virginia/governor/	2017 Virginia Governor election results: Gillespie vs. Northam	Politico
+poll	http://www.politico.com/interactives/2017/politico-morning-consult-poll/	How America feels about Trump	Politico
 corpTaxRates	http://www.politico.com/interactives/2017/35-percent-corporate-tax-rate-100-companies/	Trump wants to slash America’s corporate tax rate, but that rate is a myth	Politico
 confederatePopulation	http://www.politico.com/interactives/2017/confederate-monuments-statues-and-symbols-in-the-south/	1,503 Confederate symbols are on display across America. Most are in the South. 179 are in majority black counties.	Politico
 confederateSymbols	http://www.politico.com/interactives/2017/confederate-monuments/	Symbols of the Confederacy still dot the South	Politico
 muller	http://www.politico.com/interactives/2017/trump-russia-mueller-investigation-timelines/	Midterms loom over Mueller’s Russia probe	Politico
 georgiaSixth	http://www.politico.com/interactives/2017/georgia-special-election-results-2017-ossoff-handel-race/	Live results from the Georgia 6th special election	Politico
-mapGuide	http://jeremycflin.github.io/maps.html	Bloomberg style guide example maps	Bloomberg
+mapGuide	http://jeremycflin.github.io/map.html	Bloomberg style guide example maps	Bloomberg
+statsFurious	https://www.bloomberg.com/graphics/2017-fast-and-furious/	The stats of the furious	Bloomberg
 borderWallNew	https://www.bloomberg.com/graphics/2017-mexico-trump-first-line-of-defense-on-immigration/	Why Mexico is Trump’s first line of defense on immigration	Bloomberg
 trumpRevealed	https://www.washingtonpost.com/graphics/politics/trump-revealed-book-reporting-archive/	‘Trump Revealed’: The reporting archive	Washington Post
 maternityLeave	https://www.washingtonpost.com/news/worldviews/wp/2016/08/13/the-world-is-getting-better-at-paid-maternity-leave-the-u-s-is-not/?utm_term=.ee9205f42915	The world is getting better at paid maternity leave. The U.S. is not.	Washington Post
