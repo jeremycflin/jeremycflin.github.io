@@ -14,6 +14,7 @@ a{
  img{
    -webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
     filter: grayscale(20%);
+  
  }
 
 .cross-line{

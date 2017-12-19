@@ -49,6 +49,7 @@ $(document).ready(function () {
   $elem.imagesLoaded(function () {
     $elem.masonry();
 
+
     $elem.masonry({
       // options
       itemSelector: '.grid-item',
