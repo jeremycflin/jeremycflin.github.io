@@ -12,8 +12,8 @@ a{
 }
 
  img{
-   -webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(20%);
+ /*  -webkit-filter: grayscale(20%);  Safari 6.0 - 9.0 
+    filter: grayscale(20%);*/
   
  }
 
@@ -85,7 +85,7 @@ body{
  }
 
  .name-container{
- 	border-top: 1.5px solid #282828;
+ 	border-top: 1px solid #282828;
  }
 
  .note{
