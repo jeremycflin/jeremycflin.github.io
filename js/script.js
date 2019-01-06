@@ -25,9 +25,9 @@ d3.tsv("data.tsv",function(portfolio) {
     .attr("class","img-container")
 
 
-  // imgContainer.append("span")
-  //   .text(function(d){return d.pub})
-  //   .attr("class","pub")
+  imgContainer.append("span")
+    .text(function(d){return d.pub})
+    .attr("class","pub")
 
   imgContainer.append("img")
       .attr("src",function(d) { return "img/" + d.slug + ".png"; })

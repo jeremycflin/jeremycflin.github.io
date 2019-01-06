@@ -1,8 +1,8 @@
 
 a{
  
-	color: #ff0000;
-	font-weight: 500;
+	color: #000;
+	font-weight: 900;
 	/*text-decoration: none;*/
 	font-family: 'roboto', sans-serif;
 	/*text-decoration-color:rgba(255, 0, 118, 1);*/
@@ -97,14 +97,16 @@ body{
  }
 
  .pub{
-	position: absolute;
-    background-color: #282828;
+	 position: absolute;
+    background-color: #000;
     color: white;
     padding: 5px;
     border-radius: 3px;
-    margin-left: -2px;
-    font-size: 11px;
+    margin-left: -1px;
+    font-size: 10px;
     z-index: 100000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
  }
 
 
