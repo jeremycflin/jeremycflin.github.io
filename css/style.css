@@ -97,16 +97,17 @@ body{
  }
 
  .pub{
-	 position: absolute;
-    background-color: #000;
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-    margin-left: -1px;
-    font-size: 10px;
-    z-index: 100000;
-    letter-spacing: 1px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    font-weight: 800;
     text-transform: uppercase;
+    line-height: 1.28em;
+ }
+
+ .name{
+  font-size: 14px;
+  line-height: 1.1em;
+  font-weight: 400;
  }
 
 
@@ -122,6 +123,13 @@ body{
 	border-radius: 3px;
 	transition: all .4s;
  }
+
+#clip{
+  text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
 
 #clip a{
  	text-decoration: none !important;
