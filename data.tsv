@@ -1,4 +1,6 @@
 slug	url	name	pub
+citycovid	https://www.bloomberg.com/graphics/2020-coronavirus-transportation-data-cities-traffic-mobility/	Pandemic Travel Patterns Hint at Our Urban Future	Bloomberg
+airbnb	https://www.bloomberg.com/graphics/2020-airbnb-ipo-challenges	Airbnb to America's Big Cities: See You in Court	Bloomberg
 aufire	https://www.bloomberg.com/graphics/2020-australia-fires	Australia Fire Maps: Where the Devastating Wildfires Are Burning	Bloomberg
 gdpcenter	https://www.bloomberg.com/graphics/2019-county-gdp/	The Center of the U.S. Economy Is in Rural Missouri	Bloomberg
 distracted	https://www.bloomberg.com/graphics/2019-distracted-drivers/	Drivers Refuse to Put Down Their Phones. People Keep Dying.	Bloomberg
@@ -14,7 +16,7 @@ russiaProbes	https://www.politico.com/interactives/2018/trump-russia-investigati
 hezbollah	https://www.POLITICO.com/interactives/2017/obama-hezbollah-drug-trafficking-investigation/	The secret backstory of how Obama let Hezbollah off the hook	POLITICO
 alElection	https://www.POLITICO.com/interactives/elections/2017/alabama/special-election/dec-12/	Alabama Senate 2017 special election: Moore vs. Jones	POLITICO
 poll	https://www.politico.com/interactives/2017/politico-morning-consult-poll/	How America feels about Trump	POLITICO
-confederatePopulation	http://www.POLITICO.com/interactives/2017/confederate-monuments-statues-and-symbols-in-the-south/	1,503 Confederate symbols are on display across America. Most are in the South. 179 are in majority black counties.	POLITICO
+confederatePopulation	http://www.POLITICO.com/interactives/2017/confederate-monuments-statues-and-symbols-in-the-south/	"1,503 Confederate symbols are on display across America. Most are in the South. 179 are in majority black counties."	POLITICO
 mapGuide	http://jeremycflin.github.io/maps.html	Bloomberg style guide example maps	Bloomberg
 borderWallNew	https://www.bloomberg.com/graphics/2017-mexico-trump-first-line-of-defense-on-immigration/	Why Mexico is Trump’s first line of defense on immigration	Bloomberg
 trumpRevealed	https://www.washingtonpost.com/graphics/politics/trump-revealed-book-reporting-archive/	‘Trump Revealed’: The reporting archive	Washington Post
@@ -22,7 +24,7 @@ maternityLeave	https://www.washingtonpost.com/news/worldviews/wp/2016/08/13/the-
 brexit	https://www.washingtonpost.com/news/worldviews/wp/2016/06/29/what-a-real-brexit-britain-would-look-like/?postshare=731467212368077&tid=ss_tw&utm_term=.9dc707a7a926	What a real ‘Brexit Britain’ would look like	Washington Post
 fantasyFootball	https://www.washingtonpost.com/graphics/sports/fantasy-football/	The conjoined triangles of Fantasy Football success	Washington Post
 embargo	http://jeremycflin.github.io/do_arms_embargoes_work/	Do arms embargoes actually work?	Class assignment
-flintMap	https://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share	High lead levels were detected in nearly 400 Flint homes, and there may be more	New York Times
+flintMap	https://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share	"High lead levels were detected in nearly 400 Flint homes, and there may be more"	New York Times
 flintWater	https://www.nytimes.com/interactive/2016/01/15/us/flint-lead-water-michigan.html?smid=tw-share	The Rreach of lead in Flint’s water supply	New York Times
 oregonProtest	https://www.nytimes.com/interactive/2016/01/07/us/oregon-standoff-western-lands.html?smid=pl-share	The Oregon protest and the battle over Western lands	New York Times
 redAlert	https://www.nytimes.com/interactive/2015/12/18/world/asia/air-pollution-widespread-china-beijing-red-alert-maps-charts.html?smid=pl-share	Second red alert for Beijing: air Pollution worsens	New York Times
