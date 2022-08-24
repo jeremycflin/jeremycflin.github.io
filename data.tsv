@@ -1,4 +1,9 @@
 slug	url	name	pub
+ev-roadtrip	https://www.bloomberg.com/graphics/2022-summer-ev-road-trip/	Great American Road Trips Are Impossible for Most Electric Cars	Bloomberg
+lanai	https://www.bloomberg.com/graphics/2022-oracle-larry-ellison-lanai-hawaii-plans-tourism/	Larry Ellison’s Lanai Isn’t for You—or the People Who Live There	Bloomberg
+hamptons	https://www.bloomberg.com/graphics/2021-hamptons-real-estate-beach-climate-proofing/	Hamptons Tries Extreme Climate-Proofing to Save Itself	Bloomberg
+fixAmerica	https://www.bloomberg.com/features/2021-infrastructure-across-america/	How to Fix America	Bloomberg
+biden-inauguration	https://www.bloomberg.com/graphics/2021-biden-inauguration-logistics/	What a Scaled-Down, High-Security Inauguration Looks Like	Bloomberg
 latinoelex	https://www.bloomberg.com/graphics/2020-us-election-hispanic-latino-voters/	Trump's New Latino Voters Are Sending Democrats a Message	Bloomberg
 elexcovid	https://www.bloomberg.com/graphics/2020-election-results-trump-vote-covid-deaths/	Covid Hotspots Stuck With Trump in Close Presidential Race	Bloomberg
 nyccovid	https://www.bloomberg.com/graphics/2020-new-york-city-reopening/	New York City Reopening Splits Along Lines of Wealth and Race	Bloomberg
@@ -19,7 +24,7 @@ russiaProbes	https://www.politico.com/interactives/2018/trump-russia-investigati
 hezbollah	https://www.POLITICO.com/interactives/2017/obama-hezbollah-drug-trafficking-investigation/	The secret backstory of how Obama let Hezbollah off the hook	POLITICO
 alElection	https://www.POLITICO.com/interactives/elections/2017/alabama/special-election/dec-12/	Alabama Senate 2017 special election: Moore vs. Jones	POLITICO
 poll	https://www.politico.com/interactives/2017/politico-morning-consult-poll/	How America feels about Trump	POLITICO
-confederatePopulation	http://www.POLITICO.com/interactives/2017/confederate-monuments-statues-and-symbols-in-the-south/	"1,503 Confederate symbols are on display across America. Most are in the South. 179 are in majority black counties."	POLITICO
+confederatePopulation	http://www.POLITICO.com/interactives/2017/confederate-monuments-statues-and-symbols-in-the-south/	1,503 Confederate symbols are on display across America. Most are in the South. 179 are in majority black counties.	POLITICO
 mapGuide	http://jeremycflin.github.io/maps.html	Bloomberg style guide example maps	Bloomberg
 borderWallNew	https://www.bloomberg.com/graphics/2017-mexico-trump-first-line-of-defense-on-immigration/	Why Mexico is Trump’s first line of defense on immigration	Bloomberg
 trumpRevealed	https://www.washingtonpost.com/graphics/politics/trump-revealed-book-reporting-archive/	‘Trump Revealed’: The reporting archive	Washington Post
@@ -27,7 +32,7 @@ maternityLeave	https://www.washingtonpost.com/news/worldviews/wp/2016/08/13/the-
 brexit	https://www.washingtonpost.com/news/worldviews/wp/2016/06/29/what-a-real-brexit-britain-would-look-like/?postshare=731467212368077&tid=ss_tw&utm_term=.9dc707a7a926	What a real ‘Brexit Britain’ would look like	Washington Post
 fantasyFootball	https://www.washingtonpost.com/graphics/sports/fantasy-football/	The conjoined triangles of Fantasy Football success	Washington Post
 embargo	http://jeremycflin.github.io/do_arms_embargoes_work/	Do arms embargoes actually work?	Class assignment
-flintMap	https://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share	"High lead levels were detected in nearly 400 Flint homes, and there may be more"	New York Times
+flintMap	https://www.nytimes.com/interactive/2016/02/04/us/flint-water-lead-maps.html?smid=pl-share	High lead levels were detected in nearly 400 Flint homes, and there may be more	New York Times
 flintWater	https://www.nytimes.com/interactive/2016/01/15/us/flint-lead-water-michigan.html?smid=tw-share	The Rreach of lead in Flint’s water supply	New York Times
 oregonProtest	https://www.nytimes.com/interactive/2016/01/07/us/oregon-standoff-western-lands.html?smid=pl-share	The Oregon protest and the battle over Western lands	New York Times
 redAlert	https://www.nytimes.com/interactive/2015/12/18/world/asia/air-pollution-widespread-china-beijing-red-alert-maps-charts.html?smid=pl-share	Second red alert for Beijing: air Pollution worsens	New York Times
